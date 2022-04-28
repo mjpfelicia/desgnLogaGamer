@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a,
+li,
+ul {
+    text-decoration: none;
+}
+
+ :root {
+    --cor-azul: #0d6efd;
+    --cor-azul-suave: hsl(231, 69%, 60%);
+    --cor-azul-escuro: hsl(233, 26%, 24%);
+    --cor-vermelho-claro: hsl(0, 94%, 66%);
+    --cor-verde-limao: hsl(136, 65%, 51%);
+    --cor-ciano-brilhante: hsl(192, 70%, 51%);
+    --cor-azul-acinzentado: hsl(233, 8%, 62%);
+    --cor-azul-acinzentado-claro: hsl(220, 16%, 96%);
+    --cor-cinza: #4b566b;
+    --cor-cinzento-title: #373f50;
+    --cor-cinzento: #dae1e7;
+    --cor-cinza-muito-claro: hsl(0, 0%, 98%);
+    --cor-branco: hsl(0, 0%, 100%);
+}
+
+.header {
+    width: 100%;
+    background: var(--cor-cinza-muito-claro);
+}
+
+.conteudo-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.conteudo-nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+
+.content-btn-pesquisa {
+    display: flex;
+    gap: 1rem;
+}
+
+.logo-header img {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+
+#lupa-pesquisa {
+    background-image: url(./imagens/lupa.svg);
+    background-repeat: no-repeat;
+    background-position: 6%;
+    background-size: 1rem;
+    width: 30rem;
+    padding-left: 8%;
+    line-height: 3;
+    color: var(--cor-cinza);
+    background-color: var(--cor-branco);
+    filter: opacity(0.5);
+    box-shadow: 1px 2px 4px 0px var(--cor-azul-acinzentado);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-image: url(./imagens/user-regular.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 0.5rem;
+    width: 7rem;
+    filter: opacity(0.5);
+    cursor: pointer;
+    transition: color .25s ease-in-out;
+    border-radius: 0.5rem;
+    border: 1px solid var(--cor-cinzento);
+    box-shadow: 1px 2px 4px 0px var(--cor-azul-acinzentado);
+}
+
+.btn-login:hover {
+    border: 1px solid var(--cor-vermelho-claro);
+    color: var(--cor-vermelho-claro);
+    transition: .3s ease-in-out;
+}
+
+.btn-carrinho {
+    background-image: url(./imagens/cart-shopping-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 0.5rem;
+    width: 7rem;
+    filter: opacity(0.5);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 0.5rem;
+    border: 1px solid var(--cor-cinzento);
+    box-shadow: 1px 2px 4px 0px var(--cor-azul-acinzentado);
+}
+
+.btn-carrinho:hover {
+    border: 1px solid var(--cor-vermelho-claro);
+    color: var(--cor-vermelho-claro);
+    transition: .3s ease-in-out;
+}
+
+.conteudo-nav-link {
+    color: var(--cor-cinzento-title);
+}
+
+.conteudo-nav-link:hover {
+    color: var(--cor-vermelho-claro);
+    transition: .3s ease-in-out;
+}
+
+.img-interactive {
+    width: 100%;
+}
+
+.title-principal {
+    font-size: 1.6rem;
+    color: var(--cor-branco);
+    text-align: center;
+    padding-top: 2rem;
+    text-transform: uppercase;
+}
+
+span {
+    color: var(--cor-azul-suave);
+}
+
+.content-principal {
+    background-image: url(./imagens/banner-principal2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 30rem;
+    background-position: center;
+}
+
+#card-fundacao {
+    border: 2px solid var(--cor-branco);
+    /* max-width: 25rem; */
+    height: 9rem;
+    position: relative;
+    /* left: 51rem; */
+    color: white;
+    top: 8rem;
+}
+
+.card-link {
+    color: var(--cor-branco);
+    /* position: relative; */
+    /* top: 23rem; */
+    /* left: 3rem; */
+}
+
+.btn-link {
+    color: var(--cor-branco);
+    font-size: 1.5rem;
+}
+
+.btn-link:hover {
+    color: var(--cor-vermelho-claro);
+}
+
+.btn-link img {
+    filter: invert(1);
+    height: 1rem;
+}
+
+.btn-link img:hover {
+    filter: var(--cor-vermelho-claro);
+}
+
+.title-ofertas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.whapper-produto-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 1rem 1rem 1rem rgb(31 27 45 / 8%), 0 1rem 0.75rem rgb(31 27 45 / 8%);
+    transition: .3s ease-in-out;
+    z-index: 1;
+}
+
+.content-produto-desconto {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.img-oculus {
+    width: 100%;
+}
+
+.card-img-grande {
+    width: 40%;
+}
+
+.card-img-grande:hover {
+    box-shadow: 0 1rem 1rem 1rem rgb(31 27 45 / 8%), 0 1rem 0.75rem rgb(31 27 45 / 8%);
+    transition: .3s ease-in-out;
+    z-index: 1;
+}
+
+.descricao-produto {
+    text-align: center;
+}
