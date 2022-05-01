@@ -12,11 +12,9 @@
 <body>
     <header class="header">
         <div class="conteudo-nav">
-
             <a href="#" class="logo-header" aria-label="logo-bookmark">
                 <img src="./imagens/logomeninab.jpg" alt="svg">
             </a>
-
             <ul class="conteudo-nav__list">
                 <li class="conteudo-nav-item">
                     <a class="conteudo-nav-link" href="#">Departamentos</a>
@@ -30,174 +28,797 @@
             </ul>
             <div class="content-btn-pesquisa">
                 <label for="lupa-pesquisa"></label>
-                <input id="lupa-pesquisa" type="text" placeholder="Pesquisar produtos">
-                </input>
-                <button class="btn btn-login">Login in</button>
-                <button class="btn-carrinho">Meu carrinho</button>
+                <div class="card-lupa-pesquisa">
+                    <input id="lupa-pesquisa" type="text" placeholder="Pesquisar produtos">
+                    <svg class="svgLupa" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                        </path>
+                    </svg>
+
+                </div>
+
+                <button id="test" class="btn btn-login login">Login
+                    <svg class="svgLogin" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z">
+                        </path>
+                    </svg>
+                </button>
+
+                <div class="modal-cont">
+                    <div class="modal-box">
+                        <span class="close">&times;</span>
+                        <div class="tabs">
+                            <div role="tablist" aria-label="Entertainment">
+
+
+                                <button type="button" role="tab" aria-selected="true" aria-controls="login-tab"
+                                    id="login">Login</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="cadastro-tab"
+                                    id="cadastro" tabindex="-1">cadastro</button>
+
+                                <div tabindex="0" role="tabpanel" id="login-tab" aria-labelledby="nils">
+                                    <form action="" class="login-box">
+                                        <h1> Login Page </h1>
+                                        <label for="">Username</label>
+                                        <input type="text" class="name" required>
+                                        <label for="">Password</label>
+                                        <input type="password" class="password" required>
+                                        <button class="login-button">Login</button>
+                                        <div class="close-forgot">
+                                            <button class="cancel">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div tabindex="0" role="tabpanel" id="cadastro-tab" aria-labelledby="agnes"
+                                    class="is-hidden">
+                                    <form action="" class="login-box">
+                                        <div class="container">
+                                            <h1>Sign Up</h1>
+                                            <p>Please fill in this form to create an account.</p>
+                                            <hr>
+                                            <label for="email"><b>Email</b></label>
+                                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                                            <label for="psw"><b>Password</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                            <label for="psw-repeat"><b>Repeat Password</b></label>
+                                            <input type="password" placeholder="Repeat Password" name="psw-repeat"
+                                                required>
+
+                                            <label>
+                                                <input type="checkbox" checked="checked" name="remember"
+                                                    style="margin-bottom:15px"> Remember me
+                                            </label>
+
+                                            <p>By creating an account you agree to our <a href="#"
+                                                    style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                                            <div class="clearfix">
+                                                <div class="close-forgot">
+                                                    <button class="cancel">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <button class="btn-carrinho">
+                <svg class="svgCarrinho" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
+                    </path>
+                </svg>
+                Meu carrinho
+            </button>
 
-        </div>
     </header>
     <main>
         <div class="box-geral">
-            <section class="whapper-principal">
-                <div class="content-principal">
+            <section class="content-principal">
+                <div class="whapper-principal">
                     <div class="card-imagem-principal">
-                        <h1 class="title-principal">Se você é um <span>geek</span>, este é o Site De Venda Online certa para você!!
+                        <h1 class="title-principal">
+                            Se você é um <span class="span-principal">geek</span>, este é o Site De Venda Online certa
+                            para você!!
                         </h1>
-                    </div>
-                    <div class="card-link">
-                        <a class="btn-link" href="">Shop Now
-                            <img src="./imagens/arrow-right-long-solid.svg" alt="arrow">
-                        </a>
+                        <div class="card-link-principal">
+                            <a class="btn-link" href="">Shop Now</a>
+                            <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                            </svg>
 
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="content-ofertas">
                 <div class="title-ofertas">
-                    <h2 class="">Produtos em Ofertas</h2>
-                    <div class=""><a class="" href="">Mais Produtos</a></div>
+                    <h2>OFERTAS EM DESTAQUE</h2>
+                    <div class="detalhe-link">
+                        <a class="title-link" href="">Mais Produtos</a>
+                        <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </div>
                 </div>
                 <div class="content-produto-desconto">
                     <div class="card-img-grande">
-                        <div class="">
-                            <img class="img-oculus" src="./imagens/oculor virtual.jpg" alt="">
-                            <div class="descricao-produto">
-                                <a class="" href="#">produtos</a>
-                                <h3 class="">
-                                    <a href="">produto</a>
+                        <div class="desconto-grande">-40%</div>
+                        <div class="detalhe-padding">
+                            <img class="img-oculus" src="/imagens/oculorvirtual.jpg" alt="oculos">
+                            <div class="card-informacao-produto">
+                                <a class="title-produto-ofertas" href="#">produtos</a>
+                                <h3 class="sub-title-produto-ofertas-grande">
+                                    <a href="">Lorem ipsum dolor</a>
                                 </h3>
-                                <div class="">
-                                    <div class="">
-                                        <span class=" ">$98.<small>50</small></span>
-                                        <del class="">$149.<small>99</small></del>
-                                    </div>
+
+                                <div class="card-preco">
+                                    <del class="preco-atual">$149.<small>99</small></del>
+                                    <span class="preco-oferta">$98.<small>50</small></span>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                     <div class="whapper-produto-ofertas">
                         <div class="card">
                             <div class="card-1">
-                                <img src="./imagens/maquina fotografica.jpg" alt="">
-                                <div class="">
-                                    <a class="" href="#">produtos</a>
-                                    <h3 class="">
-                                        <a href="">produto</a>
+                                <div class="desconto">-21%</div>
+                                <img src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <div class="card-informacao-produto">
+                                    <a class="title-produto-ofertas" href="#">produtos</a>
+                                    <h3 class="sub-title-produto-ofertas">
+                                        <a href="">Lorem ipsum dolor</a>
                                     </h3>
-                                    <div class="">
-                                        <div class="">
-                                            <span class=" ">$98.<small>50</small></span>
-                                            <del class="">$149.<small>99</small></del>
-                                        </div>
+                                    <div class="card-preco">
+                                        <del class="preco-atual">$149.<small>99</small></del>
+                                        <span class="preco-oferta">$98.<small>50</small></span>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="">
-                                <div class="">
-                                    <button class="" type="button"></button>
-                                </div>
-                                <img src="./imagens/maquina fotografica.jpg" alt="">
-                                <div class="">
-                                    <a class="" href="#">produtos</a>
-                                    <h3 class="">
-                                        <a href="">produto</a>
-                                    </h3>
-                                    <div class="">
-                                        <div class="">
-                                            <span class=" ">$98.<small>50</small></span>
-                                            <del class="">$149.<small>99</small></del>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
+                                </div>
+                            </div>
                         </div>
                         <div class="card">
-                            <div class="">
-                                <img src="./imagens/maquina fotografica.jpg" alt="">
-                                <div class="">
-                                    <a class="" href="#">produtos</a>
-                                    <h3 class="">
-                                        <a href="">produto</a>
+                            <div class="card-1">
+                                <div class="desconto">-21%</div>
+                                <img src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <div class="card-informacao-produto">
+                                    <a class="title-produto-ofertas" href="#">produtos</a>
+                                    <h3 class="sub-title-produto-ofertas">
+                                        <a href="">Lorem ipsum dolor</a>
                                     </h3>
-                                    <div class="">
-                                        <div class="">
-                                            <span class=" ">$98.<small>50</small></span>
-                                            <del class="">$149.<small>99</small></del>
-                                        </div>
+                                    <div class="card-preco">
+                                        <del class="preco-atual">$149.<small>99</small></del>
+                                        <span class="preco-oferta">$98.<small>50</small></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="">
-                                <img src="./imagens/maquina fotografica.jpg" alt="">
-                                <div class="">
-                                    <a class="" href="#">produtos</a>
-                                    <h3 class="">
-                                        <a href="">produto</a>
+                            <div class="card-1">
+                                <div class="desconto">-21%</div>
+                                <img src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <div class="card-informacao-produto">
+                                    <a class="title-produto-ofertas" href="#">produtos</a>
+                                    <h3 class="sub-title-produto-ofertas">
+                                        <a href="">Lorem ipsum dolor</a>
                                     </h3>
-                                    <div class="">
-                                        <div class="">
-                                            <span class=" ">$98.<small>50</small></span>
-                                            <del class="">$149.<small>99</small></del>
-                                        </div>
+                                    <div class="card-preco">
+                                        <del class="preco-atual">$149.<small>99</small></del>
+                                        <span class="preco-oferta">$98.<small>50</small></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="">
-                                <img src="./imagens/maquina fotografica.jpg" alt="">
-                                <div class="">
-                                    <a class="" href="#">produtos</a>
-                                    <h3 class="">
-                                        <a href="">produto</a>
+                            <div class="card-1">
+                                <div class="desconto">-21%</div>
+                                <img src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <div class="card-informacao-produto">
+                                    <a class="title-produto-ofertas" href="#">produtos</a>
+                                    <h3 class="sub-title-produto-ofertas">
+                                        <a href="">Lorem ipsum dolor</a>
                                     </h3>
-                                    <div class="">
-                                        <div class="">
-                                            <span class=" ">$98.<small>50</small></span>
-                                            <del class="">$149.<small>99</small></del>
-                                        </div>
+                                    <div class="card-preco">
+                                        <del class="preco-atual">$149.<small>99</small></del>
+                                        <span class="preco-oferta">$98.<small>50</small></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="">
-                                <img src="./imagens/maquina fotografica.jpg" alt="">
-                                <div class="">
-                                    <a class="" href="#">produtos</a>
-                                    <h3 class="">
-                                        <a href="">produto</a>
+                            <div class="card-1">
+                                <div class="desconto">-21%</div>
+                                <img src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <div class="card-informacao-produto">
+                                    <a class="title-produto-ofertas" href="#">produtos</a>
+                                    <h3 class="sub-title-produto-ofertas">
+                                        <a href="">Lorem ipsum dolor</a>
                                     </h3>
-                                    <div class="">
-                                        <div class="">
-                                            <span class=" ">$98.<small>50</small></span>
-                                            <del class="">$149.<small>99</small></del>
-                                        </div>
+                                    <div class="card-preco">
+                                        <del class="preco-atual">$149.<small>99</small></del>
+                                        <span class="preco-oferta">$98.<small>50</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-1">
+                                <div class="desconto">-21%</div>
+                                <img src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <div class="card-informacao-produto">
+                                    <a class="title-produto-ofertas" href="#">produtos</a>
+                                    <h3 class="sub-title-produto-ofertas">
+                                        <a href="">Lorem ipsum dolor</a>
+                                    </h3>
+                                    <div class="card-preco">
+                                        <del class="preco-atual">$149.<small>99</small></del>
+                                        <span class="preco-oferta">$98.<small>50</small></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="content-lancamento">
+                <div class="whapper-lancamento">
+                    <div class="card-descricao-lancamento">
+                        <div class="sub-card-lancamento"><span class="">LANÇAMENTOS</span>
+                            <h2 class="">Last Gen iPad Pro</h2>
+                            <p class="">Com preço imperdível. Se apresse!!
+                            </p>
+                            <div class="detalhe-link-lancamento">
+                                <a class="btn-lancamento" href="#">Ver ofertas
+                                    <svg class="svgArrow-lancamento" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-imagem-lancameto">
+                        <img src="/imagens/lancamentooffer.jpg" alt="jpj">
+                    </div>
+                </div>
+            </section>
+            <section class="section-produto-em-estoque">
+                <div class="title-produto-em-estoque">
+                    <h2>PRODUTO EM DESTAQUE</h2>
+                    <div class="detalhe-link">
+                        <a class="title-link" href="">Mais Produtos</a>
+                        <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="content-produto-em-estoque">
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <img class="imagem-produto-em-estoque" src="/imagens/code.jpg"
+                                        alt="Processador Intel Core">
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de <s>R$&nbsp;4.886,25</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$3.599,90</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;4.090,80</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> 340,90</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <div>
+                                        <img class="imagem-produto-em-estoque" src="/imagens/tvPequena.jpg"
+                                            alt="Monitor TGT">
+                                    </div>
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de <s>R$&nbsp;1.397,65</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$849,90</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;965,80</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> 80,48</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <div>
+                                        <img class="imagem-produto-em-estoque" src="/imagens/foneRosa.jpg" alt="fone">
+                                    </div>
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de<s>R$&nbsp;849,90</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$359,89</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;408,97</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> R$ 34,08</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <img class="imagem-produto-em-estoque" src="/imagens/code.jpg"
+                                        alt="Processador Intel Core">
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de <s>R$&nbsp;4.886,25</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$3.599,90</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;4.090,80</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> 340,90</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <div>
+                                        <img class="imagem-produto-em-estoque" src="/imagens/tvPequena.jpg"
+                                            alt="Monitor TGT">
+                                    </div>
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de <s>R$&nbsp;1.397,65</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$849,90</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;965,80</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> 80,48</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <div>
+                                        <img class="imagem-produto-em-estoque" src="/imagens/foneRosa.jpg" alt="fone">
+                                    </div>
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de<s>R$&nbsp;849,90</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$359,89</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;408,97</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> R$ 34,08</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <div>
+                                        <img class="imagem-produto-em-estoque" src="/imagens/tvPequena.jpg"
+                                            alt="Monitor TGT">
+                                    </div>
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de <s>R$&nbsp;1.397,65</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$849,90</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;965,80</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> 80,48</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-produto-em-estoque">
+                        <a class="link-produto-em-estoque" href="#">
+                            <div class="content-ptestoque">
+                                <div class="whapper-produto-em-estoque">
+                                    <div>
+                                        <img class="imagem-produto-em-estoque" src="/imagens/foneRosa.jpg" alt="fone">
+                                    </div>
+                                    <div class="card-detalhe-pdt-estoque">
+                                        <h2 class="title-produto-em-estoque">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit.
+                                        </h2>
+                                        <div class="card-preco-produto-em-estoque">
+                                            <div class="card-preco-produto-em-estoque">
+                                                <div class="preco-atual">de<s>R$&nbsp;849,90</s> por:</div>
+                                                <span class="preco-Avista">à vista</span>
+                                                <div class="preco-oferta">R$359,89</div>
+                                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                            </div>
+                                            <div class=""></div>
+                                            <div class="card-parcelamento">
+                                                <div class="preco-atual">R$&nbsp;408,97</div>
+                                                <span class="preco-parcelamento">em até 12x de
+                                                    <span class="preco-atual"> R$ 34,08</span>
+                                                </span>
+                                                <div class="parcela-cartao">sem juros no cartão</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
             </section>
+            <section class="section-marcas">
+                <div class="content-marcas">
+                    <div class="card-marcas" id="">
+                        <a class="" href="# ">
+                            <img class="imagem-marcas" src="imagens/marcaamazon.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card-marcas" id="">
+                        <a class="" href="#">
+                            <img class="imagem-marcas" src="imagens/marcacalmon.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card-marcas" id="">
+                        <a class="" href="# ">
+                            <img class="imagem-marcas" src="imagens/marcasansung.png" alt="">
+                        </a>
+                    </div>
+                    <div class="card-marcas" id="">
+                        <a class="" href="# ">
+                            <img class="imagem-marcas" src="imagens/marcamicrofo.png" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section-destaque">
+                <div class="content-destaque">
+                    <div class="whapper-destaque">
+                        <div class="card-destaque">
+                            <div class="content-vendidos">
+                                <h3 class="title-vendidos">Mais vendidos ...</h3>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detalhe-destaque">
+                                    <a class="title-link" href="">Veja mais </a>
+                                    <svg class="svgArrowDestaque" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-destaque">
+                            <div class="content-vendidos">
+                                <h3 class="title-vendidos">Novas chegadas ...</h3>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detalhe-destaque">
+                                    <a class="title-link" href="">Veja mais </a>
+                                    <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-destaque">
+                            <div class="content-vendidos">
+                                <h3 class="title-vendidos">Mais Visitados ...</h3>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="preco-oferta">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-imagem">
+                                    <a class="link-vendidos" href="">
+                                        <img class="imagem-destaque" src="/imagens/maouse.webp" alt="">
+                                    </a>
+                                    <div class="card-img-destaque">
+                                        <h6 class="title-destaque">
+                                            <a class="title-destaque" href="">Lorem ipsum dolor sit amet.</a>
+                                        </h6>
+                                        <div class="card-preco">
+                                            <span class="preco-oferta">$259.<small>00</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detalhe-destaque">
+                                    <a class="title-link" href="">Veja mais </a>
+                                    <svg class="svgArrowDestaque" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
         </div>
+
     </main>
 
-
-
-
-
-
 </body>
+<script src="/main.js"></script>
 
 </html>

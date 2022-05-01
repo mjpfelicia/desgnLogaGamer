@@ -1,8 +1,18 @@
 {
     "git.ignoreLimitWarning": true,
     "cSpell.words": [
+        "animatezoom",
+        "cancelbtn",
+        "cartao",
         "descricao",
         "fundacao",
-        "limao"
+        "imgcontainer",
+        "informacao",
+        "lancamento",
+        "lancameto",
+        "limao",
+        "preco",
+        "ptestoque",
+        "signin"
     ]
 }
