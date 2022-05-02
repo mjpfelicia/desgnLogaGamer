@@ -1,9 +1,11 @@
+
+// modal logim
 const closeBut = document.getElementsByClassName('close')[0],
     modal = document.getElementsByClassName('modal-cont')[0],
     cancelBut = document.getElementsByClassName('cancel')[0],
     loginBut = document.getElementsByClassName('login')[0];
     
-//close
+
 function x () {
     modal.style.display = "none";
 }
@@ -19,12 +21,7 @@ window.onclick = function (e) {
         e.target.style.display = 'none';
     }
 }
-
-
-/*
- *   This content is licensed according to the W3C Software License at
- *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
- */
+// fim do modal
 
 'use strict';
 
@@ -41,7 +38,7 @@ window.onclick = function (e) {
     panels = document.querySelectorAll('[role="tabpanel"]');
   }
 
-  // For easy reference
+  // Para fácil referência
   var keys = {
     end: 35,
     home: 36,
@@ -52,7 +49,7 @@ window.onclick = function (e) {
     delete: 46,
   };
 
-  // Add or subtract depending on key pressed
+  // Adiciona ou subtrai dependendo da tecla pressionada
   var direction = {
     37: -1,
     38: -1,
@@ -60,7 +57,7 @@ window.onclick = function (e) {
     40: 1,
   };
 
-  // Bind listeners
+ // Vincula os ouvintes
   for (var i = 0; i < tabs.length; ++i) {
     addListeners(i);
   }
@@ -70,34 +67,34 @@ window.onclick = function (e) {
     tabs[index].addEventListener('keydown', keydownEventListener);
     tabs[index].addEventListener('keyup', keyupEventListener);
 
-    // Build an array with all tabs (<button>s) in it
+    // Construir um array com todas as guias (<button>s) nele
     tabs[index].index = index;
   }
 
-  // When a tab is clicked, activateTab is fired to activate it
+ // Quando uma aba é clicada, activateTab é acionado para ativá-la
   function clickEventListener(event) {
     var tab = event.target;
     activateTab(tab, false);
   }
 
-  // Handle keydown on tabs
+  // Manipula o keydown nas guias
   function keydownEventListener(event) {
     var key = event.keyCode;
 
     switch (key) {
       case keys.end:
         event.preventDefault();
-        // Activate last tab
+       // Ativa a última aba
         activateTab(tabs[tabs.length - 1]);
         break;
       case keys.home:
         event.preventDefault();
-        // Activate first tab
+       // Ativa a primeira aba
         activateTab(tabs[0]);
         break;
 
-      // Up and down are in keydown
-      // because we need to prevent page scroll >:)
+     // Para cima e para baixo estão em keydown
+      // porque precisamos evitar a rolagem da página >:)
       case keys.up:
       case keys.down:
         determineOrientation(event);
@@ -105,7 +102,7 @@ window.onclick = function (e) {
     }
   }
 
-  // Handle keyup on tabs
+  // Manipula o keyup nas abas
   function keyupEventListener(event) {
     var key = event.keyCode;
 
@@ -120,9 +117,9 @@ window.onclick = function (e) {
     }
   }
 
-  // When a tablist’s aria-orientation is set to vertical,
-  // only up and down arrow should function.
-  // In all other cases only left and right arrow function.
+  // Quando a orientação da ária de uma tablist é definida como vertical,
+  // apenas as setas para cima e para baixo devem funcionar.
+  // Em todos os outros casos apenas a função de seta para a esquerda e para a direita.
   function determineOrientation(event) {
     var key = event.keyCode;
     var vertical = tablist.getAttribute('aria-orientation') == 'vertical';
@@ -144,8 +141,8 @@ window.onclick = function (e) {
     }
   }
 
-  // Either focus the next, previous, first, or last tab
-  // depending on key pressed
+ // Focalize a próxima, anterior, primeira ou última guia
+  // dependendo da tecla pressionada
   function switchTabOnArrowPress(event) {
     var pressed = event.keyCode;
 
@@ -167,31 +164,31 @@ window.onclick = function (e) {
     }
   }
 
-  // Activates any given tab panel
+ // Ativa qualquer painel de abas
   function activateTab(tab, setFocus) {
     setFocus = setFocus || true;
-    // Deactivate all other tabs
+   // Desativa todas as outras abas
     deactivateTabs();
 
-    // Remove tabindex attribute
+   // Remove o atributo tabindex
     tab.removeAttribute('tabindex');
 
-    // Set the tab as selected
+   // Define a guia como selecionada
     tab.setAttribute('aria-selected', 'true');
 
-    // Get the value of aria-controls (which is an ID)
+   // Obtém o valor de aria-controls (que é um ID)
     var controls = tab.getAttribute('aria-controls');
 
-    // Remove is-hidden class from tab panel to make it visible
+  // Remove a classe está oculta do painel de guias para torná-la visível
     document.getElementById(controls).classList.remove('is-hidden');
 
-    // Set focus when required
+   // Define o foco quando necessário
     if (setFocus) {
       tab.focus();
     }
   }
 
-  // Deactivate all tabs and tab panels
+  // Desativa todas as abas e painéis de abas
   function deactivateTabs() {
     for (var t = 0; t < tabs.length; t++) {
       tabs[t].setAttribute('tabindex', '-1');
@@ -204,28 +201,27 @@ window.onclick = function (e) {
     }
   }
 
-  // Make a guess
+  // Adivinhe
   function focusFirstTab() {
     tabs[0].focus();
   }
 
-  // Make a guess
+  // Adivinhe
   function focusLastTab() {
     tabs[tabs.length - 1].focus();
   }
-
-  // Detect if a tab is deletable
+// Detecta se uma aba é deletável
   function determineDeletable(event) {
     var target = event.target;
 
     if (target.getAttribute('data-deletable') !== null) {
-      // Delete target tab
+      // Excluir guia de destino
       deleteTab(event, target);
 
-      // Update arrays related to tabs widget
+      // Atualiza arrays relacionados ao widget de abas
       generateArrays();
 
-      // Activate the closest tab to the one that was just deleted
+      // Ativa a aba mais próxima daquela que acabou de ser deletada
       if (target.index - 1 < 0) {
         activateTab(tabs[0]);
       } else {
@@ -234,7 +230,7 @@ window.onclick = function (e) {
     }
   }
 
-  // Deletes a tab and its panel
+  // Exclui uma aba e seu painel
   function deleteTab(event) {
     var target = event.target;
     var panel = document.getElementById(target.getAttribute('aria-controls'));
@@ -243,8 +239,8 @@ window.onclick = function (e) {
     panel.parentElement.removeChild(panel);
   }
 
-  // Determine whether there should be a delay
-  // when user navigates with the arrow keys
+ // Determina se deve haver um atraso
+  // quando o usuário navega com as teclas de seta
   function determineDelay() {
     var hasDelay = tablist.hasAttribute('data-delay');
     var delay = 0;
@@ -254,7 +250,7 @@ window.onclick = function (e) {
       if (delayValue) {
         delay = delayValue;
       } else {
-        // If no value is specified, default to 300ms
+       // Se nenhum valor for especificado, o padrão é 300ms
         delay = 300;
       }
     }
@@ -262,14 +258,14 @@ window.onclick = function (e) {
     return delay;
   }
 
-  //
+  
   function focusEventHandler(event) {
     var target = event.target;
 
     setTimeout(checkTabFocus, delay, target);
   }
 
-  // Only activate tab on focus if it still has focus after the delay
+  // Só ativa a aba em foco se ainda tiver foco após o atraso
   function checkTabFocus(target) {
     var focused = document.activeElement;
 
