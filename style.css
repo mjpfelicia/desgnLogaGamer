@@ -41,6 +41,9 @@ ul {
 .header {
     width: 100%;
     background: var(--cor-cinza-muito-claro);
+    position: fixed;
+    z-index: 1;
+
 }
 
 .conteudo-nav {
@@ -629,18 +632,6 @@ ul li:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* fim header */
 
 
@@ -799,13 +790,13 @@ ul li:hover {
 }
 
 .sub-title-produto-ofertas>a {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--cor-azul-escuro);
 }
 
 .sub-title-produto-ofertas-grande a {
     color: var(--cor-azul-escuro);
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .sub-title-produto-ofertas,
@@ -813,9 +804,6 @@ ul li:hover {
     padding: 0.5rem 0;
 }
 
-.card-informacao-produto {
-    height: 5rem;
-}
 
 .preco-oferta {
     color: var(--cor-verde-limao);
@@ -987,6 +975,7 @@ ul li:hover {
 
 .card-preco-produto-em-estoque {
     padding: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 .preco-Avista,
