@@ -749,8 +749,9 @@ ul li:hover {
 .whapper-produto-ofertas {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
-    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
 }
 
 .detalhe-padding {
@@ -760,7 +761,7 @@ ul li:hover {
 
 .card {
     flex: 0 0 auto;
-    width: 32%;
+    width: 23%;
     text-align: center;
     background: var(--cor-branco);
 }
@@ -781,17 +782,6 @@ ul li:hover {
 
 .img-oculus {
     width: 100%;
-}
-
-.card-img-grande {
-    width: 40%;
-    background: var(--cor-branco);
-}
-
-.card-img-grande:hover {
-    box-shadow: 0 1rem 1rem 1rem rgb(31 27 45 / 8%), 0 1rem 0.75rem rgb(31 27 45 / 8%);
-    transition: .3s ease-in-out;
-    z-index: 1;
 }
 
 .descricao-produto {
@@ -956,6 +946,13 @@ ul li:hover {
 /* fim section lançamento */
 
 
+/* section mensagens */
+
+.whapper-mensagem {
+    margin: 1rem 0;
+}
+
+
 /* começo section produto em estoque */
 
 .content-produto-em-estoque {
@@ -1076,4 +1073,148 @@ ul li:hover {
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
+}
+
+.footer {
+    flex-shrink: 0;
+    background: var(--cor-azul-escuro);
+    color: var(--cor-branco);
+    padding-top: 3rem;
+    opacity: 1;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: var(--cor-branco);
+}
+
+.whapper-footer {
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.card-footer {
+    flex: 0 0 auto;
+    width: 33%;
+}
+
+.title-footer {
+    margin-bottom: 1.20rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.container {
+    margin: 0 4rem;
+}
+
+.card-list-item {
+    margin-bottom: 0.5rem;
+}
+
+.card-list-link {
+    display: block;
+    font-size: .8rem;
+    color: var(--cor-azul-acinzentado);
+    transition: .25s ease-in-out;
+}
+
+.widget-2 {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.form-control {
+    display: block;
+    flex: 1 1 auto;
+    line-height: 1.5;
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--cor-cinzento-title);
+    border: none;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+.btn-subscribe {
+    display: block;
+    flex: 1 1 auto;
+    line-height: 1.5;
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--cor-branco);
+    background-color: var(--cor-vermelho-claro);
+    border: none;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    cursor: pointer;
+}
+
+.text-subscription {
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.card-midia {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.svgApple,
+.svgGoogle {
+    width: 10rem;
+}
+
+.whapper-footerDetalhe {
+    opacity: 1;
+    background-color: #2b3445;
+}
+
+.box-entrega {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    margin: 0 3rem;
+}
+
+.card-entrega {
+    flex: 0 0 auto;
+    width: 25%;
+    padding-right: 1rem;
+}
+
+.svgPagamento,
+.svgDevolucao,
+.SvgIcon-root,
+.svgEntrega {
+    width: 3rem;
+    fill: var(--cor-vermelho-claro);
+}
+
+.d-flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.text-d-flex {
+    padding-left: 1rem;
+}
+
+.title-d-flex {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    opacity: 0.9;
+}
+
+.p-d-flex {
+    font-size: 0.8125rem;
+    opacity: .5;
 }
