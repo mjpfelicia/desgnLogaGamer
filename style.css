@@ -708,6 +708,14 @@ ul li:hover {
     left: 1rem;
 }
 
+.card-link-principal:hover {
+    background: var(--cor-vermelho-claro);
+}
+
+.card-link-principal a:hover {
+    color: var(--cor-branco);
+}
+
 .card-link-principal a {
     color: var(--cor-vermelho-claro);
 }
@@ -1102,6 +1110,11 @@ footer a {
     margin-bottom: 1.20rem;
     font-size: 1rem;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.title-footer:hover {
+    color: var(--cor-vermelho-claro);
 }
 
 .container {
@@ -1117,6 +1130,10 @@ footer a {
     font-size: .8rem;
     color: var(--cor-azul-acinzentado);
     transition: .25s ease-in-out;
+}
+
+.card-list-link:hover {
+    color: var(--cor-branco);
 }
 
 .widget-2 {
@@ -1191,6 +1208,7 @@ footer a {
     padding-right: 1rem;
 }
 
+.svgYOu,
 .svgPagamento,
 .svgDevolucao,
 .SvgIcon-root,
@@ -1212,9 +1230,66 @@ footer a {
     font-size: 1rem;
     margin-bottom: 0.3rem;
     opacity: 0.9;
+    cursor: pointer;
+}
+
+.title-d-flex:hover {
+    color: var(--cor-vermelho-claro);
 }
 
 .p-d-flex {
     font-size: 0.8125rem;
     opacity: .5;
+    cursor: pointer;
+}
+
+.p-d-flex:hover {
+    color: var(--cor-branco);
+}
+
+.section-footer-rodape {
+    border-top: 1px solid var(--cor-border);
+}
+
+.content-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+    margin: 0 3rem;
+}
+
+.card-rodape1,
+.card-icons-rodape {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.card-icons-rodape {
+    text-align: right;
+}
+
+.img-rodade {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.card-list-rodape {
+    display: flex;
+}
+
+.direitos-autorais {
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.6rem;
+}
+
+.card-item-link-rodape {
+    margin-top: 1rem;
+}
+
+.svgYOu:hover {
+    fill: var(--cor-branco);
+    border-radius: 0.3125rem;
+    transition: .25s ease;
 }
