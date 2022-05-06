@@ -41,3 +41,4 @@ rosa, amarelo, laranja, roxo, ciano, bege, nem marrom.
 :Quero uma página de contato, com dados como: telefone, e-mail, localização. 
 Preciso que seja de fácil visualização o e-mail e telefone para contato da empresa. 
 Teremos também nossas redes sociais (Facebook e Instagram) interligadas ao site. 
+# desgnLogaGamer
