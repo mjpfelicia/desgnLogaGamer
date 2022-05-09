@@ -117,6 +117,7 @@ ul {
 .produtosAdd-para-compras {
     flex: 0 0 auto;
     width: 66%;
+    text-align: center;
 }
 
 .title-continueshoppin {
@@ -161,6 +162,10 @@ ul {
     display: flex;
     align-items: center;
     width: 70%;
+}
+
+.card-item-link {
+    width: 30%;
 }
 
 .card-quantidade {
@@ -362,7 +367,7 @@ ul {
 .btn-atualizarCarrinho {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 80%;
     color: var(--cor-azul-suave);
     border-color: var(--cor-azul-suave);
     box-shadow: 0 0.3rem 1.525rem -0.375rem rgb(0 0 0 / 10%);
