@@ -47,7 +47,7 @@ btn.forEach(btn => {
 
 
         const cardItem = document.createElement('div');
-        cardItem.setAttribute('class', 'widget-cart');
+        cardItem.setAttribute('class', 'widget-cart-item');
 
         const dCard = document.createElement('div');
         dCard.setAttribute('class', 'd-card')
