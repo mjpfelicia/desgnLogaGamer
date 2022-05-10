@@ -43,9 +43,6 @@ btn.forEach(btn => {
 
 
 
-
-
-
         const cardItem = document.createElement('div');
         cardItem.setAttribute('class', 'widget-cart-item');
 
