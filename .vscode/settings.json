@@ -1,6 +1,7 @@
 {
     "git.ignoreLimitWarning": true,
     "cSpell.words": [
+        "adipiscing",
         "animatezoom",
         "Arrowbtn",
         "cancelbtn",
@@ -10,16 +11,21 @@
         "Comentario",
         "comentarios",
         "Comentatio",
+        "consectetur",
         "continueshoppin",
+        "Deletable",
         "descricao",
         "Devolucao",
         "dropbtn",
+        "elit",
         "fundacao",
+        "idget",
         "imgcontainer",
         "informacao",
         "lancamento",
         "lancameto",
         "limao",
+        "logim",
         "midia",
         "mjpfelicia",
         "Mjpfelicia",
@@ -36,7 +42,9 @@
         "simplebar",
         "Smarte",
         "svgbtn",
+        "tabindex",
         "tablist",
-        "tabpanel"
+        "tabpanel",
+        "valospn"
     ]
 }

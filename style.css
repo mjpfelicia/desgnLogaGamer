@@ -216,8 +216,17 @@ ul {
 
 .widget-cart-item {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20rem;
+    border-bottom: 1px solid var(--cor-border);
+}
+
+.content-widget-cart-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     width: 20rem;
     border-bottom: 1px solid var(--cor-border);
@@ -231,7 +240,7 @@ ul {
     height: 1.25rem;
     border-radius: 50%;
     background-color: var(--cor-vermelho-claro);
-    color: #fff;
+    color: black;
     font-size: .75rem;
     font-weight: 500;
     text-align: center;
@@ -936,7 +945,6 @@ ul li:hover {
 .btn-sm {
     cursor: pointer;
     height: 2rem;
-    width: 10rem;
     border-radius: 0.5rem;
     border: none;
     color: var(--cor-branco);
@@ -1042,6 +1050,10 @@ ul li:hover {
     flex: 0 0 auto;
     width: 50%;
     height: 100%;
+}
+
+.card-imagem-lancameto img {
+    width: 100%;
 }
 
 .sub-card-lancamento {
@@ -1326,6 +1338,7 @@ footer a {
     border: none;
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
+    background: var(--cor-branco);
 }
 
 .btn-subscribe {

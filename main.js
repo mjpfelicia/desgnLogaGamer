@@ -25,10 +25,10 @@ window.onclick = function(e) {
 'use strict';
 
 (function() {
-    var tablist = document.querySelectorAll('[role="tablist"]')[0];
-    var tabs;
-    var panels;
-    var delay = determineDelay();
+    let tablist = document.querySelectorAll('[role="tablist"]')[0];
+    let tabs;
+    let panels;
+    let delay = determineDelay();
 
     generateArrays();
 
@@ -38,7 +38,7 @@ window.onclick = function(e) {
     }
 
     // Para fácil referência
-    var keys = {
+    let keys = {
         end: 35,
         home: 36,
         left: 37,
@@ -49,7 +49,7 @@ window.onclick = function(e) {
     };
 
     // Adiciona ou subtrai dependendo da tecla pressionada
-    var direction = {
+    let direction = {
         37: -1,
         38: -1,
         39: 1,
@@ -72,13 +72,13 @@ window.onclick = function(e) {
 
     // Quando uma aba é clicada, activateTab é acionado para ativá-la
     function clickEventListener(event) {
-        var tab = event.target;
+        let tab = event.target;
         activateTab(tab, false);
     }
 
     // Manipula o keydown nas guias
     function keydownEventListener(event) {
-        var key = event.keyCode;
+        let key = event.keyCode;
 
         switch (key) {
             case keys.end:
@@ -103,7 +103,7 @@ window.onclick = function(e) {
 
     // Manipula o keyup nas abas
     function keyupEventListener(event) {
-        var key = event.keyCode;
+        let key = event.keyCode;
 
         switch (key) {
             case keys.left:
@@ -120,9 +120,9 @@ window.onclick = function(e) {
     // apenas as setas para cima e para baixo devem funcionar.
     // Em todos os outros casos apenas a função de seta para a esquerda e para a direita.
     function determineOrientation(event) {
-        var key = event.keyCode;
-        var vertical = tablist.getAttribute('aria-orientation') == 'vertical';
-        var proceed = false;
+        let key = event.keyCode;
+        let vertical = tablist.getAttribute('aria-orientation') == 'vertical';
+        let proceed = false;
 
         if (vertical) {
             if (key === keys.up || key === keys.down) {
@@ -143,14 +143,14 @@ window.onclick = function(e) {
     // Focalize a próxima, anterior, primeira ou última guia
     // dependendo da tecla pressionada
     function switchTabOnArrowPress(event) {
-        var pressed = event.keyCode;
+        let pressed = event.keyCode;
 
         for (var x = 0; x < tabs.length; x++) {
             tabs[x].addEventListener('focus', focusEventHandler);
         }
 
         if (direction[pressed]) {
-            var target = event.target;
+            let target = event.target;
             if (target.index !== undefined) {
                 if (tabs[target.index + direction[pressed]]) {
                     tabs[target.index + direction[pressed]].focus();
@@ -176,7 +176,7 @@ window.onclick = function(e) {
         tab.setAttribute('aria-selected', 'true');
 
         // Obtém o valor de aria-controls (que é um ID)
-        var controls = tab.getAttribute('aria-controls');
+        let controls = tab.getAttribute('aria-controls');
 
         // Remove a classe está oculta do painel de guias para torná-la visível
         document.getElementById(controls).classList.remove('is-hidden');
@@ -211,7 +211,7 @@ window.onclick = function(e) {
     }
     // Detecta se uma aba é deletável
     function determineDeletable(event) {
-        var target = event.target;
+        let target = event.target;
 
         if (target.getAttribute('data-deletable') !== null) {
             // Excluir guia de destino
@@ -231,8 +231,8 @@ window.onclick = function(e) {
 
     // Exclui uma aba e seu painel
     function deleteTab(event) {
-        var target = event.target;
-        var panel = document.getElementById(target.getAttribute('aria-controls'));
+        let target = event.target;
+        let panel = document.getElementById(target.getAttribute('aria-controls'));
 
         target.parentElement.removeChild(target);
         panel.parentElement.removeChild(panel);
@@ -241,11 +241,11 @@ window.onclick = function(e) {
     // Determina se deve haver um atraso
     // quando o usuário navega com as teclas de seta
     function determineDelay() {
-        var hasDelay = tablist.hasAttribute('data-delay');
-        var delay = 0;
+        let hasDelay = tablist.hasAttribute('data-delay');
+        let delay = 0;
 
         if (hasDelay) {
-            var delayValue = tablist.getAttribute('data-delay');
+            let delayValue = tablist.getAttribute('data-delay');
             if (delayValue) {
                 delay = delayValue;
             } else {
@@ -259,14 +259,14 @@ window.onclick = function(e) {
 
 
     function focusEventHandler(event) {
-        var target = event.target;
+        let target = event.target;
 
         setTimeout(checkTabFocus, delay, target);
     }
 
     // Só ativa a aba em foco se ainda tiver foco após o atraso
     function checkTabFocus(target) {
-        var focused = document.activeElement;
+        let focused = document.activeElement;
 
         if (target === focused) {
             activateTab(target, false);
