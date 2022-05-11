@@ -1,36 +1,46 @@
-const btn = document.querySelectorAll('.btn-sm');
-const quantidadeDeItem = document.querySelector('.navbar-tool-label');
-const produtoAped = document.querySelector('.content-widget-cart-item');
+const btn2 = document.querySelectorAll('.btn-parcelemento');
+const quantidadeDeItem2 = document.querySelector('.navbar-tool-label');
+const produtoAped2 = document.querySelector('.content-widget-cart-item');
 
-const lista = [];
+const lista2 = [];
 
-btn.forEach(btnAdd => {
+btn2.forEach(btnAdd => {
     btnAdd.addEventListener("click", function(ev) {
 
         const parentElement1 = ev.target.parentElement;
         const parentElement2 = parentElement1.parentElement;
         const parentElement3 = parentElement2.parentElement;
+        const parentElement4 = parentElement3.parentElement;
+
 
         console.log({
-            parentElement1,
-            parentElement2,
+            parentElement4,
             parentElement3,
+            parentElement2
         });
 
-        const imgSrc = parentElement3.childNodes[3].currentSrc
-        const preco = parentElement1.children[0].children[2].innerText;
-        const tituloProduto = parentElement2.children[0].innerText;
+        const imgSrc1 = parentElement4.children[0].currentSrc;
+        const preco1 = parentElement3.children[1].children[0].children[1].innerText;
+        const tituloProduto1 = parentElement3.children[0].innerText;
 
-        quantidadeDeItem.innerText = `${+quantidadeDeItem.innerText+1}`;
+        console.log({ tituloProduto1 })
+        console.log({ preco1 })
 
-        addItemCarrinho(imgSrc, tituloProduto, preco);
+        console.log({ imgSrc1: parentElement4.children[0].children[0] });
 
+
+        quantidadeDeItem2.innerText = `${+quantidadeDeItem2.innerText+1}`;
+
+
+        addItemCarrinho1(imgSrc1, tituloProduto1, preco1);
 
     });
 });
 
 
-function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '') {
+
+
+function addItemCarrinho1(urlImage = '', nomeProduto = '', precoProduto = '') {
 
     const cardItem = document.createElement('div');
     cardItem.setAttribute('class', 'widget-cart-item');
@@ -44,7 +54,6 @@ function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '') {
     dCard.append(dBlock);
 
     const imagemProduto = document.createElement('img');
-
     imagemProduto.setAttribute('width', 64)
     imagemProduto.setAttribute('src', urlImage)
     dBlock.append(imagemProduto);
@@ -74,5 +83,5 @@ function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '') {
     valore.append(spanQuantidade);
     spanQuantidade.innerHTML = "x 1";
 
-    produtoAped.append(cardItem);
+    produtoAped2.append(cardItem);
 }

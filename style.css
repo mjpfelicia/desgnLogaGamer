@@ -154,12 +154,14 @@ ul {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
+    border-top: 1px solid var(--cor-border);
+    padding-top: 1rem;
 }
 
 .widget-product-title {
     margin-bottom: 0.5rem;
-    font-size: .875rem;
-    font-weight: 500;
+    font-size: .8rem;
+    color: var(--cor-cinzento-title);
 }
 
 .dropdown-content a {
@@ -250,6 +252,7 @@ ul {
 .d-card {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .btn-carrinho:hover {
@@ -1220,6 +1223,79 @@ ul li:hover {
     width: 100%;
 }
 
+.title-section-marcas {
+    color: var(--cor-cinzento-title);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    animation: carouselAnim 5s infinite alternate linear;
+}
+
+.entry {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 15rem;
+    background: var(--cor-branco);
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .items {
+        animation: carouselAnim 5s infinite alternate linear;
+    }
+    @keyframes carouselAnim {
+        from {
+            transform: translate(0, 0);
+        }
+        to {
+            transform: translate(calc(-100% + (2 * 300px)));
+        }
+    }
+}
+
+@keyframes carouselAnim {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(calc(-100% + (5 * 300px)));
+    }
+}
+
+.container .faders {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.faders .right,
+.faders .left {
+    background: linear-gradient( to right, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    z-index: 200;
+}
+
+.right {
+    right: 0;
+    background: linear-gradient( to left, rgba(245, 245, 245, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 
 /* fim section marcas */
 
@@ -1235,7 +1311,7 @@ ul li:hover {
 
 .card-destaque {
     flex: 0 0 auto;
-    width: 30%;
+    width: 33%;
 }
 
 .imagem-destaque {
@@ -1245,14 +1321,13 @@ ul li:hover {
 .card-imagem {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-bottom: 1px solid var(--cor-cinzento);
     margin: 0 1rem;
 }
 
 .title-vendidos {
     color: var(--cor-cinzento-title);
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
@@ -1262,6 +1337,25 @@ ul li:hover {
     align-items: center;
     padding-top: 2rem;
 }
+
+.card-img-destaque {
+    padding-left: 1rem;
+}
+
+.btn-destaque {
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    background: var(--cor-branco);
+}
+
+
+/* sim section destaque */
+
+
+/* footer */
 
 .footer {
     flex-shrink: 0;
@@ -1279,11 +1373,12 @@ footer a {
 .whapper-footer {
     display: flex;
     padding-bottom: 1rem;
+    justify-content: space-between;
 }
 
 .card-footer {
     flex: 0 0 auto;
-    width: 33%;
+    width: 30%;
 }
 
 .title-footer {
@@ -1297,7 +1392,7 @@ footer a {
     color: var(--cor-vermelho-claro);
 }
 
-.container {
+.container-footer {
     margin: 0 4rem;
 }
 
@@ -1324,7 +1419,7 @@ footer a {
 .input-group {
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 70%;
     justify-content: center;
 }
 
@@ -1368,7 +1463,7 @@ footer a {
 
 .svgApple,
 .svgGoogle {
-    width: 10rem;
+    width: 8rem;
 }
 
 .whapper-footerDetalhe {
