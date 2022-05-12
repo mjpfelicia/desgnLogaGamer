@@ -1,8 +1,9 @@
 const btn = document.querySelectorAll('.btn-sm');
 const quantidadeDeItem = document.querySelector('.navbar-tool-label');
 const produtoAped = document.querySelector('.content-widget-cart-item');
+const valoTotalDaCompra = document.querySelector('#valor-text-accent');
+let total = 0;
 
-const lista = [];
 
 btn.forEach(btnAdd => {
     btnAdd.addEventListener("click", function(ev) {
@@ -20,17 +21,18 @@ btn.forEach(btnAdd => {
         const imgSrc = parentElement3.childNodes[3].currentSrc
         const preco = parentElement1.children[0].children[2].innerText;
         const tituloProduto = parentElement2.children[0].innerText;
+        const descontoDoProduto = parentElement1.children[0].children[0].children[0].innerHTML;
 
         quantidadeDeItem.innerText = `${+quantidadeDeItem.innerText+1}`;
 
-        addItemCarrinho(imgSrc, tituloProduto, preco);
+        addItemCarrinho(imgSrc, tituloProduto, preco, descontoDoProduto);
 
 
     });
 });
 
 
-function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '') {
+export function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '', descontoProduto = '') {
 
     const cardItem = document.createElement('div');
     cardItem.setAttribute('class', 'widget-cart-item');
@@ -64,6 +66,11 @@ function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '') {
     valore.setAttribute('class', 'widget-product-meta')
     ps2.append(valore);
 
+    const spanDescontoDoProduto = document.createElement('span');
+    spanDescontoDoProduto.setAttribute('class', 'preco-atual');
+    valore.append(spanDescontoDoProduto);
+    spanDescontoDoProduto.innerHTML = descontoProduto;
+
     const spanValorDoProduto = document.createElement('span');
     spanValorDoProduto.setAttribute('class', 'text-accent');
     valore.append(spanValorDoProduto);
@@ -73,6 +80,13 @@ function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = '') {
     spanQuantidade.setAttribute('class', 'text-muted')
     valore.append(spanQuantidade);
     spanQuantidade.innerHTML = "x 1";
+
+    const trataValor = precoProduto.replace("R$", "").replace(".", "").replace(",", ".");
+    total = total + Number(trataValor);
+
+
+    valoTotalDaCompra.innerHTML = total;
+    console.log({ total })
 
     produtoAped.append(cardItem);
 }
