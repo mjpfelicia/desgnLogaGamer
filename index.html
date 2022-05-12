@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Loja Game</title>
+
+    <title>loja virtual de Jogos e Games</title>
 </head>
 
 <body>
@@ -111,52 +116,240 @@
                     </a>
                     <div class="dropdown-content">
                         <div class="content-widget-cart-item">
-
                         </div>
-
-
                         <div class="d-flex-dropdown-content py-3">
                             <div class="fs-sm">
-                                <span class="text-muted">Subtotal:</span>
+                                <span class="text-muted-desconto">DESCONTO:</span>
+                                <span class="text-accent">$.<small id="valor-text-accent-desconto">00</small></span>
+                            </div>
+                            <div class="fs-sm">
+                                <span class="text-muted">TOTAL:</span>
                                 <span class="text-accent">$.<small id="valor-text-accent">00</small></span>
                             </div>
-                            <a class="btn-outline-secondary" href="./checkout.html">Expand cart
-                                <svg class="svgArrowbtn-outline-secondary" width="20" height="20" viewBox="0 0 24 24"
-                                    aria-hidden="true">
-                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                </svg>
-                            </a>
                         </div>
+
+
                         <div class="cardBtn-checkout">
-                            <button class="btn btn-checkout-outline-secondary">
-                                <svg class="svg-outline-secondary" viewBox="0 0 269.125 269.125" width="20" height="20">
-                                    <g>
-                                        <path
-                                            d="m262.125,54.661h-255.125c-3.866,0-7,3.134-7,7v145.804c0,3.866 3.134,7 7,7h255.125c3.866,0 7-3.134 7-7v-145.804c0-3.867-3.134-7-7-7zm-7,145.803h-241.125v-131.803h241.125v131.803z">
-                                        </path>
-                                        <path
-                                            d="m41.507,102.96h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z">
-                                        </path>
-                                        <path
-                                            d="m41.507,125.458h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z">
-                                        </path>
-                                        <path
-                                            d="m41.507,147.955h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z">
-                                        </path>
-                                        <path
-                                            d="m229.176,170.851h-36.901c-3.866,0-7,3.134-7,7s3.134,7 7,7h36.901c3.866,0 7-3.134 7-7s-3.134-7-7-7z">
-                                        </path>
-                                    </g>
-                                </svg> Fazer o check-out
-                            </button>
+                            <button id="myBtnCheckout" class="btn-checkout-outline-secondary">Expand cart</button>
+
+                            <div id="ModalmyBtnCheckout" class="modalCheckout">
+
+                                <div class="modalCheckout-content">
+                                    <span class="close">&times;</span>
+
+                                    <div class="header-pagamento">
+                                        <div class="content-header">
+                                            <div class="card-home-shop-cart">
+                                                <nav aria-label="breadcrumb">
+                                                    <ol class="card-breadcrumb">
+                                                        <li class="breadcrumb-item-home">
+                                                            <svg class="svgCazinha" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                                <path
+                                                                    d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z">
+                                                                </path>
+                                                            </svg>
+                                                            <a class="breadcrumb-link" href="">Home
+                                                                <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
+                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="breadcrumb-item">
+                                                            <a class="breadcrumb-link" href="">Shop
+                                                                <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
+                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+
+                                                    </ol>
+                                                </nav>
+                                            </div>
+                                            <div class="">
+                                                <h1 class="">Your cart</h1>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="container-2">
+                                        <div class="whapper-geral">
+                                            <section class="produtosAdd-para-compras">
+                                                <div class="card-produtos-continueShoppin">
+                                                    <h1 class="title-continueshoppin">Products</h1>
+                                                    <a class=" btn-outline-primary" href="shop-grid-ls.html">
+                                                        <svg class="svgArrowLeft" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                        </svg>Continue shopping</a>
+                                                </div>
+                                                <!-- Item-->
+                                                <div class="content-item">
+                                                    <div class="card-item">
+                                                        <a class="card-item-link" href="">
+                                                            <img src="./imagens/foneRosa.jpg" width="100" alt="Product"></a>
+                                                        <div class="">
+                                                            <h3><a class="coluna-descricao" href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                                            <div class="coluna-detalhe">
+                                                                <span class="c-dth">Size:</span>8.5</div>
+                                                            <div class="coluna-detalhe">
+                                                                <span class="c-dth">Color:</span>White &amp; Blue</div>
+                                                            <div class="coluna-valor">$154.<small>00</small></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-quantidade">
+                                                        <label class="for-quantidade" for="quantity1">Quantity</label>
+                                                        <input class="quantidade-item" type="number" id="quantity1" min="1" value="1">
+                                                        <button class="btn" type="button">
+                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z" fill="#e72626"></path>
+                                                            </svg>
+                                                             <span>Remove</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- Item-->
+                                                <div class="content-item">
+                                                    <div class="card-item">
+                                                        <a class="card-item-link" href="">
+                                                            <img src="./imagens/maouse.webp" width="100" alt="Product"></a>
+                                                        <div class="">
+                                                            <h3><a class="coluna-descricao" href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                                            <div class="coluna-detalhe">
+                                                                <span class="c-dth">Size:</span>8.5</div>
+                                                            <div class="coluna-detalhe">
+                                                                <span class="c-dth">Color:</span>White &amp; Blue</div>
+                                                            <div class="coluna-valor">$154.<small>00</small></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-quantidade">
+                                                        <label class="for-quantidade" for="quantity1">Quantity</label>
+                                                        <input class="quantidade-item" type="number" id="quantity1" min="1" value="1">
+                                                        <button class="btn" type="button">
+                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z" fill="#e72626"></path>
+                                                            </svg>                               
+                                                             <span>Remove</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- Item-->
+                                                <div class="content-item">
+                                                    <div class="card-item">
+                                                        <a class="card-item-link" href="">
+                                                            <img src="./imagens/tvPequena.jpg" width="100" alt="Product"></a>
+                                                        <div class="">
+                                                            <h3><a class="coluna-descricao" href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                                            <div class="coluna-detalhe">
+                                                                <span class="c-dth">Size:</span>8.5</div>
+                                                            <div class="coluna-detalhe">
+                                                                <span class="c-dth">Color:</span>White &amp; Blue</div>
+                                                            <div class="coluna-valor">$154.<small>00</small></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-quantidade">
+                                                        <label class="for-quantidade" for="quantity1">Quantity</label>
+                                                        <input class="quantidade-item" type="number" id="quantity1" min="1" value="1">
+                                                        <button class="btn" type="button">
+                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32" fill="none" xmlns="https://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z" fill="#e72626"></path>
+                                                            </svg>                                
+                                                            <span class="">Remove</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <button class="btn btn-atualizarCarrinho" type="button">
+                                                   Atualizar Carrinho
+                                                </button>
+                                            </section>
+                                            <!-- Sidebar-->
+                                            <aside class="content-pagamentos">
+                                                <div class="box-geral">
+                                                    <div class="whapper-pagamentos">
+                                                        <div class="card-valores">
+                                                            <h2 class="title-subtotal">Subtotal</h2>
+                                                            <h3 class="title-preco">$462.<small>00</small></h3>
+                                                        </div>
+
+                                                        <div class="content-orderOptions" id="order-options">
+                                                            <div class="whapperOptions">
+                                                                <h3 class="titleOptions">
+                                                                    <a class="title-0ptions" href="#" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="shipping-estimates">Estimativas de envio</a>
+                                                                </h3>
+                                                                <div id="shipping-estimates" data-bs-parent="#order-options">
+                                                                    <div class="">
+                                                                        <form class="" novalidate="">
+                                                                            <div class="card-m3">
+                                                                                <select class="mb-3" required="">
+                                                                                    <option value="">Escolha seu país</option>
+                                                                                    <option value="Australia">Australia</option>
+                                                                                    <option value="Belgium">Belgium</option>
+                                                                                    <option value="Canada">Canada</option>
+                                                                                    <option value="Finland">Finland</option>
+                                                                                    <option value="Mexico">Mexico</option>
+                                                                                    <option value="New Zealand">New Zealand</option>
+                                                                                    <option value="Switzerland">Switzerland</option>
+                                                                                    <option value="United States">United States</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="card-m3">
+                                                                                <select class="mb-3" required="">
+                                                                                    <option value="">Escolha sua cidade</option>
+                                                                                    <option value="Bern">Bern</option>
+                                                                                    <option value="Brussels">Brussels</option>
+                                                                                    <option value="Canberra">Canberra</option>
+                                                                                    <option value="Helsinki">Helsinki</option>
+                                                                                    <option value="Mexico City">Mexico City</option>
+                                                                                    <option value="Ottawa">Ottawa</option>
+                                                                                    <option value="Washington D.C.">Washington D.C.</option>
+                                                                                    <option value="Wellington">Wellington</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="invalid-feedback">
+                                                                                <input class="mb-3" type="text" placeholder="Forneça um CEP válido!" required="">
+                                                                            </div>
+                                                                            <button class="btn btn-options" type="submit">Calcular frete</button>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardBtn-checkout">
+                                                            <a class="btn btn-checkout" href="#">
+                                                                <svg class="svgCheckout" viewBox="0 0 269.125 269.125">
+                                                                    <g>
+                                                                        <path d="m262.125,54.661h-255.125c-3.866,0-7,3.134-7,7v145.804c0,3.866 3.134,7 7,7h255.125c3.866,0 7-3.134 7-7v-145.804c0-3.867-3.134-7-7-7zm-7,145.803h-241.125v-131.803h241.125v131.803z"/>
+                                                                        <path d="m41.507,102.96h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z"/>
+                                                                        <path d="m41.507,125.458h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z"/>
+                                                                        <path d="m41.507,147.955h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z"/>
+                                                                        <path d="m229.176,170.851h-36.901c-3.866,0-7,3.134-7,7s3.134,7 7,7h36.901c3.866,0 7-3.134 7-7s-3.134-7-7-7z"/>
+                                                                    </g>
+                                                                </svg> Fazer o check-out
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </aside>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
                         </div>
+
                     </div>
 
                 </div>
 
             </div>
-
-        </div>
     </header>
     <main>
         <div class="box-geral">
@@ -200,7 +393,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;4.100,00</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de<s>R$ &nbsp;4.100,00</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$3.199,00</div>
                                         </div>
@@ -228,7 +421,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;488</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;488</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$139,90</div>
                                         </div>
@@ -257,7 +450,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;2.272,61</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;2.272,61</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$1.249,90</div>
                                         </div>
@@ -285,7 +478,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;4.886,25</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;4.886,25</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$3.599,90</div>
                                         </div>
@@ -313,7 +506,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;4.100,00</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;4.100,00</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$3.199,00</div>
                                         </div>
@@ -341,7 +534,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;488</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;488</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$139,90</div>
                                         </div>
@@ -369,7 +562,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de<s>R$&nbsp;2.272,61</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de<s>R$&nbsp;2.272,61</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$1.249,90</div>
                                         </div>
@@ -397,7 +590,7 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual">de <s>R$&nbsp;4.886,25</s> por:</div>
+                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;4.886,25</s> por:</div>
                                             <span class="preco-Avista">à vista</span>
                                             <div class="preco-oferta">R$3.599,90</div>
                                         </div>
@@ -735,15 +928,12 @@
 
             </section>
             <section class="section-marcas">
-
                 <h2 class="title-section-marcas">PROCURE POR MARCAS</h2>
-
                 <div class="container">
                     <div class="faders">
                         <div class="left"></div>
                         <div class="right"></div>
                     </div>
-
                     <div class="items">
                         <div class="entry">
                             <img class=" slide slide-1 imagem-marcas" src="./imagens/marcaamazon.png" alt="">
@@ -765,9 +955,9 @@
             </section>
 
             <section class="section-destaque">
-                <div class="content-destaque">
-                    <div class="whapper-destaque">
-                        <div class="card-destaque">
+                <div class="content-destaque container">
+                    <div class="whapper-destaque row">
+                        <div class="card-destaque col-sm">
                             <div class="content-vendidos">
                                 <h3 class="title-vendidos">Mais vendidos ...</h3>
                                 <div class="card-imagem">
@@ -869,7 +1059,7 @@
                             </div>
 
                         </div>
-                        <div class="card-destaque">
+                        <div class="card-destaque col-sm">
                             <div class="content-vendidos">
                                 <h3 class="title-vendidos">Novas chegadas ...</h3>
                                 <div class="card-imagem">
@@ -945,8 +1135,7 @@
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
-                                            <a class="title-destaque" href="">Webcam Hikvision Full HD Lentes Fixas de
-                                                3.6mm - DS-U02.</a>
+                                            <a class="title-destaque" href="">Webcam Hikvision Full HD Lentes Fixas</a>
                                         </h6>
                                         <div class="card-preco">
                                             <span class="preco-oferta">R$201,<small>46</small>
@@ -972,7 +1161,7 @@
                             </div>
 
                         </div>
-                        <div class="card-destaque">
+                        <div class="card-destaque col-sm">
                             <div class="content-vendidos">
                                 <h3 class="title-vendidos">Mais Visitados ...</h3>
                                 <div class="card-imagem">
@@ -1134,16 +1323,19 @@
                     <div class="widget widget-2">
                         <h3 class="title-footer">Mantenha-se informado</h3>
                         <form action="form-control" method="post" name="form-control">
-                            <div class="input-group">
-                                <input class="btn form-control" type="email" name="EMAIL" placeholder="Your email" required="">
-                                <button class="btn-subscribe" type="submit" name="subscribe">Subscribe*</button>
+
+                            <div class="box-input-footer3">
+                                <label for="email"></label>
+                                <input class="btnInpultFooter3" type="email" id="email" placeholder="Enter your email address" required="">
+                                <p class="footer-msg-error"></p>
+                                <button class="btnEnviar" type="submit">ENVIA</button>
                             </div>
                             <div class="subscription-status">
                                 <div class="text-subscription">*Assine nossa newsletter para receber ofertas de desconto antecipadas, atualizações e informações sobre novos produtos.</div>
                             </div>
                         </form>
                     </div>
-                    <div class="widget mb-4">
+                    <div class="widget">
                         <h3 class="title-footer">Baixe nosso aplicativo</h3>
                         <div class="card-midia">
                             <div class="card-apple">
@@ -1496,6 +1688,8 @@
     <script src="./main.js"></script>
     <script type="module" src="./addProduto.js"></script>
     <script type="module" src="./addPEmEstoque.js"></script>
+    <script src="./modal.js"></script>
+
 </body>
 
 </html>

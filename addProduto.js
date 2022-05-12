@@ -2,6 +2,7 @@ const btn = document.querySelectorAll('.btn-sm');
 const quantidadeDeItem = document.querySelector('.navbar-tool-label');
 const produtoAped = document.querySelector('.content-widget-cart-item');
 const valoTotalDaCompra = document.querySelector('#valor-text-accent');
+const descontoDoProduto = document.querySelector('.preco-atual')
 let total = 0;
 
 
@@ -67,9 +68,10 @@ export function addItemCarrinho(urlImage = '', nomeProduto = '', precoProduto = 
     ps2.append(valore);
 
     const spanDescontoDoProduto = document.createElement('span');
-    spanDescontoDoProduto.setAttribute('class', 'preco-atual');
+    spanDescontoDoProduto.setAttribute('class', 'preco-atual-em-estoque');
     valore.append(spanDescontoDoProduto);
     spanDescontoDoProduto.innerHTML = descontoProduto;
+    console.log({ spanDescontoDoProduto })
 
     const spanValorDoProduto = document.createElement('span');
     spanValorDoProduto.setAttribute('class', 'text-accent');
