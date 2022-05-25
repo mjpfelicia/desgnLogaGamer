@@ -671,7 +671,6 @@ input[type=text],
 input[type=password] {
     width: 100%;
     border: 1px solid var(--cor-border);
-    ;
     display: block;
     padding: 8px;
     margin: 5px 0;
@@ -1177,8 +1176,9 @@ ul li:hover {
     font-size: 1.6rem;
     color: var(--cor-branco);
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 8rem;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 .span-principal {
