@@ -1207,40 +1207,6 @@ ul li:hover {
     top: 20rem;
 }
 
-.card-link-principal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 10rem;
-    height: 3rem;
-    width: 10rem;
-    border-radius: 0.5rem;
-    background: var(--cor-branco);
-    left: 1rem;
-}
-
-.card-link-principal:hover {
-    background: var(--cor-vermelho-claro);
-}
-
-.card-link-principal a:hover {
-    color: var(--cor-branco);
-}
-
-.card-link-principal a {
-    color: var(--cor-vermelho-claro);
-}
-
-.card-link-principal :hover {
-    color: var(--cor-azul-suave);
-}
-
-.btn-link img {
-    width: 1rem;
-    height: 1rem;
-    filter: invert(1);
-}
 
 
 /* fim */

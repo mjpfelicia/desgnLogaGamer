@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styleteste.css">
+
+    <title>teste</title>
+</head>
+
+<body>
+    <header class="header content-header" id="box-header">
+        <div class="container-fluid pt-3">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="content-logo">
+                        <img class="logo" style="width:5rem ; border-radius:50%;" src="./imagens/logovermelho.png"
+                            alt="svg">
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <p class="navbar-toggler-icon"></p>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-start" id="navbarScroll">
+                        <ul class="navbar-nav p-lg-4 d-flex justify-content-around" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Departamentos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Destaques</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Contatos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">TELEFONE</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">LOJAS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SUGESTÃO</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="input-group mb-0">
+                            <input type="text" class="form-control" placeholder="Pesquisar produtos"
+                                aria-label="Pesquisar produtos" aria-describedby="basic-addon2">
+                            <p class="input-group-text mb-0" id="basic-addon2">
+                                <img class="svgLupa" src="./imagens/search.svg" alt="">
+                            </p>
+                        </div>
+                        <ul class="navbar-nav flex-row d-flex justify-content-around w-50">
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" href="#">
+                                    <svg width="16" height="16" fill="currentColor" class="bi bi-heart icon"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" href="#">
+                                    <svg width="16" height="16" fill="currentColor" class="bi bi-person icon"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" data-bs-toggle="offcanvas" href="#">
+                                    <p data-cart-items="2">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-cart2 icon"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11h5a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                        </svg>
+                                    </p>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="banner-apresentacao">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagens/banner-principal2.jpg" class="d-block w-100 img-banner" alt="...">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Falta pouco para acabar o estoque. Não fique de fora dessa promoção</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/banner2.jpg" class="d-block w-100 img-banner" alt="...">
+                        <div class="carousel-caption  d-md-block">
+                            <h2>Se você é um <span class="span-principal">geek</span>, este é o Site De
+                                Venda Online certa
+                                para você!!</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/banner3.png" class="d-block w-100 img-banner" alt="...">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Escolha cada <span class="span-principal">componente</span> e monte o
+                                computador dos seus sonhos!</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="section-promocao">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-lg-around align-items-center">
+                    <h2 class="title-oportunidade text-produtos p-4">OPORTUNIDADES DA SEMANA</h2>
+                    <a href="#" class="stretched-link text-danger link-vejamais">veja mais</a>
+                </div>
+            </div>
+            <div class="container-fluid conteudo-vendas">
+                <div class="d-flex flex-wrap m-auto">
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CÂMERA CANON EOS REBEL T100 COM LENTE
+                                    <p class="card-text m-0 preco-atual-em-estoque">De&nbsp;R$4.100,00 por:</p>
+                                    <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
+                                    <span class="preco-Avista">à vista</p>
+                                        <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2  mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-20%</div>
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,
+                                    ROSA</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$488 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$139,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-22%</div>
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CADEIRA GAMER ,PRETA E AZUL
+                                    PG-TAU-RED01</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$2.272,61 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$1.249,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
+                                    24-THREADS</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De 4.886,25 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$3.599,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CÂMERA CANON EOS REBEL T100 COM LENTE
+                                    18-55MM</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$4.100,00 por:</p>
+                                <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
+                                <span class="preco-Avista">à vista</p>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2  mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-20%</div>
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,
+                                    ROSA</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$488 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$139,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-22%</div>
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CADEIRA GAMER ,PRETA E AZUL
+                                    PG-TAU-RED01</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$2.272,61 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$1.249,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
+                                    24-THREADS</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De 4.886,25 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$3.599,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="section-lancamento">
+            <div class="col-12 d-flex justify-content-lg-around align-items-center conteudo-titulo">
+                <h2 class="title-oportunidade title-lancamento p-4">LANÇAMENTOS</h2>
+
+            </div>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./imagens/computador.png" class="d-block img-lancamneto w-100" alt="...">
+                        <div class="carousel-caption carousel-lancamneto d-md-block text-center">
+                            <h1 class="title-produto-lancamento">COMPUTADOR HOME, AMD A6-5400B, 8GB DDR3</h1>
+                            <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se apresse!!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./imagens/headphoneslancamneto.jpg" class="d-block img-lancamneto w-100" alt="...">
+                        <div class=" carousel-caption carousel-lancamneto  d-md-block text-center">
+                            <h1 class="title-produto-lancamento">Óculos 3D Realidade Virtual Com Headphone Warrior</h1>
+                            <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se apresse!!
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/tab-game-pad-lancamneto.jpg" class="d-block img-lancamneto w-100" alt="...">
+                        <div class="carousel-caption carousel-lancamneto d-md-block text-center">
+                            <h1 class="title-produto-lancamento">Controle Game Tablet Celular Android Ios</h1>
+                            <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se apresse!!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="section-estoque">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-lg-around align-items-center">
+                    <h2 class="title-oportunidade text-produtos p-4">OS QUERIDINHOS DO MOMENTO
+                    </h2>
+                    <a href="#" class="stretched-link text-danger link-vejamais">veja mais</a>
+                </div>
+            </div>
+            <div class="container-fluid conteudo-vendas">
+                <div class="d-flex flex-wrap m-auto">
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/tvPequena.jpg" class="card-img-top" alt="TV">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
+                                    60HZ, HDMI/VGA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2  mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
+                                </h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$1.249,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$118,36</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">>PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$3.599,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$340,90</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">>PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$3.599,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$340,90</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
+                                </h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$1.249,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$118,36</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2  mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box">
+                            <img src="./imagens/tvPequena.jpg" class="card-img-top" alt="TV">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
+                                    60HZ, HDMI/VGA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-marcas">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-lg-around align-items-center">
+                    <h2 class="title-oportunidade text-produtos p-4">PROCURE POR MARCAS
+                    </h2>
+                </div>
+            </div>
+           
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</body>
+
+</html>

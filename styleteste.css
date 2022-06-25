@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Open+Sans:wght@500;700&family=PT+Serif:wght@700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family:"Roboto";
+
+}
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-azul: #0d6efd;
+    --cor-azul-suave: hsl(231, 69%, 60%);
+    --cor-azul-claro: rgba(105, 179, 254, .09);
+    --cor-azul-escuro: hsl(233, 26%, 24%);
+    --cor-vermelho-claro: hsl(0, 94%, 66%);
+    --cor-verde-limao: hsl(136, 65%, 51%);
+    --cor-ciano-brilhante: hsl(192, 70%, 51%);
+    --cor-azul-acinzentado: hsl(233, 8%, 62%);
+    --cor-azul-acinzentado-claro: hsl(220, 16%, 96%);
+    --cor-cinza: #4b566b;
+    --cor-cinzento-title: #373f50;
+    --cor-cinzento: #dae1e7;
+    --cor-cinza-muito-claro: hsl(0, 0%, 98%);
+    --cor-branco: hsl(0, 0%, 100%);
+    --cor-border: hsl(219deg 1% 72%);
+    --cor-cinza-box-: hsl(220deg 43% 99%);
+}
+
+/* header */
+
+.content-header {
+    background: var(--cor-azul-acinzentado-claro) !important;
+}
+
+.navbar-collapse {
+    background: var(--cor-azul-acinzentado-claro) !important;
+
+}
+.icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--cor-vermelho-claro);
+}
+/* section-apresentaçao*/
+.img-banner {
+    height: 610px;
+}
+.carousel-caption {
+    bottom: 30rem !important;
+}
+/* section-vendas */
+.span-principal {
+    color: var(--cor-azul-suave);
+}
+
+.desconto {
+    width: 3rem;
+    background: var(--cor-vermelho-claro);
+    color: var(--cor-branco);
+    border-radius: 0.2rem;
+    line-height: 1.5rem;
+    margin: 0.9rem;
+}
+
+.preco-atual-em-estoque {
+    color: var(--cor-vermelho-claro) !important;
+    font-size: 1rem !important;
+}
+
+.preco-oferta {
+    color: var(--cor-verde-limao) !important;
+    font-size: 1rem !important;
+}
+
+.preco-Avista {
+    color: var(--cor-cinza) !important;
+    font-size: 1rem !important;
+}
+
+.btn-compra {
+    color: var(--cor-branco);
+    background: var(--cor-vermelho-claro);
+}
+.conteudo-vendas{
+    background-color: var(--cor-azul-acinzentado-claro);
+    padding-top: 5rem;
+}
+.card-img-top{
+    width: 50%;
+    align-self: center;
+}
+.card-title{
+    color: var(--cor-cinzento-title);
+    font-size: 1rem;
+}
+
+.link-vejamais {
+    color: var(--cor-vermelho-claro);
+    font-size: 1.4rem;
+
+}
+
+.title-oportunidade {
+    color: var(--cor-cinzento-title);
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.card:hover {
+    box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+}
+/* section-lancamento */
+.img-lancamneto{
+    height: 500px;
+}
+.carousel-lancamneto{
+    bottom: 21rem!important;
+}
+.conteudo-titulo{
+    height: 100px;
+    border-bottom: 1px solid  var(--cor-border);
+}
+.title-lancamento{
+    font-size: calc(1.3rem + 0.6vw);
+    color: var(--cor-cinzento-title);
+    font-weight: 600;
+    opacity: 0.9;
+
+}
+.title-produto-lancamento{
+    font-size: calc(1.325rem + 0.9vw);
+    color: var(--cor-azul-suave);
+   
+}
+.link-lancamento {
+    color: var(--cor-vermelho-claro);
+    font-size: 1.5rem;
+}
+/* section-marcas */
+

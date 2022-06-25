@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-
     <title>loja virtual de Jogos e Games</title>
 </head>
 
@@ -39,6 +36,7 @@
                             d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
                         </path>
                     </svg>
+
                 </div>
                 <button id="test" class="btn-login login">Login
                     <svg class="svgLogin" viewBox="0 0 24 24" aria-hidden="true">
@@ -54,16 +52,20 @@
                         <div class="tabs">
                             <div role="tablist" aria-label="Entertainment">
 
-                                <button type="button" role="tab" aria-selected="true" aria-controls="login-tab" id="login">Login</button>
-                                <button type="button" role="tab" aria-selected="false" aria-controls="cadastro-tab" id="cadastro" tabindex="-1">cadastro</button>
+                                <button type="button" role="tab" aria-selected="true" aria-controls="login-tab"
+                                    id="login">Login</button>
+                                <button type="button" role="tab" aria-selected="false" aria-controls="cadastro-tab"
+                                    id="cadastro" tabindex="-1">cadastro</button>
 
                                 <div role="tabpanel" id="login-tab">
                                     <form class="login-box">
                                         <h1> Página de login</h1>
                                         <label for="name">Username</label>
-                                        <input type="text" id="name" class="name" placeholder="Digite seu nome" required>
+                                        <input type="text" id="name" class="name" placeholder="Digite seu nome"
+                                            required>
                                         <label for="password">Password</label>
-                                        <input type="password" id="password" class="password" placeholder="Digite sua senha" required>
+                                        <input type="password" id="password" class="password"
+                                            placeholder="Digite sua senha" required>
                                         <button class="login-button">Login</button>
                                         <div class="close-forgot">
                                             <button class="cancel">Cancel</button>
@@ -79,13 +81,16 @@
                                             <p>Por favor, preencha este formulário para criar uma conta.</p>
                                             <hr>
                                             <label for="email"><b>Email</b></label>
-                                            <input id="email" type="text" placeholder="Enter Email" name="email" required>
+                                            <input id="email" type="text" placeholder="Enter Email" name="email"
+                                                required>
 
                                             <label for="psw"><b>Password</b></label>
-                                            <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+                                            <input id="psw" type="password" placeholder="Enter Password" name="psw"
+                                                required>
 
                                             <label for="psw-repeat"><b>Repeat Password</b></label>
-                                            <input id="psw-repeat" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                                            <input id="psw-repeat" type="password" placeholder="Repeat Password"
+                                                name="psw-repeat" required>
 
                                             <label>
                                                 <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -97,7 +102,8 @@
                                                     <button class="cancel">Cancel</button>
                                                 </div>
                                             </div>
-                                            <p>Ao criar uma conta você concorda com nossos <a class="concordaTermos" href="#">Terms & Privacy</a>.</p>
+                                            <p>Ao criar uma conta você concorda com nossos <a class="concordaTermos"
+                                                    href="#">Terms & Privacy</a>.</p>
                                         </div>
                                     </form>
                                 </div>
@@ -143,21 +149,28 @@
                                                 <nav aria-label="breadcrumb">
                                                     <ol class="card-breadcrumb">
                                                         <li class="breadcrumb-item-home">
-                                                            <svg class="svgCazinha" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                                                            <svg class="svgCazinha" focusable="false"
+                                                                viewBox="0 0 24 24" aria-hidden="true">
                                                                 <path
                                                                     d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z">
                                                                 </path>
                                                             </svg>
                                                             <a class="breadcrumb-link" href="">Home
-                                                                <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
-                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                <svg class="svgArrow" viewBox="0 0 24 24"
+                                                                    aria-hidden="true">
+                                                                    <path
+                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z">
+                                                                    </path>
                                                                 </svg>
                                                             </a>
                                                         </li>
                                                         <li class="breadcrumb-item">
                                                             <a class="breadcrumb-link" href="">Shop
-                                                                <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
-                                                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+                                                                <svg class="svgArrow" viewBox="0 0 24 24"
+                                                                    aria-hidden="true">
+                                                                    <path
+                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z">
+                                                                    </path>
                                                                 </svg>
                                                             </a>
                                                         </li>
@@ -177,33 +190,44 @@
                                                 <div class="card-produtos-continueShoppin">
                                                     <h1 class="title-continueshoppin">Products</h1>
                                                     <a class=" btn-outline-primary" href="shop-grid-ls.html">
-                                                        <svg class="svgArrowLeft" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                                                        <svg class="svgArrowLeft" focusable="false" viewBox="0 0 24 24"
+                                                            aria-hidden="true">
+                                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z">
+                                                            </path>
                                                         </svg>Continue shopping</a>
                                                 </div>
                                                 <!-- Item-->
                                                 <div class="content-item">
                                                     <div class="card-item">
                                                         <a class="card-item-link" href="">
-                                                            <img src="./imagens/foneRosa.jpg" width="100" alt="Product"></a>
+                                                            <img src="./imagens/foneRosa.jpg" width="100"
+                                                                alt="Product"></a>
                                                         <div class="">
-                                                            <h3><a class="coluna-descricao" href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                                            <h3><a class="coluna-descricao"
+                                                                    href="shop-single-v1.html">Women Colorblock
+                                                                    Sneakers</a></h3>
                                                             <div class="coluna-detalhe">
-                                                                <span class="c-dth">Size:</span>8.5</div>
+                                                                <span class="c-dth">Size:</span>8.5
+                                                            </div>
                                                             <div class="coluna-detalhe">
-                                                                <span class="c-dth">Color:</span>White &amp; Blue</div>
+                                                                <span class="c-dth">Color:</span>White &amp; Blue
+                                                            </div>
                                                             <div class="coluna-valor">$154.<small>00</small></div>
                                                         </div>
                                                     </div>
 
                                                     <div class="card-quantidade">
                                                         <label class="for-quantidade" for="quantity1">Quantity</label>
-                                                        <input class="quantidade-item" type="number" id="quantity1" min="1" value="1">
+                                                        <input class="quantidade-item" type="number" id="quantity1"
+                                                            min="1" value="1">
                                                         <button class="btn" type="button">
-                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z" fill="#e72626"></path>
+                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32"
+                                                                fill="none" xmlns="https://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z"
+                                                                    fill="#e72626"></path>
                                                             </svg>
-                                                             <span>Remove</span>
+                                                            <span>Remove</span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -211,25 +235,34 @@
                                                 <div class="content-item">
                                                     <div class="card-item">
                                                         <a class="card-item-link" href="">
-                                                            <img src="./imagens/maouse.webp" width="100" alt="Product"></a>
+                                                            <img src="./imagens/maouse.webp" width="100"
+                                                                alt="Product"></a>
                                                         <div class="">
-                                                            <h3><a class="coluna-descricao" href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                                            <h3><a class="coluna-descricao"
+                                                                    href="shop-single-v1.html">Women Colorblock
+                                                                    Sneakers</a></h3>
                                                             <div class="coluna-detalhe">
-                                                                <span class="c-dth">Size:</span>8.5</div>
+                                                                <span class="c-dth">Size:</span>8.5
+                                                            </div>
                                                             <div class="coluna-detalhe">
-                                                                <span class="c-dth">Color:</span>White &amp; Blue</div>
+                                                                <span class="c-dth">Color:</span>White &amp; Blue
+                                                            </div>
                                                             <div class="coluna-valor">$154.<small>00</small></div>
                                                         </div>
                                                     </div>
 
                                                     <div class="card-quantidade">
                                                         <label class="for-quantidade" for="quantity1">Quantity</label>
-                                                        <input class="quantidade-item" type="number" id="quantity1" min="1" value="1">
+                                                        <input class="quantidade-item" type="number" id="quantity1"
+                                                            min="1" value="1">
                                                         <button class="btn" type="button">
-                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z" fill="#e72626"></path>
-                                                            </svg>                               
-                                                             <span>Remove</span>
+                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32"
+                                                                fill="none" xmlns="https://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z"
+                                                                    fill="#e72626"></path>
+                                                            </svg>
+                                                            <span>Remove</span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -237,31 +270,40 @@
                                                 <div class="content-item">
                                                     <div class="card-item">
                                                         <a class="card-item-link" href="">
-                                                            <img src="./imagens/tvPequena.jpg" width="100" alt="Product"></a>
+                                                            <img src="./imagens/tvPequena.jpg" width="100"
+                                                                alt="Product"></a>
                                                         <div class="">
-                                                            <h3><a class="coluna-descricao" href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                                            <h3><a class="coluna-descricao"
+                                                                    href="shop-single-v1.html">Women Colorblock
+                                                                    Sneakers</a></h3>
                                                             <div class="coluna-detalhe">
-                                                                <span class="c-dth">Size:</span>8.5</div>
+                                                                <span class="c-dth">Size:</span>8.5
+                                                            </div>
                                                             <div class="coluna-detalhe">
-                                                                <span class="c-dth">Color:</span>White &amp; Blue</div>
+                                                                <span class="c-dth">Color:</span>White &amp; Blue
+                                                            </div>
                                                             <div class="coluna-valor">$154.<small>00</small></div>
                                                         </div>
                                                     </div>
 
                                                     <div class="card-quantidade">
                                                         <label class="for-quantidade" for="quantity1">Quantity</label>
-                                                        <input class="quantidade-item" type="number" id="quantity1" min="1" value="1">
+                                                        <input class="quantidade-item" type="number" id="quantity1"
+                                                            min="1" value="1">
                                                         <button class="btn" type="button">
-                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z" fill="#e72626"></path>
-                                                            </svg>                                
+                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32"
+                                                                fill="none" xmlns="https://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                    d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z"
+                                                                    fill="#e72626"></path>
+                                                            </svg>
                                                             <span class="">Remove</span>
                                                         </button>
                                                     </div>
                                                 </div>
 
                                                 <button class="btn btn-atualizarCarrinho" type="button">
-                                                   Atualizar Carrinho
+                                                    Atualizar Carrinho
                                                 </button>
                                             </section>
                                             <!-- Sidebar-->
@@ -276,41 +318,65 @@
                                                         <div class="content-orderOptions" id="order-options">
                                                             <div class="whapperOptions">
                                                                 <h3 class="titleOptions">
-                                                                    <a class="title-0ptions" href="#" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="shipping-estimates">Estimativas de envio</a>
+                                                                    <a class="title-0ptions" href="#" role="button"
+                                                                        data-bs-toggle="collapse" aria-expanded="true"
+                                                                        aria-controls="shipping-estimates">Estimativas
+                                                                        de envio</a>
                                                                 </h3>
-                                                                <div id="shipping-estimates" data-bs-parent="#order-options">
+                                                                <div id="shipping-estimates"
+                                                                    data-bs-parent="#order-options">
                                                                     <div class="">
                                                                         <form class="" novalidate="">
                                                                             <div class="card-m3">
                                                                                 <select class="mb-3" required="">
-                                                                                    <option value="">Escolha seu país</option>
-                                                                                    <option value="Australia">Australia</option>
-                                                                                    <option value="Belgium">Belgium</option>
-                                                                                    <option value="Canada">Canada</option>
-                                                                                    <option value="Finland">Finland</option>
-                                                                                    <option value="Mexico">Mexico</option>
-                                                                                    <option value="New Zealand">New Zealand</option>
-                                                                                    <option value="Switzerland">Switzerland</option>
-                                                                                    <option value="United States">United States</option>
+                                                                                    <option value="">Escolha seu país
+                                                                                    </option>
+                                                                                    <option value="Australia">Australia
+                                                                                    </option>
+                                                                                    <option value="Belgium">Belgium
+                                                                                    </option>
+                                                                                    <option value="Canada">Canada
+                                                                                    </option>
+                                                                                    <option value="Finland">Finland
+                                                                                    </option>
+                                                                                    <option value="Mexico">Mexico
+                                                                                    </option>
+                                                                                    <option value="New Zealand">New
+                                                                                        Zealand</option>
+                                                                                    <option value="Switzerland">
+                                                                                        Switzerland</option>
+                                                                                    <option value="United States">United
+                                                                                        States</option>
                                                                                 </select>
                                                                             </div>
                                                                             <div class="card-m3">
                                                                                 <select class="mb-3" required="">
-                                                                                    <option value="">Escolha sua cidade</option>
+                                                                                    <option value="">Escolha sua cidade
+                                                                                    </option>
                                                                                     <option value="Bern">Bern</option>
-                                                                                    <option value="Brussels">Brussels</option>
-                                                                                    <option value="Canberra">Canberra</option>
-                                                                                    <option value="Helsinki">Helsinki</option>
-                                                                                    <option value="Mexico City">Mexico City</option>
-                                                                                    <option value="Ottawa">Ottawa</option>
-                                                                                    <option value="Washington D.C.">Washington D.C.</option>
-                                                                                    <option value="Wellington">Wellington</option>
+                                                                                    <option value="Brussels">Brussels
+                                                                                    </option>
+                                                                                    <option value="Canberra">Canberra
+                                                                                    </option>
+                                                                                    <option value="Helsinki">Helsinki
+                                                                                    </option>
+                                                                                    <option value="Mexico City">Mexico
+                                                                                        City</option>
+                                                                                    <option value="Ottawa">Ottawa
+                                                                                    </option>
+                                                                                    <option value="Washington D.C.">
+                                                                                        Washington D.C.</option>
+                                                                                    <option value="Wellington">
+                                                                                        Wellington</option>
                                                                                 </select>
                                                                             </div>
                                                                             <div class="invalid-feedback">
-                                                                                <input class="mb-3" type="text" placeholder="Forneça um CEP válido!" required="">
+                                                                                <input class="mb-3" type="text"
+                                                                                    placeholder="Forneça um CEP válido!"
+                                                                                    required="">
                                                                             </div>
-                                                                            <button class="btn btn-options" type="submit">Calcular frete</button>
+                                                                            <button class="btn btn-options"
+                                                                                type="submit">Calcular frete</button>
                                                                         </form>
                                                                     </div>
                                                                 </div>
@@ -320,11 +386,16 @@
                                                             <a class="btn btn-checkout" href="#">
                                                                 <svg class="svgCheckout" viewBox="0 0 269.125 269.125">
                                                                     <g>
-                                                                        <path d="m262.125,54.661h-255.125c-3.866,0-7,3.134-7,7v145.804c0,3.866 3.134,7 7,7h255.125c3.866,0 7-3.134 7-7v-145.804c0-3.867-3.134-7-7-7zm-7,145.803h-241.125v-131.803h241.125v131.803z"/>
-                                                                        <path d="m41.507,102.96h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z"/>
-                                                                        <path d="m41.507,125.458h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z"/>
-                                                                        <path d="m41.507,147.955h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z"/>
-                                                                        <path d="m229.176,170.851h-36.901c-3.866,0-7,3.134-7,7s3.134,7 7,7h36.901c3.866,0 7-3.134 7-7s-3.134-7-7-7z"/>
+                                                                        <path
+                                                                            d="m262.125,54.661h-255.125c-3.866,0-7,3.134-7,7v145.804c0,3.866 3.134,7 7,7h255.125c3.866,0 7-3.134 7-7v-145.804c0-3.867-3.134-7-7-7zm-7,145.803h-241.125v-131.803h241.125v131.803z" />
+                                                                        <path
+                                                                            d="m41.507,102.96h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z" />
+                                                                        <path
+                                                                            d="m41.507,125.458h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z" />
+                                                                        <path
+                                                                            d="m41.507,147.955h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z" />
+                                                                        <path
+                                                                            d="m229.176,170.851h-36.901c-3.866,0-7,3.134-7,7s3.134,7 7,7h36.901c3.866,0 7-3.134 7-7s-3.134-7-7-7z" />
                                                                     </g>
                                                                 </svg> Fazer o check-out
                                                             </a>
@@ -334,22 +405,13 @@
                                             </aside>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
-
-
-
-
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
+        </div>
     </header>
     <main>
         <div class="box-geral">
@@ -357,15 +419,9 @@
                 <div class="whapper-principal">
                     <div class="card-imagem-principal">
                         <h2 class="title-principal">
-                            Se você é um <span class="span-principal">geek</span>, este é o Site De Venda Online certa para você!!
+                            Se você é um <span class="span-principal">geek</span>, este é o Site De Venda Online certa
+                            para você!!
                         </h2>
-                        <div class="card-link-principal">
-                            <a class="btn-link" href="">Shop Now</a>
-                            <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                            </svg>
-
-                        </div>
                     </div>
                 </div>
             </section>
@@ -385,7 +441,7 @@
                         <div class="card">
                             <div class="card-1">
                                 <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <img class="imagem-ofertas" src="./imagens/maquinafotografica.jpg" alt="jpj">
                                 <div class="card-informacao-produto">
                                     <h3 class="sub-title-produto-ofertas">
                                         <a class="titlePOferta" href="">CÂMERA CANON EOS REBEL T100 COM LENTE
@@ -393,9 +449,9 @@
                                     </h3>
                                     <div class="card-preco-produto-em-ofertas">
                                         <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de<s>R$ &nbsp;4.100,00</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
+                                            <div class="preco-atual-em-estoque">De R$4.100,00 por:</div>
                                             <div class="preco-oferta">R$3.199,00</div>
+                                            <span class="preco-Avista">à vista</span>
                                         </div>
                                         <button class="btn btn-sm" type="button">
                                             <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
@@ -441,7 +497,7 @@
                         <div class="card">
                             <div class="card-1">
                                 <div class="desconto">-22%</div>
-                                <img class="imagem-ofertas" src="/imagens/cadeira-gamer.jpg" alt="jpj">
+                                <img class="imagem-ofertas" src="./imagens/cadeira-gamer.jpg" alt="jpj">
                                 <div class="card-informacao-produto">
                                     <h3 class="sub-title-produto-ofertas">
                                         <a class="titlePOferta" href="">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL
@@ -470,7 +526,7 @@
                         <div class="card">
                             <div class="card-1">
                                 <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="/imagens/code.jpg" alt="jpj">
+                                <img class="imagem-ofertas" src="./imagens/code.jpg" alt="jpj">
                                 <div class="card-informacao-produto">
                                     <h3 class="sub-title-produto-ofertas">
                                         <a class="titlePOferta" href="">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
@@ -498,7 +554,7 @@
                         <div class="card">
                             <div class="card-1">
                                 <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="/imagens/maquinafotografica.jpg" alt="jpj">
+                                <img class="imagem-ofertas" src="./imagens/maquinafotografica.jpg" alt="jpj">
                                 <div class="card-informacao-produto">
                                     <h3 class="sub-title-produto-ofertas">
                                         <a class="titlePOferta" href="">CÂMERA CANON EOS REBEL T100 COM LENTE
@@ -554,7 +610,7 @@
                         <div class="card">
                             <div class="card-1">
                                 <div class="desconto">-22%</div>
-                                <img class="imagem-ofertas" src="/imagens/cadeira-gamer.jpg" alt="jpj">
+                                <img class="imagem-ofertas" src="./imagens/cadeira-gamer.jpg" alt="jpj">
                                 <div class="card-informacao-produto">
                                     <h3 class="sub-title-produto-ofertas">
                                         <a class="titlePOferta" href="">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL
@@ -582,7 +638,7 @@
                         <div class="card">
                             <div class="card-1">
                                 <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="/imagens/code.jpg" alt="jpj">
+                                <img class="imagem-ofertas" src="./imagens/code.jpg" alt="jpj">
                                 <div class="card-informacao-produto">
                                     <h3 class="sub-title-produto-ofertas">
                                         <a class="titlePOferta" href="">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
@@ -649,10 +705,10 @@
                         <div class="link-produto-em-estoque">
                             <div class="content-ptestoque">
                                 <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/code.jpg" alt="Processador Intel Core">
+                                    <img class="imagem-produto-em-estoque" src="./imagens/code.jpg"
+                                        alt="Processador Intel Core">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">PROCESSADOR INTEL CORE I9-12900, 16-CORE, 24-THREADS.
-                                        </h2>
+                                        <h2 class="title-produto-em-estoque">PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
                                                 <span class="preco-Avista">à vista</span>
@@ -662,7 +718,7 @@
                                             <div class="card-parcelamento">
                                                 <div class="preco-atual">R$&nbsp;4.090,80</div>
                                                 <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual"> 340,90</span>
+                                                    <span class="preco-atual">R$340,90</span>
                                                 </span>
                                                 <div class="parcela-cartao">sem juros no cartão</div>
                                             </div>
@@ -686,7 +742,8 @@
                                 <div class="whapper-produto-em-estoque">
                                     <img class="imagem-produto-em-estoque" src="./imagens/foneRosa.jpg" alt="fome">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA. </h2>
+                                        <h2 class="title-produto-em-estoque">HEADSET GAMER REDRAGON, RGB, DRIVERS
+                                            50MM,ROSA. </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
                                                 <span class="preco-Avista">à vista</span>
@@ -718,9 +775,11 @@
                         <div class="link-produto-em-estoque">
                             <div class="content-ptestoque">
                                 <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/cadeira-gamer.jpg" alt="CADEIRA GAMER">
+                                    <img class="imagem-produto-em-estoque" src="./imagens/cadeira-gamer.jpg"
+                                        alt="CADEIRA GAMER">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL PG-TAU-RED01
+                                        <h2 class="title-produto-em-estoque">CADEIRA GAMER TAURUS,PRETA E AZUL
+                                            PG-TAU-RED01
                                         </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
@@ -729,9 +788,9 @@
                                                 <span class="preco-Avista">no PIX com 12% desconto</span>
                                             </div>
                                             <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;R$ 2.272,61</div>
+                                                <div class="preco-atual">R$&nbsp;R$2.272,61</div>
                                                 <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$ 118,36</span>
+                                                    <span class="preco-atual">R$118,36</span>
                                                 </span>
                                                 <div class="parcela-cartao">sem juros no cartão</div>
                                             </div>
@@ -753,9 +812,11 @@
                         <div class="link-produto-em-estoque">
                             <div class="content-ptestoque">
                                 <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/tvPequena.jpg" alt="TV PEQUENA">
+                                    <img class="imagem-produto-em-estoque" src="./imagens/tvPequena.jpg"
+                                        alt="TV PEQUENA">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">MONITOR TGT MG24, 24 POL. LED FHD, 3MS, 60HZ, HDMI/VGA.
+                                        <h2 class="title-produto-em-estoque">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
+                                            60HZ, HDMI/VGA.
                                         </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
@@ -766,7 +827,7 @@
                                             <div class="card-parcelamento">
                                                 <div class="preco-atual">R$&nbsp;965,80</div>
                                                 <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$ 80,48</span>
+                                                    <span class="preco-atual">R$80,48</span>
                                                 </span>
                                                 <div class="parcela-cartao">sem juros no cartão</div>
                                             </div>
@@ -788,9 +849,11 @@
                         <div class="link-produto-em-estoque">
                             <div class="content-ptestoque">
                                 <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/code.jpg" alt="Processador Intel Core">
+                                    <img class="imagem-produto-em-estoque" src="./imagens/code.jpg"
+                                        alt="Processador Intel Core">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">PROCESSADOR INTEL CORE I9-12900, 16-CORE, 24-THREADS.
+                                        <h2 class="title-produto-em-estoque">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
+                                            24-THREADS.
                                         </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
@@ -825,7 +888,8 @@
                                 <div class="whapper-produto-em-estoque">
                                     <img class="imagem-produto-em-estoque" src="./imagens/foneRosa.jpg" alt="fome">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA. </h2>
+                                        <h2 class="title-produto-em-estoque">HEADSET GAMER REDRAGON, RGB, DRIVERS
+                                            50MM,ROSA. </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
                                                 <span class="preco-Avista">à vista</span>
@@ -857,9 +921,11 @@
                         <div class="link-produto-em-estoque">
                             <div class="content-ptestoque">
                                 <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/cadeira-gamer.jpg" alt="CADEIRA GAMER">
+                                    <img class="imagem-produto-em-estoque" src="./imagens/cadeira-gamer.jpg"
+                                        alt="CADEIRA GAMER">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL PG-TAU-RED01
+                                        <h2 class="title-produto-em-estoque">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL
+                                            PG-TAU-RED01
                                         </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
@@ -892,9 +958,11 @@
                         <div class="link-produto-em-estoque">
                             <div class="content-ptestoque">
                                 <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/tvPequena.jpg" alt="TV PEQUENA">
+                                    <img class="imagem-produto-em-estoque" src="./imagens/tvPequena.jpg"
+                                        alt="TV PEQUENA">
                                     <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">MONITOR TGT MG24, 24 POL. LED FHD, 3MS, 60HZ, HDMI/VGA.
+                                        <h2 class="title-produto-em-estoque">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
+                                            60HZ, HDMI/VGA.
                                         </h2>
                                         <div class="card-preco-produto-em-estoque">
                                             <div class="card-preco-produto-em-estoque">
@@ -1007,7 +1075,9 @@
                                 </div>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/controle-sem-fio-xbox-shock-blue_1628780812_m.jpg" alt="controle">
+                                        <img class="imagem-destaque"
+                                            src="./imagens/controle-sem-fio-xbox-shock-blue_1628780812_m.jpg"
+                                            alt="controle">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1029,7 +1099,8 @@
                                 </div>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/Xbox-Series-S-500-GB-Branco_1632252681_gg.jpg" alt="xbox">
+                                        <img class="imagem-destaque"
+                                            src="./imagens/Xbox-Series-S-500-GB-Branco_1632252681_gg.jpg" alt="xbox">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1064,7 +1135,8 @@
                                 <h3 class="title-vendidos">Novas chegadas ...</h3>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/Mini-Teclado-Sem-Fio.jpg" alt="Mini-Teclado-Sem-Fio">
+                                        <img class="imagem-destaque" src="./imagens/Mini-Teclado-Sem-Fio.jpg"
+                                            alt="Mini-Teclado-Sem-Fio">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1086,7 +1158,8 @@
                                 </div>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/volante-thrustmaster.jpg" alt="volante">
+                                        <img class="imagem-destaque" src="./imagens/volante-thrustmaster.jpg"
+                                            alt="volante">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1108,7 +1181,8 @@
                                 </div>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/tablet-multilaser-peppa-pig.jpg" alt="tablet multilaser">
+                                        <img class="imagem-destaque" src="./imagens/tablet-multilaser-peppa-pig.jpg"
+                                            alt="tablet multilaser">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1188,7 +1262,8 @@
                                 </div>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/caixa-de-som.jpg" alt="caixa-de-som">
+                                        <img class="imagem-destaque" src="./imagens/caixa-de-som.jpg"
+                                            alt="caixa-de-som">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1211,7 +1286,8 @@
                                 </div>
                                 <div class="card-imagem">
                                     <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/Kit-Teclado-E-Mouse-Gamer.jpg" alt="kit">
+                                        <img class="imagem-destaque" src="./imagens/Kit-Teclado-E-Mouse-Gamer.jpg"
+                                            alt="kit">
                                     </a>
                                     <div class="card-img-destaque">
                                         <h6 class="title-destaque">
@@ -1286,9 +1362,9 @@
                             <li class="card-list-item"><a class="card-list-link" href="#">Áudio</a></li>
                             <li class="card-list-item"><a class="card-list-link" href="#">Conectividade</a></li>
                             <li class="card-list-item"><a class="card-list-link" href="#">Câmeras &amp; Digitais</a>
-                                <li class="card-list-item"><a class="card-list-link" href="#">Games</a></li>
-                                <li class="card-list-item"><a class="card-list-link" href="#">Accessories</a></li>
-                                <li class="card-list-item"><a class="card-list-link" href="#">Hardware</a>
+                            <li class="card-list-item"><a class="card-list-link" href="#">Games</a></li>
+                            <li class="card-list-item"><a class="card-list-link" href="#">Accessories</a></li>
+                            <li class="card-list-item"><a class="card-list-link" href="#">Hardware</a>
 
                         </ul>
                     </div>
@@ -1326,12 +1402,14 @@
 
                             <div class="box-input-footer3">
                                 <label for="email"></label>
-                                <input class="btnInpultFooter3" type="email" id="email" placeholder="Enter your email address" required="">
+                                <input class="btnInpultFooter3" type="email" id="email"
+                                    placeholder="Enter your email address" required="">
                                 <p class="footer-msg-error"></p>
                                 <button class="btnEnviar" type="submit">ENVIA</button>
                             </div>
                             <div class="subscription-status">
-                                <div class="text-subscription">*Assine nossa newsletter para receber ofertas de desconto antecipadas, atualizações e informações sobre novos produtos.</div>
+                                <div class="text-subscription">*Assine nossa newsletter para receber ofertas de desconto
+                                    antecipadas, atualizações e informações sobre novos produtos.</div>
                             </div>
                         </form>
                     </div>
@@ -1685,6 +1763,9 @@
     </footer>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
     <script src="./main.js"></script>
     <script type="module" src="./addProduto.js"></script>
     <script type="module" src="./addPEmEstoque.js"></script>
