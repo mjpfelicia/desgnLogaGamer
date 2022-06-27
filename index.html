@@ -6,1558 +6,889 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
-    <title>loja virtual de Jogos e Games</title>
+
+    <title>teste</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="conteudo-nav">
-            <a href="#" class="logo-header" aria-label="logo-bookmark">
-                <img src="./imagens/logovermelho.png" alt="svg">
-            </a>
-            <ul class="conteudo-nav__list">
-                <li class="conteudo-nav-item">
-                    <a class="conteudo-nav-link" href="#">Departamentos</a>
-                </li>
-                <li class="conteudo-nav-item">
-                    <a class="conteudo-nav-link" href="#">Destaques</a>
-                </li>
-                <li class="conteudo-nav-item">
-                    <a class="conteudo-nav-link" href="#">Contatos</a>
-                </li>
-            </ul>
-            <div class="content-btn-pesquisa">
-                <label for="lupa-pesquisa"></label>
-                <div class="card-lupa-pesquisa">
-                    <input id="lupa-pesquisa" type="text" placeholder="Pesquisar produtos">
-                    <svg class="svgLupa" viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                        </path>
-                    </svg>
-
-                </div>
-                <button id="test" class="btn-login login">Login
-                    <svg class="svgLogin" viewBox="0 0 24 24" aria-hidden="true">
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z">
-                        </path>
-                    </svg>
-                </button>
-
-                <div class="modal-cont">
-                    <div class="modal-box">
-                        <span class="close">&times;</span>
-                        <div class="tabs">
-                            <div role="tablist" aria-label="Entertainment">
-
-                                <button type="button" role="tab" aria-selected="true" aria-controls="login-tab"
-                                    id="login">Login</button>
-                                <button type="button" role="tab" aria-selected="false" aria-controls="cadastro-tab"
-                                    id="cadastro" tabindex="-1">cadastro</button>
-
-                                <div role="tabpanel" id="login-tab">
-                                    <form class="login-box">
-                                        <h1> Página de login</h1>
-                                        <label for="name">Username</label>
-                                        <input type="text" id="name" class="name" placeholder="Digite seu nome"
-                                            required>
-                                        <label for="password">Password</label>
-                                        <input type="password" id="password" class="password"
-                                            placeholder="Digite sua senha" required>
-                                        <button class="login-button">Login</button>
-                                        <div class="close-forgot">
-                                            <button class="cancel">Cancel</button>
-                                            <span class="psw">Esqueceu a <a href="#">senha?</a></span>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div tabindex="0" role="tabpanel" id="cadastro-tab" class="is-hidden">
-                                    <form class="login-box">
-                                        <div class="container">
-                                            <h1>Cadastro</h1>
-                                            <p>Por favor, preencha este formulário para criar uma conta.</p>
-                                            <hr>
-                                            <label for="email"><b>Email</b></label>
-                                            <input id="email" type="text" placeholder="Enter Email" name="email"
-                                                required>
-
-                                            <label for="psw"><b>Password</b></label>
-                                            <input id="psw" type="password" placeholder="Enter Password" name="psw"
-                                                required>
-
-                                            <label for="psw-repeat"><b>Repeat Password</b></label>
-                                            <input id="psw-repeat" type="password" placeholder="Repeat Password"
-                                                name="psw-repeat" required>
-
-                                            <label>
-                                                <input type="checkbox" checked="checked" name="remember"> Remember me
-                                            </label>
-
-
-                                            <div class="clearfix">
-                                                <div class="close-forgot">
-                                                    <button class="cancel">Cancel</button>
-                                                </div>
-                                            </div>
-                                            <p>Ao criar uma conta você concorda com nossos <a class="concordaTermos"
-                                                    href="#">Terms & Privacy</a>.</p>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+    <header class="header content-header" id="box-header">
+        <div class="container-fluid pt-3">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="content-logo">
+                        <img class="logo" style="width:5rem ; border-radius:50%;" src="./imagens/logovermelho.png"
+                            alt="svg">
+                    </div>
+                    <button class="navbar-toggler menu-bars" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav p-lg-4 d-flex justify-content-around" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Departamentos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Destaques</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Contatos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">TELEFONE</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">LOJAS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SUGESTÃO</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="input-group mb-0">
+                            <input type="text" class="form-control" placeholder="Pesquisar produtos"
+                                aria-label="Pesquisar produtos" aria-describedby="basic-addon2">
+                            <p class="input-group-text mb-0" id="basic-addon2">
+                                <img class="svgLupa" src="./imagens/search.svg" alt="svgLupa">
+                            </p>
                         </div>
+                        <ul class="navbar-nav flex-row d-flex justify-content-around w-50">
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-heart icon-red"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-person icon-red"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" data-bs-toggle="offcanvas" href="#">
+                                    <i class="bi bi-cart4 icon-red"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item ms-lg-n4">
+                                <a class="nav-link" data-bs-toggle="offcanvas" href="#">
+                                    <i class="bi bi-whatsapp icon-red"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <span class="navbar-tool-label"></span>
-                    <a class=" btn btn-carrinho" href="./checkout.html">
-                        <svg class="svgCarrinho" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                            </path>
-                        </svg>
-                    </a>
-                    <div class="dropdown-content">
-                        <div class="content-widget-cart-item">
-                        </div>
-                        <div class="d-flex-dropdown-content py-3">
-                            <div class="fs-sm">
-                                <span class="text-muted-desconto">DESCONTO:</span>
-                                <span class="text-accent">$.<small id="valor-text-accent-desconto">00</small></span>
-                            </div>
-                            <div class="fs-sm">
-                                <span class="text-muted">TOTAL:</span>
-                                <span class="text-accent">$.<small id="valor-text-accent">00</small></span>
-                            </div>
-                        </div>
-
-
-                        <div class="cardBtn-checkout">
-                            <button id="myBtnCheckout" class="btn-checkout-outline-secondary">Expand cart</button>
-
-                            <div id="ModalmyBtnCheckout" class="modalCheckout">
-
-                                <div class="modalCheckout-content">
-                                    <span class="close">&times;</span>
-
-                                    <div class="header-pagamento">
-                                        <div class="content-header">
-                                            <div class="card-home-shop-cart">
-                                                <nav aria-label="breadcrumb">
-                                                    <ol class="card-breadcrumb">
-                                                        <li class="breadcrumb-item-home">
-                                                            <svg class="svgCazinha" focusable="false"
-                                                                viewBox="0 0 24 24" aria-hidden="true">
-                                                                <path
-                                                                    d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z">
-                                                                </path>
-                                                            </svg>
-                                                            <a class="breadcrumb-link" href="">Home
-                                                                <svg class="svgArrow" viewBox="0 0 24 24"
-                                                                    aria-hidden="true">
-                                                                    <path
-                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z">
-                                                                    </path>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-                                                        <li class="breadcrumb-item">
-                                                            <a class="breadcrumb-link" href="">Shop
-                                                                <svg class="svgArrow" viewBox="0 0 24 24"
-                                                                    aria-hidden="true">
-                                                                    <path
-                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z">
-                                                                    </path>
-                                                                </svg>
-                                                            </a>
-                                                        </li>
-
-                                                    </ol>
-                                                </nav>
-                                            </div>
-                                            <div class="">
-                                                <h1 class="">Your cart</h1>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="container-2">
-                                        <div class="whapper-geral">
-                                            <section class="produtosAdd-para-compras">
-                                                <div class="card-produtos-continueShoppin">
-                                                    <h1 class="title-continueshoppin">Products</h1>
-                                                    <a class=" btn-outline-primary" href="shop-grid-ls.html">
-                                                        <svg class="svgArrowLeft" focusable="false" viewBox="0 0 24 24"
-                                                            aria-hidden="true">
-                                                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z">
-                                                            </path>
-                                                        </svg>Continue shopping</a>
-                                                </div>
-                                                <!-- Item-->
-                                                <div class="content-item">
-                                                    <div class="card-item">
-                                                        <a class="card-item-link" href="">
-                                                            <img src="./imagens/foneRosa.jpg" width="100"
-                                                                alt="Product"></a>
-                                                        <div class="">
-                                                            <h3><a class="coluna-descricao"
-                                                                    href="shop-single-v1.html">Women Colorblock
-                                                                    Sneakers</a></h3>
-                                                            <div class="coluna-detalhe">
-                                                                <span class="c-dth">Size:</span>8.5
-                                                            </div>
-                                                            <div class="coluna-detalhe">
-                                                                <span class="c-dth">Color:</span>White &amp; Blue
-                                                            </div>
-                                                            <div class="coluna-valor">$154.<small>00</small></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="card-quantidade">
-                                                        <label class="for-quantidade" for="quantity1">Quantity</label>
-                                                        <input class="quantidade-item" type="number" id="quantity1"
-                                                            min="1" value="1">
-                                                        <button class="btn" type="button">
-                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32"
-                                                                fill="none" xmlns="https://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                    d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z"
-                                                                    fill="#e72626"></path>
-                                                            </svg>
-                                                            <span>Remove</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Item-->
-                                                <div class="content-item">
-                                                    <div class="card-item">
-                                                        <a class="card-item-link" href="">
-                                                            <img src="./imagens/maouse.webp" width="100"
-                                                                alt="Product"></a>
-                                                        <div class="">
-                                                            <h3><a class="coluna-descricao"
-                                                                    href="shop-single-v1.html">Women Colorblock
-                                                                    Sneakers</a></h3>
-                                                            <div class="coluna-detalhe">
-                                                                <span class="c-dth">Size:</span>8.5
-                                                            </div>
-                                                            <div class="coluna-detalhe">
-                                                                <span class="c-dth">Color:</span>White &amp; Blue
-                                                            </div>
-                                                            <div class="coluna-valor">$154.<small>00</small></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="card-quantidade">
-                                                        <label class="for-quantidade" for="quantity1">Quantity</label>
-                                                        <input class="quantidade-item" type="number" id="quantity1"
-                                                            min="1" value="1">
-                                                        <button class="btn" type="button">
-                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32"
-                                                                fill="none" xmlns="https://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                    d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z"
-                                                                    fill="#e72626"></path>
-                                                            </svg>
-                                                            <span>Remove</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- Item-->
-                                                <div class="content-item">
-                                                    <div class="card-item">
-                                                        <a class="card-item-link" href="">
-                                                            <img src="./imagens/tvPequena.jpg" width="100"
-                                                                alt="Product"></a>
-                                                        <div class="">
-                                                            <h3><a class="coluna-descricao"
-                                                                    href="shop-single-v1.html">Women Colorblock
-                                                                    Sneakers</a></h3>
-                                                            <div class="coluna-detalhe">
-                                                                <span class="c-dth">Size:</span>8.5
-                                                            </div>
-                                                            <div class="coluna-detalhe">
-                                                                <span class="c-dth">Color:</span>White &amp; Blue
-                                                            </div>
-                                                            <div class="coluna-valor">$154.<small>00</small></div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="card-quantidade">
-                                                        <label class="for-quantidade" for="quantity1">Quantity</label>
-                                                        <input class="quantidade-item" type="number" id="quantity1"
-                                                            min="1" value="1">
-                                                        <button class="btn" type="button">
-                                                            <svg class="svgErro" width="10" viewBox="0 0 24 32"
-                                                                fill="none" xmlns="https://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                    d="M16.6154 4H22.1538C23.2615 4 24 4.8 24 6V8H0V6C0 4.8 0.923077 4 1.84615 4H7.38462C7.75385 1.8 9.78461 0 12 0C14.2154 0 16.2462 1.8 16.6154 4ZM9.23077 4H14.7692C14.4 2.8 13.1077 2 12 2C10.8923 2 9.6 2.8 9.23077 4ZM1.84615 10H22.1538L20.4923 30.2C20.4923 31.2 19.5692 32 18.6462 32H5.35385C4.43077 32 3.69231 31.2 3.50769 30.2L1.84615 10Z"
-                                                                    fill="#e72626"></path>
-                                                            </svg>
-                                                            <span class="">Remove</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-                                                <button class="btn btn-atualizarCarrinho" type="button">
-                                                    Atualizar Carrinho
-                                                </button>
-                                            </section>
-                                            <!-- Sidebar-->
-                                            <aside class="content-pagamentos">
-                                                <div class="box-geral">
-                                                    <div class="whapper-pagamentos">
-                                                        <div class="card-valores">
-                                                            <h2 class="title-subtotal">Subtotal</h2>
-                                                            <h3 class="title-preco">$462.<small>00</small></h3>
-                                                        </div>
-
-                                                        <div class="content-orderOptions" id="order-options">
-                                                            <div class="whapperOptions">
-                                                                <h3 class="titleOptions">
-                                                                    <a class="title-0ptions" href="#" role="button"
-                                                                        data-bs-toggle="collapse" aria-expanded="true"
-                                                                        aria-controls="shipping-estimates">Estimativas
-                                                                        de envio</a>
-                                                                </h3>
-                                                                <div id="shipping-estimates"
-                                                                    data-bs-parent="#order-options">
-                                                                    <div class="">
-                                                                        <form class="" novalidate="">
-                                                                            <div class="card-m3">
-                                                                                <select class="mb-3" required="">
-                                                                                    <option value="">Escolha seu país
-                                                                                    </option>
-                                                                                    <option value="Australia">Australia
-                                                                                    </option>
-                                                                                    <option value="Belgium">Belgium
-                                                                                    </option>
-                                                                                    <option value="Canada">Canada
-                                                                                    </option>
-                                                                                    <option value="Finland">Finland
-                                                                                    </option>
-                                                                                    <option value="Mexico">Mexico
-                                                                                    </option>
-                                                                                    <option value="New Zealand">New
-                                                                                        Zealand</option>
-                                                                                    <option value="Switzerland">
-                                                                                        Switzerland</option>
-                                                                                    <option value="United States">United
-                                                                                        States</option>
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="card-m3">
-                                                                                <select class="mb-3" required="">
-                                                                                    <option value="">Escolha sua cidade
-                                                                                    </option>
-                                                                                    <option value="Bern">Bern</option>
-                                                                                    <option value="Brussels">Brussels
-                                                                                    </option>
-                                                                                    <option value="Canberra">Canberra
-                                                                                    </option>
-                                                                                    <option value="Helsinki">Helsinki
-                                                                                    </option>
-                                                                                    <option value="Mexico City">Mexico
-                                                                                        City</option>
-                                                                                    <option value="Ottawa">Ottawa
-                                                                                    </option>
-                                                                                    <option value="Washington D.C.">
-                                                                                        Washington D.C.</option>
-                                                                                    <option value="Wellington">
-                                                                                        Wellington</option>
-                                                                                </select>
-                                                                            </div>
-                                                                            <div class="invalid-feedback">
-                                                                                <input class="mb-3" type="text"
-                                                                                    placeholder="Forneça um CEP válido!"
-                                                                                    required="">
-                                                                            </div>
-                                                                            <button class="btn btn-options"
-                                                                                type="submit">Calcular frete</button>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cardBtn-checkout">
-                                                            <a class="btn btn-checkout" href="#">
-                                                                <svg class="svgCheckout" viewBox="0 0 269.125 269.125">
-                                                                    <g>
-                                                                        <path
-                                                                            d="m262.125,54.661h-255.125c-3.866,0-7,3.134-7,7v145.804c0,3.866 3.134,7 7,7h255.125c3.866,0 7-3.134 7-7v-145.804c0-3.867-3.134-7-7-7zm-7,145.803h-241.125v-131.803h241.125v131.803z" />
-                                                                        <path
-                                                                            d="m41.507,102.96h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z" />
-                                                                        <path
-                                                                            d="m41.507,125.458h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z" />
-                                                                        <path
-                                                                            d="m41.507,147.955h186.111c3.866,0 7-3.134 7-7s-3.134-7-7-7h-186.111c-3.866,0-7,3.134-7,7s3.134,7 7,7z" />
-                                                                        <path
-                                                                            d="m229.176,170.851h-36.901c-3.866,0-7,3.134-7,7s3.134,7 7,7h36.901c3.866,0 7-3.134 7-7s-3.134-7-7-7z" />
-                                                                    </g>
-                                                                </svg> Fazer o check-out
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </aside>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </div>
     </header>
     <main>
-        <div class="box-geral">
-            <section class="content-principal">
-                <div class="whapper-principal">
-                    <div class="card-imagem-principal">
-                        <h2 class="title-principal">
-                            Se você é um <span class="span-principal">geek</span>, este é o Site De Venda Online certa
-                            para você!!
-                        </h2>
+        <section class="banner-apresentacao">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagens/banner-principal2.jpg" class="d-block w-100 img-banner" alt="...">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Falta pouco para acabar o estoque. Não fique de fora dessa promoção</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/banner2.jpg" class="d-block w-100 img-banner" alt="...">
+                        <div class="carousel-caption  d-md-block">
+                            <h2>Se você é um <span class="span-principal">geek</span>, este é o Site De
+                                Venda Online certa
+                                para você!!</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagens/banner3.png" class="d-block w-100 img-banner" alt="...">
+                        <div class="carousel-caption d-md-block">
+                            <h2>Escolha cada <span class="span-principal">componente</span> e monte o
+                                computador dos seus sonhos!</h2>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="content-ofertas">
-                <div class="title-ofertas">
-                    <h2>OPORTUNIDADES DA SEMANA</h2>
-                    <div class="detalhe-link">
-                        <a class="title-link" href="#">Mais Produtos</a>
-                        <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
-                    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="section-promocao">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-around align-items-center">
+                    <h2 class="title-oportunidade text-produtos py-4">OPORTUNIDADES DA SEMANA</h2>
+                    <a href="#" class="text-danger link-vejamais">veja mais
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
                 </div>
-                <div class="content-produto-desconto">
-                    <div class="whapper-produto-ofertas">
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="./imagens/maquinafotografica.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">CÂMERA CANON EOS REBEL T100 COM LENTE
-                                            18-55MM</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">De R$4.100,00 por:</div>
-                                            <div class="preco-oferta">R$3.199,00</div>
-                                            <span class="preco-Avista">à vista</span>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-20%</div>
-                                <img class="imagem-ofertas" src="./imagens/foneRosa.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,
-                                            ROSA</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;488</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$139,90</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-22%</div>
-                                <img class="imagem-ofertas" src="./imagens/cadeira-gamer.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL
-                                            PG-TAU-RED01
-                                        </a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;2.272,61</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$1.249,90</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="./imagens/code.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
-                                            24-THREADS</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;4.886,25</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$3.599,90</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="./imagens/maquinafotografica.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">CÂMERA CANON EOS REBEL T100 COM LENTE
-                                            18-55MM</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;4.100,00</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$3.199,00</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-20%</div>
-                                <img class="imagem-ofertas" src="./imagens/foneRosa.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,
-                                            ROSA</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;488</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$139,90</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-22%</div>
-                                <img class="imagem-ofertas" src="./imagens/cadeira-gamer.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL
-                                            PG-TAU-RED01</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de<s>R$&nbsp;2.272,61</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$1.249,90</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-1">
-                                <div class="desconto">-10%</div>
-                                <img class="imagem-ofertas" src="./imagens/code.jpg" alt="jpj">
-                                <div class="card-informacao-produto">
-                                    <h3 class="sub-title-produto-ofertas">
-                                        <a class="titlePOferta" href="">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
-                                            24-THREADS</a>
-                                    </h3>
-                                    <div class="card-preco-produto-em-ofertas">
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="preco-atual-em-estoque">de <s>R$&nbsp;4.886,25</s> por:</div>
-                                            <span class="preco-Avista">à vista</span>
-                                            <div class="preco-oferta">R$3.599,90</div>
-                                        </div>
-                                        <button class="btn btn-sm" type="button">
-                                            <svg class="svgCarrinhoCompras" width="15" height="15" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                            Add to Cart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <section class="content-lancamento">
-                <h1 class="titulo-sub-card-lancamento">LANÇAMENTOS</h1>
-                <div class="whapper-lancamento">
-                    <div class="card-descricao-lancamento">
-                        <h2 class="sub-titulo-lancamento-h2">Last Gen iPad Pro</h2>
-                        <p class="sub-titlulo-lancamento-p">Com preço imperdível.Se apresse!!
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-produto-em-estoque">
-                <div class="title-produto-em-estoque">
-                    <h2>OS QUERIDINHOS DO MOMENTO</h2>
-                    <div class="detalhe-link">
-                        <a class="title-link" href="">Mais Produtos</a>
-                        <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                        </svg>
-                    </div>
-                </div>
-                <div class="content-produto-em-estoque">
-
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/code.jpg"
-                                        alt="Processador Intel Core">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">PROCESSADOR INTEL CORE I9-12900, 16-CORE.
-                                        </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$3.599,90</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;4.090,80</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$340,90</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+            </div>
+            <div class="container-fluid conteudo-vendas">
+                <div class="d-flex flex-wrap m-auto">
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CÂMERA CANON EOS REBEL T100 COM LENTE</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De&nbsp;R$4.100,00 por:</p>
+                                <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/foneRosa.jpg" alt="fome">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">HEADSET GAMER REDRAGON, RGB, DRIVERS
-                                            50MM,ROSA. </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$639,89</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;R$ 805,02</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">60,60</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-20%</div>
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$488 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$139,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/cadeira-gamer.jpg"
-                                        alt="CADEIRA GAMER">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">CADEIRA GAMER TAURUS,PRETA E AZUL
-                                            PG-TAU-RED01
-                                        </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$1.249,90</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;R$2.272,61</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$118,36</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-22%</div>
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$2.272,61 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$1.249,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/tvPequena.jpg"
-                                        alt="TV PEQUENA">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
-                                            60HZ, HDMI/VGA.
-                                        </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$849,90</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;965,80</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$80,48</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">PROCESSADOR INTEL CORE I9-12900, 16-CORE, 24-THREADS</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De 4.886,25 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$3.599,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/code.jpg"
-                                        alt="Processador Intel Core">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">PROCESSADOR INTEL CORE I9-12900, 16-CORE,
-                                            24-THREADS.
-                                        </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$3.599,90</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;4.090,80</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual"> 340,90</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CÂMERA CANON EOS REBEL T100 COM LENTE 18-55MM</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$4.100,00 por:</p>
+                                <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/foneRosa.jpg" alt="fome">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">HEADSET GAMER REDRAGON, RGB, DRIVERS
-                                            50MM,ROSA. </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$639,89</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;R$ 805,02</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">60,60</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-20%</div>
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM, ROSA</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$488 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$139,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/cadeira-gamer.jpg"
-                                        alt="CADEIRA GAMER">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">CADEIRA GAMER PICHAU TAURUS,PRETA E AZUL
-                                            PG-TAU-RED01
-                                        </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$1.249,90</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;R$ 2.272,61</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$ 118,36</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-22%</div>
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De R$2.272,61 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$1.249,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-produto-em-estoque">
-                        <div class="link-produto-em-estoque">
-                            <div class="content-ptestoque">
-                                <div class="whapper-produto-em-estoque">
-                                    <img class="imagem-produto-em-estoque" src="./imagens/tvPequena.jpg"
-                                        alt="TV PEQUENA">
-                                    <div class="card-detalhe-pdt-estoque">
-                                        <h2 class="title-produto-em-estoque">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
-                                            60HZ, HDMI/VGA.
-                                        </h2>
-                                        <div class="card-preco-produto-em-estoque">
-                                            <div class="card-preco-produto-em-estoque">
-                                                <span class="preco-Avista">à vista</span>
-                                                <div class="preco-oferta">R$849,90</div>
-                                                <span class="preco-Avista">no PIX com 12% desconto</span>
-                                            </div>
-                                            <div class="card-parcelamento">
-                                                <div class="preco-atual">R$&nbsp;965,80</div>
-                                                <span class="preco-parcelamento">em até 12x de
-                                                    <span class="preco-atual">R$ 80,48</span>
-                                                </span>
-                                                <div class="parcela-cartao">sem juros no cartão</div>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-parcelemento" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
+                    <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
+                        <div class="card card-box">
+                            <div class="desconto">-10%</div>
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3">
+                                <h5 class="card-title">PROCESSADOR INTEL CORE I9-12900, 16-CORE, 24-THREADS</h5>
+                                <p class="card-text m-0 preco-atual-em-estoque">De 4.886,25 por:</p>
+                                <p class="card-text mb-1 preco-oferta">R$3.599,90</p>
+                                <p class="preco-Avista">à vista</p>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-            </section>
-            <section class="section-marcas">
-                <h2 class="title-section-marcas">PROCURE POR MARCAS</h2>
-                <div class="container">
-                    <div class="faders">
-                        <div class="left"></div>
-                        <div class="right"></div>
+            </div>
+        </section>
+        <section class="section-lancamento">
+            <div class="col-12 d-flex justify-content-center conteudo-titulo">
+                <h2 class="title-oportunidade title-lancamento p-4">LANÇAMENTOS</h2>
+            </div>
+            <div class="box-carrosel">
+                <div class="p-5">
+                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="./imagens/computador.png" class="d-block img-lancamneto w-100" alt="...">
+                                <div class="carousel-caption carousel-lancamento d-md-block text-center">
+                                    <h1 class="title-produto-lancamento">COMPUTADOR HOME, AMD A6-5400B, 8GB DDR3</h1>
+                                    <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
+                                        apresse!!
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./imagens/headphoneslancamneto.jpg" class="d-block img-lancamneto w-100"
+                                    alt="...">
+                                <div class=" carousel-caption carousel-lancamento  d-md-block text-center">
+                                    <h1 class="title-produto-lancamento">Óculos 3D Realidade Virtual Com Headphone
+                                        Warrior</h1>
+                                    <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
+                                        apresse!!
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagens/tab-game-pad-lancamneto.jpg" class="d-block img-lancamneto w-100"
+                                    alt="...">
+                                <div class="carousel-caption carousel-lancamento d-md-block text-center">
+                                    <h1 class="title-produto-lancamento">Controle Game Tablet Celular Android Ios</h1>
+                                    <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
+                                        apresse!!
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="items">
-                        <div class="entry">
-                            <img class=" slide slide-1 imagem-marcas" src="./imagens/marcaamazon.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-estoque">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-lg-around align-items-center">
+                    <h2 class="title-oportunidade text-produtos p-4">OS QUERIDINHOS DO MOMENTO
+                    </h2>
+                    <a href="#" class="text-danger link-vejamais">veja mais
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container-fluid conteudo-vendas">
+                <div class="d-flex flex-wrap m-auto">
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/tvPequena.jpg" class="card-img-top" alt="TV">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
+                                    60HZ, HDMI/VGA.
+                                </h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
                         </div>
-                        <div class="entry">
-                            <img class="slide slide-2 imagem-marcas" src="./imagens/marcacalmon.png" alt="">
+                    </div>
+                    <div class="card-container px-2  mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
                         </div>
-                        <div class="entry">
-                            <img class=" slide slide-3 imagem-marcas" src="./imagens/marcacji.png" alt="">
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
+                                </h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$1.249,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$118,36</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
                         </div>
-                        <div class="entry">
-                            <img class=" slide slide-4 imagem-marcas" src="./imagens/marcamicrofo.png" alt="">
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">>PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$3.599,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$340,90</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
                         </div>
-                        <div class="entry">
-                            <img class="slide slide-5  imagem-marcas" src="./imagens/marcasansung.png" alt="">
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">>PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$3.599,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$340,90</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
+                                </h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$1.249,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$118,36</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2  mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
+                        <div class="card mb-3 card-box pt-3">
+                            <img src="./imagens/tvPequena.jpg" class="card-img-top" alt="TV">
+                            <div class="card-body card-vendas p-3  text-center">
+                                <h5 class="card-title">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
+                                    60HZ, HDMI/VGA.</h5>
+                                <span class="preco-Avista">à vista</p>
+                                    <div class="preco-oferta">R$849,90</div>
+                                    <span class="preco-Avista">no PIX com 12% desconto</span>
+                                    <div class="card-parcelamento pb-4">
+                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                        <span class="preco-parcelamento">em até 12x de
+                                            <span class="preco-atual text-danger">R$80,48</span>
+                                        </span>
+                                        <div class="parcela-cartao">sem juros no cartão</div>
+                                    </div>
+                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="section-destaque">
-                <div class="content-destaque container">
-                    <div class="whapper-destaque row">
-                        <div class="card-destaque col-sm">
-                            <div class="content-vendidos">
-                                <h3 class="title-vendidos">Mais vendidos ...</h3>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/maouse.webp" alt="MOUSE">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="">MOUSE GAMER TRUST GXT 900.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$153.<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#W">
-                                        <img class="imagem-destaque" src="./imagens/teclado.jpg" alt="teclado">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">TECLADO MECÂNICO LOGITECH.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$1.149.<small>90</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque"
-                                            src="./imagens/controle-sem-fio-xbox-shock-blue_1628780812_m.jpg"
-                                            alt="controle">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="">Controle Sem Fio Xbox Shock.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$449.<small>90</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque"
-                                            src="./imagens/Xbox-Series-S-500-GB-Branco_1632252681_gg.jpg" alt="xbox">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="">Xbox Series S, 500 GB, Branco.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$3.086,<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="detalhe-destaque">
-                                    <a class="title-link" href="">Veja mais </a>
-                                    <svg class="svgArrowDestaque" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-destaque col-sm">
-                            <div class="content-vendidos">
-                                <h3 class="title-vendidos">Novas chegadas ...</h3>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/Mini-Teclado-Sem-Fio.jpg"
-                                            alt="Mini-Teclado-Sem-Fio">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Mini Teclado Sem Fio 3 Cores Led.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$259.<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="">
-                                        <img class="imagem-destaque" src="./imagens/volante-thrustmaster.jpg"
-                                            alt="volante">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Volante Thrustmaster TM Open Wheel.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$1.234,<small>91</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#">
-                                        <img class="imagem-destaque" src="./imagens/tablet-multilaser-peppa-pig.jpg"
-                                            alt="tablet multilaser">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Tablet Multilaser Peppa Pig Tela 7,
-                                                Bluetooth.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$429,<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#">
-                                        <img class="imagem-destaque" src="./imagens/webcam-hikvision.jpg" alt="webcam">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Webcam Hikvision Full HD Lentes Fixas</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$201,<small>46</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="detalhe-destaque">
-                                    <a class="title-link" href="">Veja mais </a>
-                                    <svg class="svgArrow" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="card-destaque col-sm">
-                            <div class="content-vendidos">
-                                <h3 class="title-vendidos">Mais Visitados...</h3>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#">
-                                        <img class="imagem-destaque" src="./imagens/t-flight-hotas-4.jpg"
-                                            alt="t-flight-hotas-4">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Gamepad sem fio Pro Controller</a>
-                                        </h6>
-                                        <div class="preco-oferta">
-                                            <span class="preco-oferta">R$259.<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#">
-                                        <img class="imagem-destaque" src="./imagens/caixa-de-som.jpg"
-                                            alt="caixa-de-som">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Caixa de Som Portátil Essential.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$169.<small>15</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#">
-                                        <img class="imagem-destaque" src="./imagens/Kit-Teclado-E-Mouse-Gamer.jpg"
-                                            alt="kit">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Kit Teclado E Mouse Gamer Multilaser.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$241,<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="card-imagem">
-                                    <a class="link-vendidos" href="#">
-                                        <img class="imagem-destaque" src="./imagens/tvPequena.jpg" alt="TV">
-                                    </a>
-                                    <div class="card-img-destaque">
-                                        <h6 class="title-destaque">
-                                            <a class="title-destaque" href="#">Monitor Brazil PC 19 HD LED.</a>
-                                        </h6>
-                                        <div class="card-preco">
-                                            <span class="preco-oferta">R$559.<small>00</small>
-                                            </span>
-                                        </div>
-                                        <button class="btn btn-destaque" type="button">
-                                            <svg class="svgbtn-parcelemento" width="20" height="20" viewBox="0 0 24 24"
-                                                aria-hidden="true">
-                                                <path
-                                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z">
-                                                </path>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="detalhe-destaque">
-                                    <a class="title-link" href="">Veja mais </a>
-                                    <svg class="svgArrowDestaque" viewBox="0 0 24 24" aria-hidden="true">
-                                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                    </svg>
-                                </div>
-                            </div>
-
-                        </div>
+            </div>
+        </section>
+        <section class="section-marcas">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center whapper-marcas">
+                    <h2 class="title-oportunidade text-produtos p-4">PROCURE POR MARCAS
+                    </h2>
+                </div>
+            </div>
+            <div class="slider-marcas">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="./imagens/marcaamazon.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcacalmon.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcacji.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcamicrofo.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcasansung.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcaamazon.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcacalmon.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcacji.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcamicrofo.png" height="100" width="250" alt="MARCAS" />
+                    </div>
+                    <div class="slide">
+                        <img src="./imagens/marcasansung.png" height="100" width="250" alt="MARCAS" />
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+
+        </section>
+        <section class="container section-destaques pb-4 pb-md-5">
+            <div class="row">
+                <!-- Mais vendidos-->
+                <div class="col-md-4 col-sm-6 mb-2 py-3">
+                    <div class="widget">
+                        <h3 class="widget-title mb-4">Mais vendidos...</h3>
+                        <div class="d-flex align-items-center pb-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/maouse.webp" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">MOUSE GAMER TRUST GXT 900.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$259.<small>00</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
+                                href="#">
+                                <img src="./imagens/teclado.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title"><a href="#">TECLADO MECÂNICO LOGITECH.</a>
+                                </h6>
+                                <div class="widget-product-meta"><span
+                                        class="text-accent">R$1.149.<small>00</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0" href="#"><img
+                                    src="./imagens/tvPequena.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Android Smart TV Box</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$67.<small>00</small></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0" href="#"><img
+                                    src="./imagens/controle-sem-fio-xbox-shock-blue_1628780812_m.jpg" width="64"
+                                    alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title"><a href="#">Controle Sem Fio Xbox Shock.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$449.<small>00</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mb-0">...</p>
+                    <a class="fs-sm link-vejamais" href="#">Veja mais
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                <!-- Novas chegadas-->
+                <div class="col-md-4 col-sm-6 mb-2 py-3">
+                    <div class="widget">
+                        <h3 class="widget-title mb-4">Novas chegadas...</h3>
+                        <div class="d-flex align-items-center pb-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="shop-single-v2.html">
+                                <img src="./imagens/Mini-Teclado-Sem-Fio.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Mini Teclado Sem Fio 3 Cores Led.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$259.<small>00</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/volante-thrustmaster.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Volante Thrustmaster TM Open Wheel.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$1.234,<small>91</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/tablet-multilaser-peppa-pig.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Tablet Multilaser Peppa Pig Tela 7, Bluetooth.</a>
+                                </h6>
+                                <div class="widget-product-meta"><span
+                                        class="text-accent">R$429,<small>97</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/webcam-hikvision.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Webcam Hikvision Full HD Lentes Fixas</a>
+                                </h6>
+                                <div class="widget-product-meta"><span
+                                        class="text-accent">R$201.<small>99</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">...</p>
+                        <a class="fs-sm link-vejamais" href="#">Veja mais
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Mais Visitados -->
+                <div class="col-md-4 col-sm-6 mb-2 py-3">
+                    <div class="widget">
+                        <h3 class="widget-title mb-4">Mais Visitados...</h3>
+                        <div class="d-flex align-items-center pb-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/t-flight-hotas-4.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Gamepad sem fio Pro Controller</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$259.<small>99</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/caixa-de-som.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Caixa de Som Portátil Essential.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$169.<small>60</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2 border-bottom">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/Kit-Teclado-E-Mouse-Gamer.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title">
+                                    <a href="#">Kit Teclado E Mouse Gamer Multilaser.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$241.<small>75</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center py-2">
+                            <a class="d-block flex-shrink-0" href="#">
+                                <img src="./imagens/tvPequena.jpg" width="64" alt="Product"></a>
+                            <div class="ps-2">
+                                <h6 class="widget-product-title"><a href="#">Monitor Brazil PC 19 HD LED.</a>
+                                </h6>
+                                <div class="widget-product-meta">
+                                    <span class="text-accent">R$559.<small>00</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">...</p>
+                        <a class="fs-sm link-vejamais" href="#">Veja mais
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="whapper-footer">
-                <div class="card-footer">
-                    <div class="widget">
-                        <h3 class="title-footer">Shop Departamentos</h3>
-                        <ul class="widget-list">
-
-                            <li class="card-list-item"><a class="card-list-link" href="#">Tablets, iPads
-                                    e&amp;E-readers</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Cadeiras</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Benefício</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Telefonia Fixa</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Serviços Digitais</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Áudio</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Conectividade</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Câmeras &amp; Digitais</a>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Games</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Accessories</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Hardware</a>
-
-                        </ul>
+    <footer>
+        <footer class="footer pt-5">
+            <div class="container">
+                <div class="row pb-2">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-links widget-light pb-2 mb-4">
+                            <h3 class="widget-title text-light">Shop Departamentos</h3>
+                            <ul class="widget-list">
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Áudio</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Accessories</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Cadeiras</li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Conectividade</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Câmeras &amp;
+                                        Digitais</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Games</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Hardware</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Serviços Digitais</a>
+                                </li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sunglasses &amp;
+                                        Eyewear</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Telefonia Fixa</a>
+                                </li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Tablets, iPads
+                                        e&E-readers</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Relógios</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <div class="widget">
-                        <h3 class="title-footer">Conta &amp; Informação de Envio</h3>
-                        <ul class="widget-list">
-                            <li class="card-list-item"><a class="card-list-link" href="#">Sua conta</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Taxas de
-                                    envio&amp;policies</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Reembolsos&amp;substitutos</a>
-                            </li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Acompanhamento de pedidos</a>
-                            </li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Informações de entrega</a>
-                            </li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Impostos</a></li>
-                        </ul>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-links widget-light pb-2 mb-4">
+                            <h3 class="widget-title text-light">Conta &amp; Informação de Envio</h3>
+                            <ul class="widget-list">
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sua conta</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Taxas de
+                                        envio&amp;policies</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Reembolsos&amp;substitutos</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Acompanhamento de
+                                        pedidos</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Informações de
+                                        entrega</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Impostos</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget widget-links widget-light pb-2 mb-4">
+                            <h3 class="widget-title text-light">Sobre nós</h3>
+                            <ul class="widget-list">
+                                <li class="widget-list-item"><a class="widget-list-link text-light opacity-50" href="#">Sobre companhia</a>
+                                </li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Nosso time</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Carreiras</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Notícia</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="widget">
-                        <h3 class="title-footer">Sobre nós</h3>
-                        <ul class="widget-list">
-                            <li class="card-list-item"><a class="card-list-link" href="#">Sobre companhia</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Nosso time</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Carreiras</a></li>
-                            <li class="card-list-item"><a class="card-list-link" href="#">Notícia</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-footer card-footer3">
-                    <div class="widget widget-2">
-                        <h3 class="title-footer">Mantenha-se informado</h3>
-                        <form action="form-control" method="post" name="form-control">
-
-                            <div class="box-input-footer3">
-                                <label for="email"></label>
-                                <input class="btnInpultFooter3" type="email" id="email"
-                                    placeholder="Enter your email address" required="">
-                                <p class="footer-msg-error"></p>
-                                <button class="btnEnviar" type="submit">ENVIA</button>
-                            </div>
-                            <div class="subscription-status">
-                                <div class="text-subscription">*Assine nossa newsletter para receber ofertas de desconto
-                                    antecipadas, atualizações e informações sobre novos produtos.</div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="widget pb-2 mb-4">
-                        <h3 class="widget-title text-light pb-1">Baixe nosso aplicativo</h3>
-                        <div class="d-flex flex-wrap">
-                            <div class="me-2 mb-2">
-                                <a class="btn-market btn-apple" href="#" role="button">
-                                    <span class="btn-checkout-outline-secondary">Download on the</span>
-                                    <span class="btn-market-title">App Store</span>
-                                </a>
-                            </div>
-                            <div class="mb-2"><a class="btn-market btn-google" href="#" role="button">
-                                    <span class="btn-market-subtitle">Download on the</span>
-                                    <span class="btn-market-title">Google Play</span>
-                                </a>
+                    <div class="col-md-4">
+                        <div class="widget pb-2 mb-4">
+                            <h3 class="widget-title text-light pb-1">Mantenha-se informado</h3>
+                            <form class="subscription-form validate" method="post" name="subscribe" target="_blank">
+                                <div class="input-group flex-nowrap">
+                                    <input class="form-control rounded-start" type="email" name="EMAIL"
+                                        placeholder="EMAIL">
+                                    <button class="btn btn-danger" type="submit" name="subscribe">envier</button>
+                                </div>
+                                <div class="form-text text-light opacity-50">
+                                    *Assine nossa newsletter para receber ofertas de desconto antecipadas, atualizações
+                                    e informações sobre novos produtos. </div>
+                                <div class="subscription-status"></div>
+                            </form>
+                        </div>
+                        <div class="widget pb-2 mb-4">
+                            <h3 class="widget-title text-light pb-1">Baixe nosso aplicativo</h3>
+                            <div class="d-flex flex-wrap">
+                                <div class="me-2 mb-2">
+                                    <a class="btn" href="#" role="button">
+                                        <img src="./imagens/disponivel-na-app-store-botao.png" whidth="100" height="50"
+                                            alt="store">
+                                    </a>
+                                </div>
+                                <div class="mb-2">
+                                    <a class="btn" href="#" role="button">
+                                        <img src="./imagens/disponivel-na-app-store-botao.png" whidth="100" height="50"
+                                            alt="app">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="content-footerDetalhe">
-            <div class="whapper-footerDetalhe">
-                <div class="box-entrega">
-                    <div class="card-entrega">
-                        <div class="d-flex">
-                            <svg class="svgEntrega" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z">
-                                </path>
-                            </svg>
-                            <div class="text-d-flex">
-                                <h6 class="title-d-flex">Entrega rápida e gratuita</h6>
-                                <p class="p-d-flex">Entrega grátis para todos os pedidos acima de R$200</p>
+                <div class="pt-5 bg-darker">
+                    <div class="container">
+                        <div class="row pb-3">
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-truck icon-red"></i>
+                                    <div class="ps-3">
+                                        <h6 class="fs-base text-light mb-1">Entrega rápida e gratuita</h6>
+                                        <p class="mb-0 fs-ms text-light opacity-50">Entrega grátis para pedidos acima de
+                                            R$200</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-cash-coin icon-red"></i>
+                                    <div class="ps-3">
+                                        <h6 class="fs-base text-light mb-1">Garantia de devolução de dinheiro</h6>
+                                        <p class="mb-0 fs-ms text-light opacity-50">Devolvemos o dinheiro em até 30 dias
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-telephone-inbound icon-red"></i>
+                                    <div class="ps-3">
+                                        <h6 class="fs-base text-light mb-1">Suporte ao cliente 24 horas por dia.</h6>
+                                        <p class="mb-0 fs-ms text-light opacity-50">Suporte ao cliente24 horas por dia,
+                                            7
+                                            dias por semana</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 mb-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-shield-lock icon-red"></i>
+                                    <div class="ps-3">
+                                        <h6 class="fs-base text-light mb-1">Pagamento online seguro</h6>
+                                        <p class="mb-0 fs-ms text-light opacity-50">We possess SSL / Secure сertificate
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-entrega">
-                        <div class="d-flex">
-                            <svg class="svgDevolucao" viewBox="3 2.5 14 14" x="0" y="0">
-                                <path
-                                    d="m17 15.6-.6-1.2-.6-1.2v-7.3c0-.2 0-.4-.1-.6-.3-1.2-1.4-2.2-2.7-2.2h-1c-.3-.7-1.1-1.2-2.1-1.2s-1.8.5-2.1 1.3h-.8c-1.5 0-2.8 1.2-2.8 2.7v7.2l-1.2 2.5-.2.4h14.4zm-12.2-.8.1-.2.5-1v-.1-7.6c0-.8.7-1.5 1.5-1.5h6.1c.8 0 1.5.7 1.5 1.5v7.5.1l.6 1.2h-10.3z">
-                                </path>
-                                <path d="m10 18c1 0 1.9-.6 2.3-1.4h-4.6c.4.9 1.3 1.4 2.3 1.4z"></path>
-                            </svg>
-                            <div class="text-d-flex">
-                                <h6 class="title-d-flex">Garantia de devolução de dinheiro</h6>
-                                <p class="p-d-flex">Devolvemos o dinheiro em até 30 dias</p>
+                        <hr class="text-danger border-2 opacity-75 mb-5">
+                        <div class="row pb-2">
+                            <div class="col-md-6 text-center text-md-start mb-4">
+
+                                <div class="widget widget-links widget-light">
+                                    <ul
+                                        class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
+                                        <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Pontos de
+                                                venda</a>
+                                        </li>
+                                        <li class="widget-list-item me-4"><a class="widget-list-link"
+                                                href="#">Afiliados</a></li>
+                                        <li class="widget-list-item me-4"><a class="widget-list-link"
+                                                href="#">Apoiar</a>
+                                        </li>
+                                        <li class="widget-list-item me-4"><a class="widget-list-link"
+                                                href="#">Privacidade</a>
+                                        </li>
+                                        <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Termos de
+                                                uso</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end mb-4 rede-social-link">
+                                <div class="mb-3 whapper-icon text-center">
+                                    <a class="ms-2 mb-2 linpa" href="#">
+                                        <i class="bi bi-twitter icon-red"></i> </a>
+                                    <a class="ms-2 mb-2 linpa" href="#">
+                                        <i class="bi bi-facebook icon-red"></i> </a>
+                                    <a class="ms-2 mb-2 linpa" href="#">
+                                        <i class="bi bi-instagram icon-red"></i> </a>
+                                    <a class="ms-2 mb-2 linpa" href="#">
+                                        <i class="bi bi-pinterest icon-red"></i> </a>
+                                    <a class="ms-2 mb-2 linpa" href="#">
+                                        <i class="bi bi-youtube icon-red"></i> </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-entrega">
-                        <div class="d-flex">
-
-                            <svg class="SvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12.88 5.05c3.18.4 5.67 2.89 6.07 6.07.06.51.49.88.99.88.04 0 .08 0 .12-.01.55-.07.94-.57.87-1.12-.51-4.09-3.72-7.3-7.81-7.81-.55-.06-1.05.33-1.11.88-.07.55.32 1.05.87 1.11zm.38 2.11c-.53-.14-1.08.18-1.22.72s.18 1.08.72 1.22c1.05.27 1.87 1.09 2.15 2.15.12.45.52.75.97.75.08 0 .17-.01.25-.03.53-.14.85-.69.72-1.22-.47-1.77-1.84-3.14-3.59-3.59zm5.97 8.1l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z">
-                                </path>
-                            </svg>
-                            <div class="text-d-flex">
-                                <h6 class="title-d-flex">Suporte ao cliente 24 horas por dia.</h6>
-                                <p class="p-d-flex">Suporte ao cliente24 horas por dia, 7 dias por semana</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-entrega">
-                        <div class="d-flex">
-                            <svg class="svgPagamento" viewBox="0 0 16 16" fill="none">
-                                <path
-                                    d="M8.00065 14.6667C11.6825 14.6667 14.6673 11.6819 14.6673 8.00004C14.6673 4.31814 11.6825 1.33337 8.00065 1.33337C4.31875 1.33337 1.33398 4.31814 1.33398 8.00004C1.33398 11.6819 4.31875 14.6667 8.00065 14.6667Z"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path
-                                    d="M5.33464 8.00004C5.33464 11.6819 6.52854 14.6667 8.0013 14.6667C9.47406 14.6667 10.668 11.6819 10.668 8.00004C10.668 4.31814 9.47406 1.33337 8.0013 1.33337C6.52854 1.33337 5.33464 4.31814 5.33464 8.00004Z"
-                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                <path d="M1.33398 8H14.6673" stroke="currentColor" stroke-linecap="round"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                            <div class="text-d-flex">
-                                <h6 class="title-d-flex">Pagamento online seguro</h6>
-                                <p class="p-d-flex">Possuímos certificado SSL/Secure</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-footer-rodape">
-                    <div class="content-rodape">
-                        <div class="card-rodape1">
-
-                            <div class="card-item-link-rodape">
-                                <ul class="card-list-rodape">
-                                    <li class="card-widget-item"><a class="card-list-link" href="#">Outlets</a></li>
-                                    <li class="card-widget-item"><a class="card-list-link" href="#">Affiliates</a></li>
-                                    <li class="card-widget-item"><a class="card-list-link" href="#">Support</a></li>
-                                    <li class="card-widget-item"><a class="card-list-link" href="#">Privacy</a></li>
-                                    <li class="card-widget-item"><a class="card-list-link" href="#">Terms of use</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a class="card-list-link direitos-autorais" href="#" rel="noopener">© All rights
-                                reserved.Made by Mjpfelicia</a>
-
-                        </div>
-
-                        <div class="card-icons-rodape">
-                            <a href="#" class="icons">
-                                <svg class="svgYOu" width="30" height="30" viewBox="0 0 20 20">
-                                    <title>facebook</title>
-                                    <path fill="000"
-                                        d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="#" class="icons">
-                                <svg class="svgYOu" width="30" height="30" viewBox="0 0 21 20">
-                                    <title>YouTube</title>
-                                    <path fill="000"
-                                        d="M10.333 0c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.701 14.077c-1.752.12-5.653.12-7.402 0C4.735 13.947 4.514 13.018 4.5 10c.014-3.024.237-3.947 2.132-4.077 1.749-.12 5.651-.12 7.402 0 1.898.13 2.118 1.059 2.133 4.077-.015 3.024-.238 3.947-2.133 4.077zM8.667 8.048l4.097 1.949-4.097 1.955V8.048z">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="#" class="icons">
-                                <svg class="svgYOu" width="30" height="30" viewBox="0 0 21 18">
-                                    <title>twitter</title>
-                                    <path fill="000"
-                                        d="M20.667 2.797a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.606.996A4.096 4.096 0 0014.513.873c-2.649 0-4.595 2.472-3.997 5.038a11.648 11.648 0 01-8.457-4.287 4.109 4.109 0 001.27 5.478A4.086 4.086 0 011.47 6.59c-.045 1.901 1.317 3.68 3.29 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.834 2.85 8.25 8.25 0 01-6.075 1.7 11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.662-12.205a8.354 8.354 0 002.048-2.124z">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="#" class="icons">
-                                <svg class="svgYOu" width="30" height="30" viewBox="0 0 20 20">
-                                    <title>pinterest</title>
-                                    <path fill="000"
-                                        d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z">
-                                    </path>
-                                </svg>
-                            </a>
-                            <a href="#" class="icons">
-                                <svg class="svgYOu" width="30" height="30" viewBox="0 0 21 20">
-                                    <title>instagram</title>
-                                    <path fill="000"
-                                        d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z">
-                                    </path>
-                                </svg>
-                            </a>
+                        <div class="pb-4 fs-xs text-light opacity-50 text-center">
+                            Todos os direitos reservados.Feito por Mjpfelicia
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
+        </footer>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./carroselmarcas.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-        </script>
-    <script src="./main.js"></script>
-    <script type="module" src="./addProduto.js"></script>
-    <script type="module" src="./addPEmEstoque.js"></script>
-    <script src="./modal.js"></script>
+
+</body>
 
 </body>
 
