@@ -1363,42 +1363,31 @@ ul li:hover {
 /*  inicio section lançamento */
 
 .whapper-lancamento {
+    background-image: url(./imagens/lancamentooffer.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 25rem;
-    background: var(--cor-azul-claro);
-    padding: 1rem 2rem;
     cursor: pointer;
-}
 
-.content-lancamento {
-    padding: 0 3rem;
-    margin-top: 2rem;
 }
 
 .card-descricao-lancamento {
-    flex: 0 0 auto;
-    width: 50%;
-    height: 100%;
-}
-
-.card-imagem-lancameto {
-    flex: 0 0 auto;
-    width: 50%;
-    height: 100%;
-}
-
-.card-imagem-lancameto img {
     width: 100%;
-}
-
-.sub-card-lancamento {
+    text-align: center;
     height: 90%;
-    padding: 2rem 0 0 3rem;
+}
+.titulo-sub-card-lancamento {
+    font-size: calc(1.3rem + 0.6vw);
+    color: var(--cor-cinzento-title);
+    text-align: center;
+    font-weight: 600;
+    padding: 2rem 0;
 }
 
-.sub-card-lancamento h2 {
+ .sub-titulo-lancamento-h2 {
     font-size: calc(1.325rem + 0.9vw);
     color: var(--cor-azul-suave);
     font-weight: bolder;
@@ -1406,15 +1395,8 @@ ul li:hover {
     margin-bottom: 0.6rem;
     padding-top: 1rem;
 }
-
-.sub-card-lancamento span {
-    font-size: calc(1.3rem + 0.6vw);
-    color: var(--cor-cinzento-title);
-    font-weight: 600;
-}
-
-.sub-card-lancamento p {
-    color: var(--cor-cinza);
+.sub-titlulo-lancamento-p{
+    color: var(--cor-vermelho-claro);
 }
 
 .detalhe-link-lancamento {
@@ -1708,6 +1690,7 @@ ul li:hover {
 
 footer a {
     color: var(--cor-branco);
+    text-decoration: none;
 }
 
 .whapper-footer {
