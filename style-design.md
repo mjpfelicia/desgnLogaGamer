@@ -24,7 +24,7 @@ The designs were created to the following widths:
 
 ### Headings
 
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Family: [roboto,](https://fonts.google.com/specimen/Poppins)
 - Weights: 700
 
 ### Body
