@@ -15,15 +15,19 @@ body {
 :root {
     --cor-azul: #0d6efd;
     --cor-azul-suave: hsl(231, 69%, 60%);
+    --cor-azul-claro: rgba(105, 179, 254, .09);
     --cor-azul-escuro: hsl(233, 26%, 24%);
     --cor-azul-footer: #2b3445;
+    --cor-azul-acinzentado-claro: hsl(220, 16%, 96%);
     --cor-branco: hsl(0, 0%, 100%);
+    --cor-border: hsl(219deg 20% 90%);
     --cor-cinza: #4b566b;
     --cor-ciano-brilhante: hsl(192, 70%, 51%);
     --cor-cinzento-title: #373f50;
     --cor-card: #f8f9fa;
     --cor-cinzento: #dae1e7;
     --cor-cinza-muito-claro: hsl(0, 0%, 98%);
+    --cor-cinza-box-: hsl(220deg 43% 99%);
     --cor-verde-limao: hsl(136, 65%, 51%);
     --cor-vermelho-claro: hsl(0, 94%, 66%);
 }
