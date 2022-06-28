@@ -17,8 +17,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <div class="content-logo">
-                        <img class="logo" style="width:90%" src="./imagens/logoes.png"
-                            alt="svg">
+                        <img class="logo" style="width:90%" src="./imagens/logoes.png" alt="svg">
                     </div>
                     <button class="navbar-toggler menu-bars" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -65,10 +64,144 @@
                                 </a>
                             </li>
                             <li class="nav-item ms-lg-n4">
-                                <a class="nav-link" href="#">
-                                    <i class="bi bi-person icon-red"></i>
+                                <a class="nav-link">
+                                    <i class="bi bi-person icon-red" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop">
+                                    </i>
                                 </a>
                             </li>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close">
+                                            </button>
+                                        </div>
+                                        <div class="modal-body p-5">
+                                            <ul class="nav list-inline" role="tablist">
+                                                <li class="list-inline-item">
+                                                    <a class="nav-link nav-link-lg active text-danger" data-bs-toggle="tab"
+                                                        href="#loginModalTabLogin" role="tab" id="loginModalLinkLogin"
+                                                        aria-controls="loginModalTabLogin" aria-selected="true">Login
+                                                    </a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <a class="nav-link nav-link-lg text-success" data-bs-toggle="tab"
+                                                        href="#loginModalTabRegister" role="tab"
+                                                        id="loginModalLinkRegister"
+                                                        aria-controls="loginModalTabRegister"
+                                                        aria-selected="false">Register
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <hr class="mb-3">
+                                            <div class="tab-content">
+                                                <div class="tab-pane active fade show px-3 login" id="loginModalTabLogin"
+                                                    role="tabpanel" aria-labelledby="loginModalLinkLogin">
+                                                    <form action="customer-orders.html" method="get">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="email">Email</label>
+                                                            <input class="form-control" id="email" type="text" placeholder="EMAIL">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <label class="form-label"
+                                                                        for="loginPassword">Senha
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <a class="form-text small" href="#">
+                                                                        Esqueceu a senha?
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <input class="form-control" name="loginPassword"
+                                                                id="loginPassword" placeholder="Senha"
+                                                                type="password" required=""
+                                                                data-msg="Please enter your password">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" id="loginRemember"
+                                                                    type="checkbox">
+                                                                <label class="form-check-label text-muted"
+                                                                    for="loginRemember">
+                                                                    <span class="text-sm">Lembre-ne</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-grid mb-3">
+                                                            <button class="btn btn-outline-dark" type="submit">
+                                                                <i class="bi bi-box-arrow-in-right svg-icon "></i>
+                                                                Login
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                    <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
+                                                    <div class="text-center">
+                                                        <button class="btn btn btn-outline-primary letter-spacing-0"
+                                                            data-bs-toggle="tooltip" title="Connect with Facebook"
+                                                            data-bs-original-title="Connect with Facebook">
+                                                            <i class="bi bi-facebook"></i>
+                                                        </button>
+                                                        <button class="btn btn btn-outline-muted letter-spacing-0"
+                                                            data-bs-toggle="tooltip" title="Connect with Google"
+                                                            data-bs-original-title="Connect with Google">
+                                                            <i class="bi bi-google"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade px-3 regirtra" id="loginModalTabRegister"
+                                                    role="tabpanel" aria-labelledby="loginModalLinkRegister">
+                                                    <form action="customer-orders.html" method="get">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="registerName">Name</label>
+                                                            <input class="form-control" id="registerName" type="text">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="registerEmail">Email</label>
+                                                            <input class="form-control" id="registerEmail" type="text">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label"
+                                                                for="registerPassword">Senha</label>
+                                                            <input class="form-control" id="registerPassword"
+                                                                type="password">
+                                                        </div>
+                                                        <div class="d-grid mb-3 text-center">
+                                                            <button class="btn btn-outline-dark" type="submit">
+                                                                <i class="bi bi-person svg-icon"></i>
+                                                                Register
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                    <hr class="my-3 hr-text letter-spacing-2"
+                                                        data-content="OR CONNECT WITH">
+                                                    <div class="text-center">
+                                                        <button class="btn btn btn-outline-primary letter-spacing-0"
+                                                            data-bs-toggle="tooltip" title="Conecte-se com o Facebook"
+                                                            data-bs-original-title="Conecte-se com o Facebook">
+                                                            <i class="bi bi-google"></i>
+                                                        </button>
+                                                        <button class="btn btn btn-outline-muted letter-spacing-0"
+                                                            data-bs-toggle="tooltip" title="Conecte-se com o Google"
+                                                            data-bs-original-title="Conecte-se com o Google">
+                                                            <i class="bi bi-google"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                             <li class="nav-item ms-lg-n4">
                                 <a class="nav-link" data-bs-toggle="offcanvas" href="#">
                                     <i class="bi bi-cart4 icon-red"></i>
@@ -147,7 +280,10 @@
                             <div class="desconto">-10%</div>
                             <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">CÂMERA CANON EOS REBEL T100 COM LENTE</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="CÂMERA CANON EOS REBEL T100 COM LENTE">
+                                    CÂMERA CANON EOS REBEL T100 COM LENTE
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De&nbsp;R$4.100,00 por:</p>
                                 <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
                                 <p class="preco-Avista">à vista</p>
@@ -158,9 +294,13 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-20%</div>
-                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA">
+                                    HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA
+                                </h5>
+
                                 <p class="card-text m-0 preco-atual-em-estoque">De R$488 por:</p>
                                 <p class="card-text mb-1 preco-oferta">R$139,90</p>
                                 <p class="preco-Avista">à vista</p>
@@ -171,9 +311,12 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-22%</div>
-                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01">
+                                    CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De R$2.272,61 por:</p>
                                 <p class="card-text mb-1 preco-oferta">R$1.249,90</p>
                                 <p class="preco-Avista">à vista</p>
@@ -184,9 +327,12 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-10%</div>
-                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">PROCESSADOR INTEL CORE I9-12900, 16-CORE, 24-THREADS</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title=" PROCESSADOR INTEL CORE I9-12900, 16-CORE,24-THREADS">
+                                    PROCESSADOR INTEL CORE I9-12900, 16-CORE,24-THREADS
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De 4.886,25 por:</p>
                                 <p class="card-text mb-1 preco-oferta">R$3.599,90</p>
                                 <p class="preco-Avista">à vista</p>
@@ -197,9 +343,12 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-10%</div>
-                            <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">CÂMERA CANON EOS REBEL T100 COM LENTE 18-55MM</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="CÂMERA CANON EOS REBEL T100 COM LENTE 18-55MM">
+                                    CÂMERA CANON EOS REBEL T100 COM LENTE 18-55MM
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De R$4.100,00 por:</p>
                                 <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
                                 <p class="preco-Avista">à vista</p>
@@ -210,9 +359,12 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-20%</div>
-                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM, ROSA</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="HEADSET GAMER REDRAGON, RGB,DRIVERS 50MM,ROSA">
+                                    HEADSET GAMER REDRAGON, RGB,DRIVERS 50MM,ROSA
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De R$488 por:</p>
                                 <p class="card-text mb-1 preco-oferta">R$139,90</p>
                                 <p class="preco-Avista">à vista</p>
@@ -223,9 +375,12 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-22%</div>
-                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01">
+                                    CADEIRA GAMER ,PRETA E AZUL PG-TAU-RED01
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De R$2.272,61 por:</p>
                                 <p class="card-text mb-1 preco-oferta">R$1.249,90</p>
                                 <p class="preco-Avista">à vista</p>
@@ -236,9 +391,12 @@
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
                         <div class="card card-box">
                             <div class="desconto">-10%</div>
-                            <img src="./imagens/code.jpg" class="card-img-top" alt="...">
+                            <img src="./imagens/code.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
-                                <h5 class="card-title">PROCESSADOR INTEL CORE I9-12900, 16-CORE, 24-THREADS</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="PROCESSADOR INTEL CORE I9-12900, 16-CORE,24-THREADS">
+                                    PROCESSADOR INTEL CORE I9-12900, 16-CORE,24-THREADS
+                                </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De 4.886,25 por:</p>
                                 <p class="card-text mb-1 preco-oferta">R$3.599,90</p>
                                 <p class="preco-Avista">à vista</p>
@@ -267,7 +425,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="./imagens/computador.png" class="d-block img-lancamneto w-100" alt="...">
+                                <img src="./imagens/computador.png" class="d-block img-lancamneto w-100" alt="Product">
                                 <div class="carousel-caption carousel-lancamento d-md-block text-center">
                                     <h1 class="title-produto-lancamento">COMPUTADOR HOME, AMD A6-5400B, 8GB DDR3</h1>
                                     <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
@@ -327,8 +485,9 @@
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/tvPequena.jpg" class="card-img-top" alt="TV">
                             <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
-                                    60HZ, HDMI/VGA.
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="MONITOR TGT MG24, 24 POL.LED FHD, 3MS,60HZ, HDMI/VGA.">
+                                    MONITOR TGT MG24, 24 POL.LED FHD, 3MS, 60HZ, HDMI/VGA.
                                 </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$849,90</div>
@@ -348,7 +507,10 @@
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
                             <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.">
+                                    HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.
+                                </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$849,90</div>
                                     <span class="preco-Avista">no PIX com 12% desconto</span>
@@ -367,7 +529,9 @@
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
                             <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="CADEIRA GAMER PRETA E AZUL PG-TAU-RED01">
+                                    CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
                                 </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$1.249,90</div>
@@ -386,8 +550,11 @@
                     <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/code.jpg" class="card-img-top" alt="...">
-                            <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">>PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h5>
+                            <div class="card-body card-vendas p-3 text-center">
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="PROCESSADOR INTEL CORE I9-12900, 16-CORE.">
+                                    PROCESSADOR INTEL CORE I9-12900, 16-CORE.
+                                </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$3.599,90</div>
                                     <span class="preco-Avista">no PIX com 12% desconto</span>
@@ -406,7 +573,10 @@
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/code.jpg" class="card-img-top" alt="...">
                             <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">>PROCESSADOR INTEL CORE I9-12900, 16-CORE.</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="PROCESSADOR INTEL CORE I9-12900, 16-CORE.">
+                                    PROCESSADOR INTEL CORE I9-12900, 16-CORE.
+                                </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$3.599,90</div>
                                     <span class="preco-Avista">no PIX com 12% desconto</span>
@@ -424,8 +594,10 @@
                     <div class="card-container px-2 mb-5 col-12 col-sm-6 col-md-3">
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="...">
-                            <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
+                            <div class="card-body card-vendas p-3 text-center">
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="CADEIRA GAMER PRETA E AZUL PG-TAU-RED01">
+                                    CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
                                 </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$1.249,90</div>
@@ -445,7 +617,10 @@
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="...">
                             <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.">
+                                    HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.
+                                </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$849,90</div>
                                     <span class="preco-Avista">no PIX com 12% desconto</span>
@@ -464,8 +639,10 @@
                         <div class="card mb-3 card-box pt-3">
                             <img src="./imagens/tvPequena.jpg" class="card-img-top" alt="TV">
                             <div class="card-body card-vendas p-3  text-center">
-                                <h5 class="card-title">MONITOR TGT MG24, 24 POL. LED FHD, 3MS,
-                                    60HZ, HDMI/VGA.</h5>
+                                <h5 class="card-title text-truncate" data-toggle="tooltip" data-placement="top"
+                                    title="MONITOR TGT MG24, 24 POL. LED FHD, 3MS,60HZ, HDMI/VGA.">
+                                    MONITOR TGT MG24, 24 POL.LED FHD, 3MS,60HZ, HDMI/VGA.
+                                </h5>
                                 <span class="preco-Avista">à vista</p>
                                     <div class="preco-oferta">R$849,90</div>
                                     <span class="preco-Avista">no PIX com 12% desconto</span>
@@ -543,6 +720,7 @@
                                     <span class="text-accent">R$259.<small>00</small>
                                     </span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2 border-bottom"><a class="d-block flex-shrink-0"
@@ -554,6 +732,7 @@
                                 <div class="widget-product-meta"><span
                                         class="text-accent">R$1.149.<small>00</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2"><a class="d-block flex-shrink-0" href="#"><img
@@ -565,6 +744,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$67.<small>00</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
 
@@ -577,6 +757,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$449.<small>00</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                     </div>
@@ -599,6 +780,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$259.<small>00</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2 border-bottom">
@@ -611,6 +793,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$1.234,<small>91</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2 border-bottom">
@@ -623,6 +806,7 @@
                                 <div class="widget-product-meta"><span
                                         class="text-accent">R$429,<small>97</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2">
@@ -635,11 +819,12 @@
                                 <div class="widget-product-meta"><span
                                         class="text-accent">R$201.<small>99</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <p class="mb-0">...</p>
                         <a class="fs-sm link-vejamais" href="#">Veja mais
-                            <i class="bi bi-chevron-right"></i>
+                            <i class="bi bi-chevron-right svg-icon"></i>
                         </a>
                     </div>
                 </div>
@@ -657,6 +842,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$259.<small>99</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2 border-bottom">
@@ -669,6 +855,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$169.<small>60</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2 border-bottom">
@@ -681,6 +868,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$241.<small>75</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <div class="d-flex align-items-center py-2">
@@ -692,6 +880,7 @@
                                 <div class="widget-product-meta">
                                     <span class="text-accent">R$559.<small>00</small></span>
                                 </div>
+                                <i class="bi bi-cart3 svg-icon"></i>
                             </div>
                         </div>
                         <p class="mb-0">...</p>
@@ -711,23 +900,35 @@
                         <div class="widget widget-links widget-light pb-2 mb-4">
                             <h3 class="widget-title text-light">Shop Departamentos</h3>
                             <ul class="widget-list">
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Áudio</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Accessories</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Cadeiras</li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Conectividade</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Câmeras &amp;
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Áudio</a>
+                                </li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Accessories</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Cadeiras
+                                </li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Conectividade</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Câmeras
+                                        &amp;
                                         Digitais</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Games</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Hardware</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Serviços Digitais</a>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Games</a>
                                 </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sunglasses &amp;
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Hardware</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Serviços
+                                        Digitais</a>
+                                </li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sunglasses
+                                        &amp;
                                         Eyewear</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Telefonia Fixa</a>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Telefonia
+                                        Fixa</a>
                                 </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Tablets, iPads
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Tablets,
+                                        iPads
                                         e&E-readers</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Relógios</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Relógios</a></li>
                             </ul>
                         </div>
                     </div>
@@ -735,26 +936,34 @@
                         <div class="widget widget-links widget-light pb-2 mb-4">
                             <h3 class="widget-title text-light">Conta &amp; Informação de Envio</h3>
                             <ul class="widget-list">
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sua conta</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sua
+                                        conta</a></li>
                                 <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Taxas de
                                         envio&amp;policies</a></li>
                                 <li class="widget-list-item"><a class="widget-list-link opacity-50"
                                         href="#">Reembolsos&amp;substitutos</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Acompanhamento de
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Acompanhamento de
                                         pedidos</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Informações de
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Informações
+                                        de
                                         entrega</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Impostos</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Impostos</a></li>
                             </ul>
                         </div>
                         <div class="widget widget-links widget-light pb-2 mb-4">
                             <h3 class="widget-title text-light">Sobre nós</h3>
                             <ul class="widget-list">
-                                <li class="widget-list-item"><a class="widget-list-link text-light opacity-50" href="#">Sobre companhia</a>
+                                <li class="widget-list-item"><a class="widget-list-link text-light opacity-50"
+                                        href="#">Sobre companhia</a>
                                 </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Nosso time</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Carreiras</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Notícia</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Nosso
+                                        time</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
+                                        href="#">Carreiras</a></li>
+                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Notícia</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -884,6 +1093,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./login.js"></script>
 
 </body>
 

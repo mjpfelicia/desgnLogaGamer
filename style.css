@@ -104,7 +104,7 @@ body {
 
 .card-title {
     color: var(--cor-cinzento-title);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .link-vejamais {
@@ -166,7 +166,7 @@ body {
 }
 
 /* section-marcas */
-.whapper-marcas{
+.whapper-marcas {
     border-bottom: 1px solid var(--cor-border);
 }
 
@@ -180,7 +180,7 @@ body {
     }
 }
 
-.slider-marcas{
+.slider-marcas {
     background: white;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
     height: 100px;
@@ -216,33 +216,43 @@ body {
     display: flex;
     width: calc(250px * 14);
 }
+
 /* section-destaques */
-.widget-product-title a{
+.widget-product-title a {
     color: var(--cor-cinzento-title);
     font-size: 0.8rem;
     text-decoration: none;
 }
-.text-accent{
+
+.text-accent {
     color: var(--cor-verde-limao);
 }
-.widget-list a{
+
+.widget-list a {
     color: var(--cor-azul-acinzentado-claro);
     list-style: none;
 }
-.widget-list li{
+
+.widget-list li {
     list-style: none;
 }
 
 /* footer */
-.footer{
+.footer {
     background: var(--cor-azul-footer);
 }
+
 .icon-red {
     color: var(--cor-vermelho-claro);
     font-size: 2.5rem;
 }
-.linpa{
+
+.svg-icon {
+    color: var(--cor-vermelho-claro);
+}
+
+.linpa {
     text-decoration: none;
 }
 
-
+/* login modal*/
