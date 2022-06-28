@@ -254,5 +254,42 @@ body {
 .linpa {
     text-decoration: none;
 }
+/* carrinho de compras */
 
-/* login modal*/
+  
+
+@media only screen and (max-width: 600px) {
+    .img-banner {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        bottom: 18rem !important;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .content-logo {
+        padding-bottom: 1rem;
+    }
+
+    .navbar-collapse {
+    margin-top:1rem !important;
+    }
+    .title-produto-lancamento{
+        font-size: 1rem;
+    }
+    .carousel-lancamento{
+        bottom: 10rem!important;
+    }
+    .img-lancamneto {
+        height: 300px;
+    }
+    .link-lancamento {
+        font-size: 0.9rem;
+    }
+
+
+}

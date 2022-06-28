@@ -57,22 +57,22 @@
                                 <img class="svgLupa" src="./imagens/search.svg" alt="svgLupa">
                             </p>
                         </div>
-                        <ul class="navbar-nav flex-row d-flex justify-content-around w-50">
-                            <li class="nav-item ms-lg-n4">
+                        <div class="navbar-nav flex-row d-flex justify-content-around w-50">
+                            <div class="nav-item ms-lg-n4">
                                 <a class="nav-link" href="#">
                                     <i class="bi bi-heart icon-red"></i>
                                 </a>
-                            </li>
-                            <li class="nav-item ms-lg-n4">
+                            </div>
+                            <div class="nav-item ms-lg-n4">
                                 <a class="nav-link">
-                                    <i class="bi bi-person icon-red" class="btn btn-primary" data-bs-toggle="modal"
+                                    <i class="bi bi-person icon-red" data-bs-toggle="modal"
                                         data-bs-target="#staticBackdrop">
                                     </i>
                                 </a>
-                            </li>
-                            <!-- Modal -->
+                            </div>
+                            <!-- Modal login -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                data-bs-keyboard="false" tabindex="-1"
                                 aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -82,36 +82,38 @@
                                             </button>
                                         </div>
                                         <div class="modal-body p-5">
-                                            <ul class="nav list-inline" role="tablist">
-                                                <li class="list-inline-item">
-                                                    <a class="nav-link nav-link-lg active text-danger" data-bs-toggle="tab"
-                                                        href="#loginModalTabLogin" role="tab" id="loginModalLinkLogin"
-                                                        aria-controls="loginModalTabLogin" aria-selected="true">Login
+                                            <div class="nav list-inline" role="tablist">
+                                                <div class="list-inline-item">
+                                                    <a class="nav-link nav-link-lg active text-danger"
+                                                        data-bs-toggle="tab" href="#loginModalTabLogin" role="tab"
+                                                        id="loginModalLinkLogin" aria-controls="loginModalTabLogin"
+                                                        aria-selected="true">Login
                                                     </a>
-                                                </li>
-                                                <li class="list-inline-item">
+                                                </div>
+                                                <div class="list-inline-item">
                                                     <a class="nav-link nav-link-lg text-success" data-bs-toggle="tab"
                                                         href="#loginModalTabRegister" role="tab"
                                                         id="loginModalLinkRegister"
                                                         aria-controls="loginModalTabRegister"
                                                         aria-selected="false">Register
                                                     </a>
-                                                </li>
-                                            </ul>
+                                                </div>
+                                            </div>
                                             <hr class="mb-3">
                                             <div class="tab-content">
-                                                <div class="tab-pane active fade show px-3 login" id="loginModalTabLogin"
-                                                    role="tabpanel" aria-labelledby="loginModalLinkLogin">
+                                                <div class="tab-pane active fade show px-3 login"
+                                                    id="loginModalTabLogin" role="tabpanel"
+                                                    aria-labelledby="loginModalLinkLogin">
                                                     <form action="customer-orders.html" method="get">
                                                         <div class="mb-3">
                                                             <label class="form-label" for="email">Email</label>
-                                                            <input class="form-control" id="email" type="text" placeholder="EMAIL">
+                                                            <input class="form-control" id="email" type="text"
+                                                                placeholder="EMAIL">
                                                         </div>
                                                         <div class="mb-3">
                                                             <div class="row">
                                                                 <div class="col">
-                                                                    <label class="form-label"
-                                                                        for="loginPassword">Senha
+                                                                    <label class="form-label" for="loginPassword">Senha
                                                                     </label>
                                                                 </div>
                                                                 <div class="col-auto">
@@ -121,9 +123,8 @@
                                                                 </div>
                                                             </div>
                                                             <input class="form-control" name="loginPassword"
-                                                                id="loginPassword" placeholder="Senha"
-                                                                type="password" required=""
-                                                                data-msg="Please enter your password">
+                                                                id="loginPassword" placeholder="Senha" type="password"
+                                                                required="" data-msg="Please enter your password">
                                                         </div>
                                                         <div class="mb-3">
                                                             <div class="form-check">
@@ -200,19 +201,95 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <li class="nav-item ms-lg-n4">
-                                <a class="nav-link" data-bs-toggle="offcanvas" href="#">
-                                    <i class="bi bi-cart4 icon-red"></i>
+                            <div class="nav-item ms-lg-n4">
+                                <a class="nav-link btn">
+                                    <i class="bi bi-cart4 icon-red btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                    </i>
                                 </a>
-                            </li>
-                            <li class="nav-item ms-lg-n4">
+                            </div>
+                            <!-- Modal carrinho-->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                        </button>
+                                    </div>
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content sidebar-cart-content">
+                                            <div class="modal-header mb-3 border-0">
+                                                <button class="btn-close btn-close-lg btn-close-rotate opacity-8"
+                                                    type="button" data-bs-dismiss="modal" aria-label="Close">
+                                                </button>
+                                            </div>
+                                            <div class="modal-body px-5 sidebar-cart-body">
+                                                <div
+                                                    class="sidebar-cart-product-wrapper custom-scrollbar mCustomScrollbar _mCS_1">
+                                                    <div id="mCSB_1"
+                                                        class="mCustomScrollBox mCS-dark-thin mCSB_vertical mCSB_inside"
+                                                        style="max-height: 502px;" tabindex="0">
+                                                        <div id="mCSB_1_container" class="mCSB_container"
+                                                            style="position:relative; top:0; left:0;" dir="ltr">
+                                                            <!-- cart item-->
+                                                            <div class="add-produto">
+                                                                <div class="d-flex align-items-center">
+                                                                    <img class="w-25" src="./imagens/cadeira-gamer.jpg"
+                                                                        alt="">
+                                                                    <div class="w-75 d-flex  justify-content-between">
+                                                                        <div class="ps-3">
+                                                                            <h2 class="text-dark fs-1 pb-3">
+                                                                                cadeira-gamer
+                                                                            </h2>
+                                                                            <small class="d-block fs-2 pb-4">
+                                                                                Quantidade:1
+                                                                            </small>
+                                                                            <strong class="d-block text-success fs-1">
+                                                                                R$75.00
+                                                                            </strong>
+                                                                        </div>
+                                                                        <i class="bi bi-x icon-red"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="mCSB_1_scrollbar_vertical"
+                                                            class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thin mCSB_scrollTools_vertical"
+                                                            style="display: block;">
+                                                            <div class="mCSB_draggerContainer">
+                                                                <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                                                                    style="position:absolute;min-height:30px;top:0px;display:block;height:313px;max-height:492px;">
+                                                                    <div class="mCSB_dragger_bar"
+                                                                        style="line-height: 30px;"></div>
+                                                                    <div class="mCSB_draggerRail"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer sidebar-cart-footer shadow">
+                                                <div class="w-100">
+                                                    <h3 class="mb-4 fs-1">Subtotal:
+                                                        <span class="float-right">R$000,00</span>
+                                                    </h3>
+                                                    <div class="d-grid gap-3">
+                                                        <a class="btn btn-outline-dark" href="#">Ver carrinho</a>
+                                                        <a class="btn btn-danger" href="#">Confira</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="nav-item ms-lg-n4">
                                 <a class="nav-link" data-bs-toggle="offcanvas" href="#">
                                     <i class="bi bi-whatsapp icon-red"></i>
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -489,17 +566,17 @@
                                     title="MONITOR TGT MG24, 24 POL.LED FHD, 3MS,60HZ, HDMI/VGA.">
                                     MONITOR TGT MG24, 24 POL.LED FHD, 3MS, 60HZ, HDMI/VGA.
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$849,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$80,48</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$849,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$80,48</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -511,17 +588,17 @@
                                     title="HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.">
                                     HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$849,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$80,48</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$849,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$80,48</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -533,17 +610,17 @@
                                     title="CADEIRA GAMER PRETA E AZUL PG-TAU-RED01">
                                     CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$1.249,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$118,36</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$1.249,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$118,36</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -555,17 +632,17 @@
                                     title="PROCESSADOR INTEL CORE I9-12900, 16-CORE.">
                                     PROCESSADOR INTEL CORE I9-12900, 16-CORE.
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$3.599,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$340,90</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$3.599,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$340,90</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -577,17 +654,17 @@
                                     title="PROCESSADOR INTEL CORE I9-12900, 16-CORE.">
                                     PROCESSADOR INTEL CORE I9-12900, 16-CORE.
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$3.599,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$340,90</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$3.599,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;4.090,80</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$340,90</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -599,17 +676,17 @@
                                     title="CADEIRA GAMER PRETA E AZUL PG-TAU-RED01">
                                     CADEIRA GAMER PRETA E AZUL PG-TAU-RED01
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$1.249,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$118,36</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$1.249,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;2.272,61</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$118,36</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -621,17 +698,17 @@
                                     title="HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.">
                                     HEADSET GAMER REDRAGON, RGB, DRIVERS 50MM,ROSA.
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$849,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$80,48</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$849,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$80,48</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -643,17 +720,17 @@
                                     title="MONITOR TGT MG24, 24 POL. LED FHD, 3MS,60HZ, HDMI/VGA.">
                                     MONITOR TGT MG24, 24 POL.LED FHD, 3MS,60HZ, HDMI/VGA.
                                 </h5>
-                                <span class="preco-Avista">à vista</p>
-                                    <div class="preco-oferta">R$849,90</div>
-                                    <span class="preco-Avista">no PIX com 12% desconto</span>
-                                    <div class="card-parcelamento pb-4">
-                                        <div class="preco-atual text-danger">R$&nbsp;965,80</div>
-                                        <span class="preco-parcelamento">em até 12x de
-                                            <span class="preco-atual text-danger">R$80,48</span>
-                                        </span>
-                                        <div class="parcela-cartao">sem juros no cartão</div>
-                                    </div>
-                                    <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
+                                <p class="preco-Avista">à vista</p>
+                                <div class="preco-oferta">R$849,90</div>
+                                <span class="preco-Avista">no PIX com 12% desconto</span>
+                                <div class="card-parcelamento pb-4">
+                                    <div class="preco-atual text-danger">R$&nbsp;965,80</div>
+                                    <span class="preco-parcelamento">em até 12x de
+                                        <span class="preco-atual text-danger">R$80,48</span>
+                                    </span>
+                                    <div class="parcela-cartao">sem juros no cartão</div>
+                                </div>
+                                <a href="#" class="btn btn-compra btn-lg w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
@@ -892,210 +969,204 @@
             </div>
         </section>
     </main>
-    <footer>
-        <footer class="footer pt-5">
-            <div class="container">
-                <div class="row pb-2">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="widget widget-links widget-light pb-2 mb-4">
-                            <h3 class="widget-title text-light">Shop Departamentos</h3>
-                            <ul class="widget-list">
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Áudio</a>
-                                </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Accessories</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Cadeiras
-                                </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Conectividade</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Câmeras
-                                        &amp;
-                                        Digitais</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Games</a>
-                                </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Hardware</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Serviços
-                                        Digitais</a>
-                                </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sunglasses
-                                        &amp;
-                                        Eyewear</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Telefonia
-                                        Fixa</a>
-                                </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Tablets,
-                                        iPads
-                                        e&E-readers</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Relógios</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="widget widget-links widget-light pb-2 mb-4">
-                            <h3 class="widget-title text-light">Conta &amp; Informação de Envio</h3>
-                            <ul class="widget-list">
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sua
-                                        conta</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Taxas de
-                                        envio&amp;policies</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Reembolsos&amp;substitutos</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Acompanhamento de
-                                        pedidos</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Informações
-                                        de
-                                        entrega</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Impostos</a></li>
-                            </ul>
-                        </div>
-                        <div class="widget widget-links widget-light pb-2 mb-4">
-                            <h3 class="widget-title text-light">Sobre nós</h3>
-                            <ul class="widget-list">
-                                <li class="widget-list-item"><a class="widget-list-link text-light opacity-50"
-                                        href="#">Sobre companhia</a>
-                                </li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Nosso
-                                        time</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50"
-                                        href="#">Carreiras</a></li>
-                                <li class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Notícia</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="widget pb-2 mb-4">
-                            <h3 class="widget-title text-light pb-1">Mantenha-se informado</h3>
-                            <form class="subscription-form validate" method="post" name="subscribe" target="_blank">
-                                <div class="input-group flex-nowrap">
-                                    <input class="form-control rounded-start" type="email" name="EMAIL"
-                                        placeholder="EMAIL">
-                                    <button class="btn btn-danger" type="submit" name="subscribe">envier</button>
-                                </div>
-                                <div class="form-text text-light opacity-50">
-                                    *Assine nossa newsletter para receber ofertas de desconto antecipadas, atualizações
-                                    e informações sobre novos produtos. </div>
-                                <div class="subscription-status"></div>
-                            </form>
-                        </div>
-                        <div class="widget pb-2 mb-4">
-                            <h3 class="widget-title text-light pb-1">Baixe nosso aplicativo</h3>
-                            <div class="d-flex flex-wrap">
-                                <div class="me-2 mb-2">
-                                    <a class="btn" href="#" role="button">
-                                        <img src="./imagens/disponivel-na-app-store-botao.png" whidth="100" height="50"
-                                            alt="store">
-                                    </a>
-                                </div>
-                                <div class="mb-2">
-                                    <a class="btn" href="#" role="button">
-                                        <img src="./imagens/disponivel-na-app-store-botao.png" whidth="100" height="50"
-                                            alt="app">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-5 bg-darker">
-                    <div class="container">
-                        <div class="row pb-3">
-                            <div class="col-md-3 col-sm-6 mb-4">
-                                <div class="d-flex">
-                                    <i class="bi bi-truck icon-red"></i>
-                                    <div class="ps-3">
-                                        <h6 class="fs-base text-light mb-1">Entrega rápida e gratuita</h6>
-                                        <p class="mb-0 fs-ms text-light opacity-50">Entrega grátis para pedidos acima de
-                                            R$200</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 mb-4">
-                                <div class="d-flex">
-                                    <i class="bi bi-cash-coin icon-red"></i>
-                                    <div class="ps-3">
-                                        <h6 class="fs-base text-light mb-1">Garantia de devolução de dinheiro</h6>
-                                        <p class="mb-0 fs-ms text-light opacity-50">Devolvemos o dinheiro em até 30 dias
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 mb-4">
-                                <div class="d-flex">
-                                    <i class="bi bi-telephone-inbound icon-red"></i>
-                                    <div class="ps-3">
-                                        <h6 class="fs-base text-light mb-1">Suporte ao cliente 24 horas por dia.</h6>
-                                        <p class="mb-0 fs-ms text-light opacity-50">Suporte ao cliente24 horas por dia,
-                                            7
-                                            dias por semana</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 mb-4">
-                                <div class="d-flex">
-                                    <i class="bi bi-shield-lock icon-red"></i>
-                                    <div class="ps-3">
-                                        <h6 class="fs-base text-light mb-1">Pagamento online seguro</h6>
-                                        <p class="mb-0 fs-ms text-light opacity-50">We possess SSL / Secure сertificate
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="text-danger border-2 opacity-75 mb-5">
-                        <div class="row pb-2">
-                            <div class="col-md-6 text-center text-md-start mb-4">
 
-                                <div class="widget widget-links widget-light">
-                                    <ul
-                                        class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
-                                        <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Pontos de
-                                                venda</a>
-                                        </li>
-                                        <li class="widget-list-item me-4"><a class="widget-list-link"
-                                                href="#">Afiliados</a></li>
-                                        <li class="widget-list-item me-4"><a class="widget-list-link"
-                                                href="#">Apoiar</a>
-                                        </li>
-                                        <li class="widget-list-item me-4"><a class="widget-list-link"
-                                                href="#">Privacidade</a>
-                                        </li>
-                                        <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Termos de
-                                                uso</a></li>
-                                    </ul>
-                                </div>
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row pb-2">
+                <div class="col-md-4 col-sm-6">
+                    <div class="widget widget-links widget-light pb-2 mb-4">
+                        <h3 class="widget-title text-light">Shop Departamentos</h3>
+                        <div class="widget-list">
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Áudio</a>
                             </div>
-                            <div class="col-md-6 text-center text-md-end mb-4 rede-social-link">
-                                <div class="mb-3 whapper-icon text-center">
-                                    <a class="ms-2 mb-2 linpa" href="#">
-                                        <i class="bi bi-twitter icon-red"></i> </a>
-                                    <a class="ms-2 mb-2 linpa" href="#">
-                                        <i class="bi bi-facebook icon-red"></i> </a>
-                                    <a class="ms-2 mb-2 linpa" href="#">
-                                        <i class="bi bi-instagram icon-red"></i> </a>
-                                    <a class="ms-2 mb-2 linpa" href="#">
-                                        <i class="bi bi-pinterest icon-red"></i> </a>
-                                    <a class="ms-2 mb-2 linpa" href="#">
-                                        <i class="bi bi-youtube icon-red"></i> </a>
-                                </div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50"
+                                    href="#">Accessories</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Cadeiras
+                                </a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50"
+                                    href="#">Conectividade</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Câmeras
+                                    &amp;
+                                    Digitais</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Games</a>
                             </div>
-                        </div>
-                        <div class="pb-4 fs-xs text-light opacity-50 text-center">
-                            Todos os direitos reservados.Feito por Mjpfelicia
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Hardware</a>
+                            </div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Serviços
+                                    Digitais</a>
+                            </div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sunglasses
+                                    &amp;
+                                    Eyewear</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Telefonia
+                                    Fixa</a>
+                            </div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Tablets,
+                                    iPads
+                                    e&E-readers</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Relógios</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </footer>
+                <div class="col-md-4 col-sm-6">
+                    <div class="widget widget-links widget-light pb-2 mb-4">
+                        <h3 class="widget-title text-light">Conta &amp; Informação de Envio</h3>
+                        <div class="widget-list">
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Sua
+                                    conta</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Taxas de
+                                    envio&amp;policies</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50"
+                                    href="#">Reembolsos&amp;substitutos</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Acompanhamento
+                                    de
+                                    pedidos</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Informações
+                                    de
+                                    entrega</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Impostos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-links widget-light pb-2 mb-4">
+                        <h3 class="widget-title text-light">Sobre nós</h3>
+                        <div class="widget-list">
+                            <div class="widget-list-item"><a class="widget-list-link text-light opacity-50"
+                                    href="#">Sobre companhia</a>
+                            </div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Nosso
+                                    time</a></div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Carreiras</a>
+                            </div>
+                            <div class="widget-list-item"><a class="widget-list-link opacity-50" href="#">Notícia</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="widget pb-2 mb-4">
+                        <h3 class="widget-title text-light pb-1">Mantenha-se informado</h3>
+                        <form class="subscription-form validate" method="post" name="subscribe" target="_blank">
+                            <div class="input-group flex-nowrap">
+                                <input class="form-control rounded-start" type="email" name="EMAIL" placeholder="EMAIL">
+                                <button class="btn btn-danger" type="submit" name="subscribe">envier</button>
+                            </div>
+                            <div class="form-text text-light opacity-50">
+                                *Assine nossa newsletter para receber ofertas de desconto antecipadas, atualizações
+                                e informações sobre novos produtos. </div>
+                            <div class="subscription-status"></div>
+                        </form>
+                    </div>
+                    <div class="widget pb-2 mb-4">
+                        <h3 class="widget-title text-light pb-1">Baixe nosso aplicativo</h3>
+                        <div class="d-flex flex-wrap">
+                            <div class="me-2 mb-2">
+                                <a class="btn" href="#" role="button">
+                                    <img class="w-50" src="./imagens/disponivel-na-app-store-botao.png" alt="store">
+                                </a>
+                            </div>
+                            <div class="mb-2">
+                                <a class="btn" href="#" role="button">
+                                    <img class="w-50" src="./imagens/disponivel-na-app-store-botao.png" alt="app">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5 bg-darker">
+                <div class="container">
+                    <div class="row pb-3">
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="d-flex">
+                                <i class="bi bi-truck icon-red"></i>
+                                <div class="ps-3">
+                                    <h6 class="fs-base text-light mb-1">Entrega rápida e gratuita</h6>
+                                    <p class="mb-0 fs-ms text-light opacity-50">Entrega grátis para pedidos acima de
+                                        R$200</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="d-flex">
+                                <i class="bi bi-cash-coin icon-red"></i>
+                                <div class="ps-3">
+                                    <h6 class="fs-base text-light mb-1">Garantia de devolução de dinheiro</h6>
+                                    <p class="mb-0 fs-ms text-light opacity-50">Devolvemos o dinheiro em até 30 dias
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="d-flex">
+                                <i class="bi bi-telephone-inbound icon-red"></i>
+                                <div class="ps-3">
+                                    <h6 class="fs-base text-light mb-1">Suporte ao cliente 24 horas por dia.</h6>
+                                    <p class="mb-0 fs-ms text-light opacity-50">Suporte ao cliente24 horas por dia,
+                                        7
+                                        dias por semana</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="d-flex">
+                                <i class="bi bi-shield-lock icon-red"></i>
+                                <div class="ps-3">
+                                    <h6 class="fs-base text-light mb-1">Pagamento online seguro</h6>
+                                    <p class="mb-0 fs-ms text-light opacity-50">We possess SSL / Secure сertificate
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="text-danger border-2 opacity-75 mb-5">
+                    <div class="row pb-2">
+                        <div class="col-md-6 text-center text-md-start mb-4">
+
+                            <div class="widget widget-links widget-light">
+                                <ul
+                                    class="widget-list d-flex flex-wrap justify-content-center justify-content-md-start">
+                                    <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Pontos de
+                                            venda</a>
+                                    </li>
+                                    <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Afiliados</a>
+                                    </li>
+                                    <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Apoiar</a>
+                                    </li>
+                                    <li class="widget-list-item me-4"><a class="widget-list-link"
+                                            href="#">Privacidade</a>
+                                    </li>
+                                    <li class="widget-list-item me-4"><a class="widget-list-link" href="#">Termos de
+                                            uso</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end mb-4 rede-social-link">
+                            <div class="mb-3 whapper-icon text-center">
+                                <a class="ms-2 mb-2 linpa" href="#">
+                                    <i class="bi bi-twitter icon-red"></i> </a>
+                                <a class="ms-2 mb-2 linpa" href="#">
+                                    <i class="bi bi-facebook icon-red"></i> </a>
+                                <a class="ms-2 mb-2 linpa" href="#">
+                                    <i class="bi bi-instagram icon-red"></i> </a>
+                                <a class="ms-2 mb-2 linpa" href="#">
+                                    <i class="bi bi-pinterest icon-red"></i> </a>
+                                <a class="ms-2 mb-2 linpa" href="#">
+                                    <i class="bi bi-youtube icon-red"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pb-4 fs-xs text-light opacity-50 text-center">
+                        Todos os direitos reservados.Feito por Mjpfelicia
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./login.js"></script>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
