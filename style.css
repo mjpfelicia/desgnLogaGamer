@@ -2,6 +2,7 @@
 
 body {
     font-family: "Roboto";
+    cursor: pointer;
 }
 
 *,
@@ -36,6 +37,7 @@ body {
 
 .content-header {
     background: var(--cor-azul-acinzentado-claro) !important;
+    cursor: pointer;
 }
 
 .navbar-collapse {
@@ -56,15 +58,6 @@ body {
 /* section-vendas */
 .span-principal {
     color: var(--cor-azul-suave);
-}
-
-.desconto {
-    width: 3rem;
-    background: var(--cor-vermelho-claro);
-    color: var(--cor-branco);
-    border-radius: 0.2rem;
-    line-height: 1.5rem;
-    margin: 0.9rem;
 }
 
 .preco-atual-em-estoque {
@@ -249,9 +242,7 @@ body {
 .linpa {
     text-decoration: none;
 }
-/* carrinho de compras */
-
-  
+ 
 
 @media only screen and (max-width: 600px) {
     .img-banner {

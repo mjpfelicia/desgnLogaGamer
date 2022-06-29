@@ -20,7 +20,7 @@ CODIFICAÇÃO PARA FRONT-END - TURMA 7 Senai
 - Senai Fundamentos da Tecnologia da Informação e Comunicação - 
 
 ## Links usados
-- https://www.youtube.com/watch?v=x-4z_u8LcGc
+- https://www.youtube.com/c/CursoemV%C3%ADdeo/featured
 - https://developer.mozilla.org/en-US/docs/Learn/CSS.
 
 ## Tecnologias usadas:
