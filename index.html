@@ -72,8 +72,7 @@
                             </div>
                             <!-- Modal login -->
                             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1"
-                                aria-hidden="true">
+                                data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-xl">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -202,6 +201,7 @@
                                 </div>
                             </div>
                             <div class="nav-item ms-lg-n4">
+                                <div class="navbar-contador" id="contadorProduto"></div>
                                 <a class="nav-link">
                                     <i class="bi bi-cart4 icon-red" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal">
@@ -211,18 +211,13 @@
                             <!-- Modal carrinho-->
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-xl modal-dialog-scrollable">
-                                    <div class="modal-header">
+                                    <div class="modal-header bg-white">
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close">
                                         </button>
                                     </div>
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content sidebar-cart-content">
-                                            <div class="modal-header mb-3 border-0">
-                                                <button class="btn-close btn-close-lg btn-close-rotate opacity-8"
-                                                    type="button" data-bs-dismiss="modal" aria-label="Close">
-                                                </button>
-                                            </div>
                                             <div class="modal-body px-5 sidebar-cart-body">
                                                 <div
                                                     class="sidebar-cart-product-wrapper custom-scrollbar mCustomScrollbar _mCS_1">
@@ -248,7 +243,7 @@
                                                                                 R$75.00
                                                                             </strong>
                                                                         </div>
-                                                                        <i class="bi bi-x icon-red"></i>
+                                                                        <i class="bi bi-trash icon-red"></i>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -353,7 +348,7 @@
             <div class="container conteudo-vendas">
                 <div class="d-flex flex-wrap m-auto">
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-10%</div>
                             <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="...">
                             <div class="card-body card-vendas p-3">
@@ -362,14 +357,14 @@
                                     CÂMERA CANON EOS REBEL T100 COM LENTE
                                 </h5>
                                 <p class="card-text m-0 preco-atual-em-estoque">De&nbsp;R$4.100,00 por:</p>
-                                <p class="card-text mb-1 preco-oferta preco-oferta">R$3.199,00</p>
+                                <p class="card-text mb-1 preco-oferta">R$3.199,00</p>
                                 <p class="preco-Avista">à vista</p>
                                 <a href="#" class="btn btn-compra btn-sm w-100">COMPRAR</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-20%</div>
                             <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -386,7 +381,7 @@
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-22%</div>
                             <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -402,7 +397,7 @@
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-10%</div>
                             <img src="./imagens/code.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -418,7 +413,7 @@
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-10%</div>
                             <img src="./imagens/maquinafotografica.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -434,7 +429,7 @@
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-20%</div>
                             <img src="./imagens/foneRosa.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -450,7 +445,7 @@
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-22%</div>
                             <img src="./imagens/cadeira-gamer.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -466,7 +461,7 @@
                         </div>
                     </div>
                     <div class="card-container px-2 col-12 col-sm-6 col-md-3 mb-2">
-                        <div class="card card-box">
+                        <div class="card card-box produto">
                             <div class="desconto">-10%</div>
                             <img src="./imagens/code.jpg" class="card-img-top" alt="Product">
                             <div class="card-body card-vendas p-3">
@@ -504,7 +499,8 @@
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <img src="./imagens/computador.png" class="d-block img-lancamneto w-100" alt="Product">
                                 <div class="carousel-caption carousel-lancamento d-md-block text-center">
-                                    <h1 class="title-produto-lancamento fs-base">Viajantes da imaginação são raridade</h1>
+                                    <h1 class="title-produto-lancamento fs-base">Viajantes da imaginação são raridade
+                                    </h1>
                                     <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
                                         apresse!!
                                     </a>
@@ -514,7 +510,8 @@
                                 <img src="./imagens/headphoneslancamneto.jpg" class="d-block img-lancamneto w-100"
                                     alt="...">
                                 <div class=" carousel-caption carousel-lancamento  d-md-block text-center">
-                                    <h1 class="title-produto-lancamento fs-base">Óculos 3D Realidade Virtual Com Headphone
+                                    <h1 class="title-produto-lancamento fs-base">Óculos 3D Realidade Virtual Com
+                                        Headphone
                                         Warrior</h1>
                                     <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
                                         apresse!!
@@ -525,7 +522,8 @@
                                 <img src="./imagens/tab-game-pad-lancamneto.jpg" class="d-block img-lancamneto w-100"
                                     alt="...">
                                 <div class="carousel-caption carousel-lancamento d-md-block text-center">
-                                    <h1 class="title-produto-lancamento fs-base">Controle Game Tablet Celular Android Ios</h1>
+                                    <h1 class="title-produto-lancamento fs-base">Controle Game Tablet Celular Android
+                                        Ios</h1>
                                     <a href="#" class="stretched-link  link-lancamento">Com preço imperdível. Se
                                         apresse!!
                                     </a>
@@ -1167,6 +1165,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./main.js"></script>
 
 </body>
 

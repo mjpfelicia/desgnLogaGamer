@@ -44,6 +44,18 @@ body {
     background: var(--cor-azul-acinzentado-claro) !important;
 
 }
+.navbar-contador{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color:var(--cor-branco);
+    border-radius: 50%;
+    background:var(--cor-vermelho-claro);
+    font-size: 0.6rem;
+    line-height: 20px;
+    margin-left: 1rem;
+}
 
 
 /* section-apresentaçao*/
@@ -114,6 +126,14 @@ body {
 .card {
     background: var(--cor-card);
     border: 1px solid var(--cor-azul-acinzentado-claro);
+}
+.desconto {
+    width: 3rem;
+    color: var(--cor-branco);
+    line-height: 1.5rem;
+    background: var(--cor-vermelho-claro);
+    border-radius: 0.2rem;
+    margin: 0.9rem;
 }
 
 /* section-lancamento */
