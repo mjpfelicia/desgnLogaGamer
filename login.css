@@ -166,7 +166,7 @@ body {
 .form-text {
     margin-top: 0.25rem;
     font-size: .875em;
-    color:var(--cor-azul-acinzentado-claro);
+    color:var(--cor-cinzento-titleo);
     text-decoration: none;
 }
 
@@ -225,4 +225,14 @@ body {
 .btn-rede2{
     border: 1px solid var(--cor-border);
     border-radius: 5px;
+}
+.msgError,
+.msgErrorSenha,
+.msgErrorNome,
+.msgErrorcadastroEmail, 
+.msgErrorSenhacadastro{
+    display: none;
+    height: 30px;
+    color: var(--cor-vermelho-claro);
+    font-size: 0.6rem;
 }

@@ -14,32 +14,31 @@
   <div class="content-login" id="login">
     <div class="box-geral" role="document">
       <div class="box-content">
-        <button class="btn-close" type="button">
+        <a class="btn-close" href="./index.html">
           <i class="fa-solid fa-xmark"></i>
-        </button>
+        </a>
         <div class="container">
           <div class="nav-header" role="tablist">
             <div class="list-inline-item">
-              <a class="nav-link nav-link-cor" id="loginLink"
-                aria-controls="loginTabLink" aria-selected="true">Entrar</a>
+              <a class="nav-link nav-link-cor" id="loginLink">Entrar</a>
             </div>
             <div class="list-inline-item">
-              <a class="nav-link nav-link-cor2" id="loginModalLinkRegister"
-                aria-controls="loginTabCadastro" aria-selected="false">CADASTRO</a>
+              <a class="nav-link nav-link-cor2" id="loginModalLinkRegister">CADASTRO</a>
             </div>
           </div>
           <hr class="linha">
           <div class="tab-content">
             <div id="loginTabLink" class="mostra entrar card-entra show hide">
-              <form action="./">
+              <form id="form" onsubmit="return false;">
                 <div class="whapper">
                   <label class="form-label" for="email">Email</label>
                   <input class="form-control" id="email" type="text">
                 </div>
+                <p class="msgError">O endereço de e-mail não pode estar vazio</p>
                 <div class="whapper">
                   <div class="row">
                     <div class="col">
-                      <label class="form-label" for="loginSenha">Senha
+                      <label class="form-label" for="loginSenha">Senha</label>
                     </div>
                     <div class="col-auto">
                       <a class="form-text small" href="#">Esqueceu a senha?</a>
@@ -47,6 +46,8 @@
                   </div>
                   <input class="form-control" name="loginSenha" id="loginSenha" placeholder="Senha" type="password">
                 </div>
+                <p class="msgErrorSenha">Preencha este campo corretamente.</p>
+
                 <div class="whapper">
                   <div class="form-check">
                     <input class="form-check-input" id="login-lembre" type="checkbox">
@@ -55,7 +56,7 @@
                   </div>
                 </div>
                 <div class="d-grid whapper">
-                  <button class="btn" type="submit">
+                  <button id="buttonEnviarmsgError" class="btn" type="submit">
                     <i class="fa fa-sign-in-alt icon-red"></i>Entrar</button>
                 </div>
               </form>
@@ -73,32 +74,36 @@
             </div>
             <div id="loginTabCadastro" class="mostra cadastrar card-cadastra hide">
 
-              <form>
+              <form onsubmit="return false;">
                 <div class="whapper">
                   <label class="form-label" for="registerName">Nome</label>
                   <input class="form-control" id="registerName" type="text">
                 </div>
+                <p class="msgErrorNome erro">Preencha este campo corretamente.</p>
                 <div class="whapper">
                   <label class="form-label" for="registerEmail">Email</label>
                   <input class="form-control" id="registerEmail" type="text">
                 </div>
+                <p class="msgErrorcadastroEmail erro">Preencha um e-mail válido</p>
                 <div class="whapper">
                   <label class="form-label" for="registerPassword">Senha</label>
                   <input class="form-control" id="registerPassword" type="password">
                 </div>
+                <p class="msgErrorSenhacadastro erro">Preencha este campo corretamente.</p>
+
                 <div class="d-grid mb-3 text-center">
-                  <button class="btn" type="submit">
+                  <button id="buttonEnviarmsgErrorCadastro" class="btn">
                     <i class="far fa-user me-2 icon-red"></i>CADASTRO
                   </button>
                 </div>
               </form>
               <hr class="linha">
               <div class="text-center">
-                <button class="btn btn-rede">
+                <button class="btn btn-rede hover">
                   <i class="fa-fw fa-facebook-f fab"></i>
                   <span class="sr-only">Conecte-se com Facebook</span>
                 </button>
-                <button class="btn btn-rede2">
+                <button class="btn btn-rede2 hover2">
                   <i class="fa-fw fa-google fab"></i>
                   <span class="sr-only">Conecte-se com Google</span>
                 </button>
@@ -111,6 +116,7 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./login.js"></script>
+  <script src="./validador.js"></script>
 
 </body>
 
