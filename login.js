@@ -13,3 +13,4 @@ cadastroLink.addEventListener('click', () => {
     cadastroTab.classList.add('show')
     loginTab.classList.remove('show')
 })
+

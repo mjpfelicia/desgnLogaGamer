@@ -8,8 +8,6 @@ btn.forEach(btnAdd => {
     btnAdd.addEventListener("click", addProduto);
 });
 
-
-
 function addProduto(evento){
     const produto = {};
     
@@ -19,3 +17,4 @@ function addProduto(evento){
 
     return lista;
 }
+
