@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="./login.css">
+  <title>login</title>
+</head>
+
+<body>
+  <div class="content-login" id="login">
+    <div class="box-geral" role="document">
+      <div class="box-content">
+        <button class="btn-close" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="container">
+          <div class="nav-header" role="tablist">
+            <div class="list-inline-item">
+              <a class="nav-link nav-link-cor" id="loginLink"
+                aria-controls="loginTabLink" aria-selected="true">Entrar</a>
+            </div>
+            <div class="list-inline-item">
+              <a class="nav-link nav-link-cor2" id="loginModalLinkRegister"
+                aria-controls="loginTabCadastro" aria-selected="false">CADASTRO</a>
+            </div>
+          </div>
+          <hr class="linha">
+          <div class="tab-content">
+            <div id="loginTabLink" class="mostra entrar card-entra show hide">
+              <form action="./">
+                <div class="whapper">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" type="text">
+                </div>
+                <div class="whapper">
+                  <div class="row">
+                    <div class="col">
+                      <label class="form-label" for="loginSenha">Senha
+                    </div>
+                    <div class="col-auto">
+                      <a class="form-text small" href="#">Esqueceu a senha?</a>
+                    </div>
+                  </div>
+                  <input class="form-control" name="loginSenha" id="loginSenha" placeholder="Senha" type="password">
+                </div>
+                <div class="whapper">
+                  <div class="form-check">
+                    <input class="form-check-input" id="login-lembre" type="checkbox">
+                    <label class="form-check-label" for="login-lembre">
+                      <span class="text-sm">Lembre-ne</span></label>
+                  </div>
+                </div>
+                <div class="d-grid whapper">
+                  <button class="btn" type="submit">
+                    <i class="fa fa-sign-in-alt icon-red"></i>Entrar</button>
+                </div>
+              </form>
+              <hr class="linha">
+              <div class="text-center">
+                <button class="btn btn-rede">
+                  <i class="fa-fw fa-facebook-f fab"></i>
+                  <span class="sr-only">Conectar com o Facebook</span>
+                </button>
+                <button class="btn btn-rede2">
+                  <i class="fa-fw fa-google fab"></i>
+                  <span class="sr-only">Conecte-se com o Google</span>
+                </button>
+              </div>
+            </div>
+            <div id="loginTabCadastro" class="mostra cadastrar card-cadastra hide">
+
+              <form>
+                <div class="whapper">
+                  <label class="form-label" for="registerName">Nome</label>
+                  <input class="form-control" id="registerName" type="text">
+                </div>
+                <div class="whapper">
+                  <label class="form-label" for="registerEmail">Email</label>
+                  <input class="form-control" id="registerEmail" type="text">
+                </div>
+                <div class="whapper">
+                  <label class="form-label" for="registerPassword">Senha</label>
+                  <input class="form-control" id="registerPassword" type="password">
+                </div>
+                <div class="d-grid mb-3 text-center">
+                  <button class="btn" type="submit">
+                    <i class="far fa-user me-2 icon-red"></i>CADASTRO
+                  </button>
+                </div>
+              </form>
+              <hr class="linha">
+              <div class="text-center">
+                <button class="btn btn-rede">
+                  <i class="fa-fw fa-facebook-f fab"></i>
+                  <span class="sr-only">Conecte-se com Facebook</span>
+                </button>
+                <button class="btn btn-rede2">
+                  <i class="fa-fw fa-google fab"></i>
+                  <span class="sr-only">Conecte-se com Google</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./login.js"></script>
+
+</body>
+
+</html>

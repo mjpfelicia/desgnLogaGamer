@@ -64,148 +64,20 @@
                                 </a>
                             </div>
                             <div class="nav-item ms-lg-n4">
-                                <a class="nav-link">
-                                    <i class="bi bi-person icon-red" data-bs-toggle="modal"
-                                        data-bs-target="#staticBackdrop">
-                                    </i>
+                                <a class="nav-link" href="./login.html">
+                                    <i class="bi bi-person icon-red"></i>
                                 </a>
                             </div>
-                            <!-- Modal login -->
-                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close">
-                                            </button>
-                                        </div>
-                                        <div class="modal-body p-5">
-                                            <div class="nav list-inline" role="tablist">
-                                                <div class="list-inline-item">
-                                                    <a class="nav-link nav-link-lg active text-danger"
-                                                        data-bs-toggle="tab" href="#loginModalTabLogin" role="tab"
-                                                        id="loginModalLinkLogin" aria-controls="loginModalTabLogin"
-                                                        aria-selected="true">ENTRAR
-                                                    </a>
-                                                </div>
-                                                <div class="list-inline-item">
-                                                    <a class="nav-link nav-link-lg text-success" data-bs-toggle="tab"
-                                                        href="#loginModalTabRegister" role="tab"
-                                                        id="loginModalLinkRegister"
-                                                        aria-controls="loginModalTabRegister"
-                                                        aria-selected="false">CADASTRO
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <hr class="mb-3">
-                                            <div class="tab-content">
-                                                <div class="tab-pane active fade show px-3 login"
-                                                    id="loginModalTabLogin" role="tabpanel"
-                                                    aria-labelledby="loginModalLinkLogin">
-                                                    <form action="customer-orders.html" method="get">
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="email">Email</label>
-                                                            <input class="form-control" id="email" type="text"
-                                                                placeholder="EMAIL">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <label class="form-label" for="loginPassword">Senha
-                                                                    </label>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <a class="form-text small" href="#">
-                                                                        Esqueceu a senha?
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <input class="form-control" name="loginPassword"
-                                                                id="loginPassword" placeholder="Senha" type="password"
-                                                                required="" data-msg="Please enter your password">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" id="loginRemember"
-                                                                    type="checkbox">
-                                                                <label class="form-check-label text-muted"
-                                                                    for="loginRemember">
-                                                                    <span class="text-sm">Lembre-ne</span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-grid mb-3">
-                                                            <button class="btn btn-outline-dark" type="submit">
-                                                                <i class="bi bi-box-arrow-in-right svg-icon "></i>
-                                                                ENTRAR
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                    <hr class="my-3 hr-text letter-spacing-2" data-content="OR">
-                                                    <div class="text-center">
-                                                        <button class="btn btn btn-outline-primary letter-spacing-0"
-                                                            data-bs-toggle="tooltip" title="Connect with Facebook"
-                                                            data-bs-original-title="Connect with Facebook">
-                                                            <i class="bi bi-facebook"></i>
-                                                        </button>
-                                                        <button class="btn btn btn-outline-muted letter-spacing-0"
-                                                            data-bs-toggle="tooltip" title="Connect with Google"
-                                                            data-bs-original-title="Connect with Google">
-                                                            <i class="bi bi-google"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="tab-pane fade px-3 regirtra" id="loginModalTabRegister"
-                                                    role="tabpanel" aria-labelledby="loginModalLinkRegister">
-                                                    <form action="customer-orders.html" method="get">
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="registerName">Name</label>
-                                                            <input class="form-control" id="registerName" type="text">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label" for="registerEmail">Email</label>
-                                                            <input class="form-control" id="registerEmail" type="text">
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label class="form-label"
-                                                                for="registerPassword">Senha</label>
-                                                            <input class="form-control" id="registerPassword"
-                                                                type="password">
-                                                        </div>
-                                                        <div class="d-grid mb-3 text-center">
-                                                            <button class="btn btn-outline-dark" type="submit">
-                                                                <i class="bi bi-person svg-icon"></i>
-                                                                CADASTRO
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                    <hr class="my-3 hr-text letter-spacing-2"
-                                                        data-content="OR CONNECT WITH">
-                                                    <div class="text-center">
-                                                        <button class="btn btn btn-outline-primary letter-spacing-0"
-                                                            data-bs-toggle="tooltip" title="Conecte-se com o Facebook"
-                                                            data-bs-original-title="Conecte-se com o Facebook">
-                                                            <i class="bi bi-facebook"></i>
-                                                        </button>
-                                                        <button class="btn btn btn-outline-muted letter-spacing-0"
-                                                            data-bs-toggle="tooltip" title="Conecte-se com o Google"
-                                                            data-bs-original-title="Conecte-se com o Google">
-                                                            <i class="bi bi-google"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="nav-item ms-lg-n4">
-                                <div class="navbar-contador" id="contadorProduto"></div>
-                                <a class="nav-link">
+
+                                <a class="nav-link position-relative">
                                     <i class="bi bi-cart4 icon-red" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal">
                                     </i>
+                                    <span id="contadorProduto"
+                                        class="position-absolute translate-middle badge rounded-pill bg-danger">
+                                    </span>
                                 </a>
                             </div>
                             <!-- Modal carrinho-->
@@ -1165,6 +1037,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./main.js"></script>
 
 </body>
