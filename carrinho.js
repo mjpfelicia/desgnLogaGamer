@@ -21,7 +21,7 @@ function renderCar(item) {
     img.src = item.src;
     img.width = 100;
     // add class para css
-    li.classList.add("d-flex")
+    li.classList.add("d-flex","border-bottom","py-2")
     div.classList.add("d-flex", "align-items-start", "flex-column");
     h5.classList.add("fs-6");
     texto.classList.add("text-success")

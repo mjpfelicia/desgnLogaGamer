@@ -16,17 +16,35 @@
 
         <div class="container-fluid pt-3 pb-3">
             <div class="container conteudo-nav">
-                <nav class="navbar navbar-expand-lg ">
+                <nav class="navbar navbar-expand-lg align-items-center">
                     <div class="content-logo">
-                        <img class="logo" style="width:90%" src="./imagens/logoes.png" alt="svg">
+                        <img class="logo" style="width:80%" src="./imagens/logoes.png" alt="svg">
                     </div>
                     <button class="navbar-toggler menu-bars" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse w-70" id="navbarCollapse">
+                    <div class="collapse navbar-collapse w-100" id="navbarCollapse">
+                        <div class="navbar-nav">
+                            <div class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="#">Departamentos</a>
+                            </div>
+                            <div class="nav-item">
+                              <a class="nav-link" href="#">Destaques</a>
+                            </div>
+                            
+                            <div class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Contatos
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item border-bottom" href="#">Telefones</a></li>
+                                <li><a class="dropdown-item border-bottom" href="#">Endereço</a></li>
+                                <li><a class="dropdown-item" href="#">Parceiros</a></li>
+                              </ul>
+                            </div>
+                    </div>
                         <div class="input-group mb-0">
                             <input type="text" class="form-control" placeholder="Pesquisar produtos"
                                 aria-label="Pesquisar produtos" aria-describedby="basic-addon2">
