@@ -47,6 +47,9 @@ body {
 #contadorProduto{
     height: 1rem;
 }
+.carrinoCechout{
+    padding-left: 0!important;
+}
 
 
 /* section-apresentaçao*/
@@ -248,6 +251,13 @@ body {
 
 .svg-icon {
     color: var(--cor-vermelho-claro);
+}
+.conteudo-nav{
+    max-width: 1300px!important;
+    width: 100%;
+}
+.card-icons-header{
+    padding-left: 2rem;
 }
 
 .linpa {

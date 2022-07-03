@@ -4,12 +4,7 @@ const email = document.querySelector("#email");
 const msgErro = document.querySelector(".msgError");
 const senha = document.querySelector("#loginSenha");
 const msgErrorSenha = document.querySelector(".msgErrorSenha");
-const nome = document.querySelector("#registerName");
-const erroNome=document.querySelector(".msgErrorNome");
-const cadatraEmail=document.querySelector("#registerEmail");
-const erroEmail=document.querySelector(".msgErrorcadastroEmail")
-const cadastraSenha=document.querySelector("#registerPassword");
-console.log({ btn })
+
 console.log({ senha })
 
 

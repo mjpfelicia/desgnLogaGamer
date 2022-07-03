@@ -13,9 +13,10 @@
 
 <body>
     <header class="header content-header" id="box-header">
-        <div class="container-fluid pt-3">
-            <nav class="navbar navbar-expand-lg ">
-                <div class="container">
+
+        <div class="container-fluid pt-3 pb-3">
+            <div class="container conteudo-nav">
+                <nav class="navbar navbar-expand-lg ">
                     <div class="content-logo">
                         <img class="logo" style="width:90%" src="./imagens/logoes.png" alt="svg">
                     </div>
@@ -24,32 +25,8 @@
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav p-lg-4 d-flex justify-content-around" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Departamentos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Destaques</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Contatos
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="#">TELEFONE</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">LOJAS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">SUGESTÃO</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+
+                    <div class="collapse navbar-collapse w-70" id="navbarCollapse">
                         <div class="input-group mb-0">
                             <input type="text" class="form-control" placeholder="Pesquisar produtos"
                                 aria-label="Pesquisar produtos" aria-describedby="basic-addon2">
@@ -57,28 +34,30 @@
                                 <img class="svgLupa" src="./imagens/search.svg" alt="svgLupa">
                             </p>
                         </div>
-                        <div class="navbar-nav flex-row d-flex justify-content-around align-items-center w-50">
-                            <div class="nav-item ms-lg-n4">
+
+                        <div class="navbar-nav flex-row d-flex card-icons-header">
+                            <div class="nav-item ms-lg-n4 d-flex align-items-center">
                                 <a class="nav-link" href="#">
                                     <i class="bi bi-heart icon-red"></i>
                                 </a>
                             </div>
-                            <div class="nav-item ms-lg-n4">
+                            <div class="nav-item ms-lg-n4 d-flex align-items-center">
                                 <a class="nav-link" href="./login.html">
                                     <i class="bi bi-person icon-red"></i>
                                 </a>
+                                <span class="svg-icon">login</span>
                             </div>
 
-                            <div class="nav-item ms-lg-n4">
-
+                            <div class="nav-item ms-lg-n4 d-flex align-items-center">
                                 <a class="nav-link position-relative">
-                                    <i class="bi bi-cart4 icon-red" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                    </i>
                                     <span id="contadorProduto"
                                         class="position-absolute translate-middle badge rounded-pill bg-danger">
                                     </span>
+                                    <i class="bi bi-cart4 icon-red" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                    </i>
                                 </a>
+                                <span class="svg-icon">carrinho</span>
                             </div>
                             <!-- Modal carrinho-->
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
@@ -99,26 +78,7 @@
                                                         <div id="mCSB_1_container" class="mCSB_container"
                                                             style="position:relative; top:0; left:0;" dir="ltr">
                                                             <!-- cart item-->
-                                                            <div class="add-produto">
-                                                                <div class="d-flex align-items-center">
-                                                                    <img class="w-25" src="./imagens/cadeira-gamer.jpg"
-                                                                        alt="">
-                                                                    <div class="w-75 d-flex  justify-content-between">
-                                                                        <div class="ps-3">
-                                                                            <h2 class="text-dark fs-1 pb-3">
-                                                                                cadeira-gamer
-                                                                            </h2>
-                                                                            <small class="d-block fs-2 pb-4">
-                                                                                Quantidade:1
-                                                                            </small>
-                                                                            <strong class="d-block text-success fs-1">
-                                                                                R$75.00
-                                                                            </strong>
-                                                                        </div>
-                                                                        <i class="bi bi-trash icon-red"></i>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <ul id="carrinho" class="carrinoCechout"></ul>
                                                         </div>
                                                         <div id="mCSB_1_scrollbar_vertical"
                                                             class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark-thin mCSB_scrollTools_vertical"
@@ -137,11 +97,11 @@
                                             </div>
                                             <div class="modal-footer sidebar-cart-footer shadow">
                                                 <div class="w-100">
-                                                    <h3 class="mb-4 fs-1">Subtotal:
-                                                        <span class="float-right">R$000,00</span>
+                                                    <h3>
+                                                        <span>Total:<strong id="total">0</strong>
+                                                        </span>
                                                     </h3>
                                                     <div class="d-grid gap-3">
-                                                        <a class="btn btn-outline-dark" href="#">Ver carrinho</a>
                                                         <a class="btn btn-danger" href="#">Confira</a>
                                                     </div>
                                                 </div>
@@ -151,16 +111,11 @@
 
                                 </div>
                             </div>
-                            <div class="nav-item ms-lg-n4">
-                                <a class="nav-link" data-bs-toggle="offcanvas" href="#">
-                                    <i class="bi bi-whatsapp icon-red"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
-        </div>
+
+                </nav>
+            </div>
     </header>
     <main>
         <section class="banner-apresentacao">
@@ -207,7 +162,9 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+
         </section>
+
         <section class="section-promocao">
             <div class="row">
                 <div class="col-12 d-flex justify-content-around align-items-center">
@@ -351,6 +308,7 @@
 
                 </div>
             </div>
+
         </section>
         <section class="section-lancamento">
             <div class="col-12 d-flex justify-content-center conteudo-titulo">
@@ -1024,9 +982,13 @@
                                     <i class="bi bi-pinterest icon-red"></i> </a>
                                 <a class="ms-2 mb-2 linpa" href="#">
                                     <i class="bi bi-youtube icon-red"></i> </a>
+                                <a class="ms-2 mb-2 linpa" href="#">
+                                    <i class="bi bi-whatsapp icon-red"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
+
                     <div class="pb-4 fs-xs text-light opacity-50 text-center">
                         Todos os direitos reservados.Feito por Mjpfelicia
                     </div>
@@ -1038,6 +1000,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./carrinho.js"></script>
     <script src="./main.js"></script>
 
 </body>

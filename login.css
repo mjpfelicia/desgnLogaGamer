@@ -236,3 +236,9 @@ body {
     color: var(--cor-vermelho-claro);
     font-size: 0.6rem;
 }
+.mensagem{
+    color: var(--cor-verde-limao);
+    text-align: center;
+    position: relative;
+    bottom: 1rem;
+}
