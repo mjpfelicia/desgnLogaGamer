@@ -1,14 +1,19 @@
 const Carrinho = []
 let Total = 0;
 $('.btn-compra').on('click', function () {
-    const imageSrc = $(this)[0].offsetParent.children[1].src;
+
+    const children = $(this)[0].offsetParent.children;
+    const imageSrc = children[0].src ?? children[1].src;
     const title = $(this)[0].parentElement.children[0].innerText;
     const valor = $(this)[0].parentElement.children[2].innerText;
 
     const valorcovertido = +(valor.replace(/\D/ig, "").split("").slice(0, -2).join("") + "." + valor.replace(/\D/ig, "").split("").slice(-2).join(""))
 
     renderCar({ nome: title, valor: valorcovertido, src: imageSrc })
+    
+    console.log({ imageSrc })
 })
+
 
 function renderCar(item) {
     // criando elementos
@@ -21,7 +26,7 @@ function renderCar(item) {
     img.src = item.src;
     img.width = 100;
     // add class para css
-    li.classList.add("d-flex","border-bottom","py-2")
+    li.classList.add("d-flex", "border-bottom", "py-2")
     div.classList.add("d-flex", "align-items-start", "flex-column");
     h5.classList.add("fs-6");
     texto.classList.add("text-success")
